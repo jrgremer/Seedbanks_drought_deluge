@@ -1,0 +1,17 @@
+---
+title: "Seedbanks and drought"
+author: "JR Gremer"
+date: "2024-07-02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#empty chunk to copy
+```{r}
+
+```
+
+#
