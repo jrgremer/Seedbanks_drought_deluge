@@ -1,0 +1,164 @@
+---
+title: "Analyses_supplement"
+author: "JR Gremer"
+date: "2024-07-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#empty chunk to copy
+```{r}
+
+```
+#load libraries
+```{r}
+library(tidyverse)
+library(vegan)
+library(emmeans) #for posthoc comparisons of means
+library(spaa) #for dist2list function 
+library(cowplot)
+```
+
+#load data
+```{r}
+alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv") %>%
+              mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species),
+                     type = as.factor(type)) %>%
+              mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+              mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank"))) %>%
+              filter(Site != "Blank") %>% #filter blanks for now, but will need to figure that out
+              #add elevations for sites 
+              mutate(elevation = case_when(
+                Site == "Black Point" ~ 1566,
+                Site == "Antelope" ~ 1636,
+                Site == "Blue Chute" ~ 1930,
+                Site == "Arboretum" ~ 2179,
+                Site == "Camp Colton" ~ 2591
+              )) %>%
+              mutate(elevation = as.numeric(elevation)) %>%
+              mutate(elevfact = as.factor(elevation)) %>%
+              mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                seedbank = "Seedbank"))
+
+summary(alldat_long)
+
+alldat_rel_wide = read.csv("../Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
+  mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type)) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
+  filter(Site != "Blank") %>%
+  mutate(siteplot = paste0(Site, Plot)) %>%
+  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
+  select(-X, -siteplot) %>%
+  #add elevations for sites 
+  mutate(elevation = case_when(
+    Site == "Black Point" ~ 1566,
+    Site == "Antelope" ~ 1636,
+    Site == "Blue Chute" ~ 1930,
+    Site == "Arboretum" ~ 2179,
+    Site == "Camp Colton" ~ 2591
+  )) %>%
+  mutate(elevation = as.numeric(elevation))%>%
+  mutate(elevfact = as.factor(elevation)) %>%
+  mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                              seedbank = "Seedbank"))
+
+summary(alldat_rel_wide)
+
+alldat_raw_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") %>%
+  mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type))%>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
+  filter(Site != "Blank") %>%
+  mutate(siteplot = paste0(Site, Plot)) %>%
+  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
+  select(-X, -siteplot) %>%
+  #add elevations for sites 
+  mutate(elevation = case_when(
+    Site == "Black Point" ~ 1566,
+    Site == "Antelope" ~ 1636,
+    Site == "Blue Chute" ~ 1930,
+    Site == "Arboretum" ~ 2179,
+    Site == "Camp Colton" ~ 2591
+  )) %>%
+  mutate(elevation = as.numeric(elevation))%>%
+  mutate(elevfact = as.factor(elevation)) %>%
+  mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                              seedbank = "Seedbank"))
+
+
+summary(alldat_raw_wide)
+
+
+```
+
+##Species richness and diversity calculation
+
+```{r}
+#create dataframe that is just columns with relative abundances of each species
+allsp_rel = alldat_rel_wide %>%
+  #make rownames siteplot names
+  column_to_rownames(var = "ID") %>%
+  select(-Site, -Plot, -Treatment, -Year, -type, -site_byelev, -trt_order, -elevation, - elevfact) %>%
+  #make NAs = 0 (NA means species wasn't in that plot/sample)
+  mutate(across(everything(), ~replace_na(.x, 0))) 
+
+#calculate richness and diversity metrics
+alldat_rel_wide = alldat_rel_wide %>%
+  filter(Site != "Blank") %>%
+  mutate(rich = specnumber(allsp_rel)) %>%
+  mutate(simp = diversity(allsp_rel, index = "simpson")) %>%
+  mutate(shannon = diversity(allsp_rel, index = "shannon")) 
+```
+
+#Simpson diversity
+```{r}
+lm_simp_all_full = lm(simp ~ type*Treatment*elevfact, data = alldat_rel_wide)
+summary(lm_simp_all_full)                   
+anova(lm_simp_all_full)
+
+#posthoc comparison
+test(emmeans(lm_simp_all_full, pairwise ~ Treatment|elevfact, by=c("type")) )
+#aboveground:
+#exclusion different from control at 1636m, no differences with addition
+#seedbank: no significant differences
+
+```
+#plot simpsons
+```{r,echo= FALSE, message = FALSE, warning = FALSE}
+simp_means = alldat_rel_wide %>%
+  group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
+  summarize(meansimp = mean(simp), sdsimp = sd(simp), samplesize = n()) %>%
+  mutate(sesimp = sdsimp/sqrt(samplesize))%>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+    type == "Aboveground" & elevation == 1636 & Treatment == "Water Exclusion" ~ "*"))
+
+simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color = Treatment, 
+                                                   shape = type)) + 
+  geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meansimp - sesimp, ymax =  meansimp + sesimp), width = 0.2,
+                position=position_dodge(10)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_shape_manual(values = c(1,18)) +
+  labs(x = "Elevation (m, asl)", y = "Simpson Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(), hjust = -1, size =12, show.legend = F) + 
+  theme(#legend.justification = c(0.95, .05),legend.position = c(0.95,.05), 
+   #     legend.key = element_rect(colour = NA, fill = NA),
+    text = element_text(size = 20))
+
+simp_plot_elevation
+
+```
+
+
+```{r}
+
+```

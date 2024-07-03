@@ -107,13 +107,81 @@ abun_tots = alldat_long %>%
                  summarize(totabun = sum(totabun)) 
 
 #linear models for above ground and seedbank separately
+#aboveground
 lm_abun_ab = lm(totabun ~ elevfact*Treatment, data = subset(abun_tots, type == "Aboveground"))
 summary(lm_abun_ab)                   
 anova(lm_abun_ab)
 
+#Post hoc contrasts
+emmeans(lm_abun_ab, pairwise ~ Treatment|elevfact) 
+#at 1566, Water exclusion sig diff from control
+#at 1636: no sig treatment diff
+#at 1930: water exclusion diff from control 
+#at 2179: water exclusion diff from control 
+#at 2591: water exclusion diff from control     
 
-#Jenny start here, need to run both models and post hoc contrasts, then plot it
-                 
+lm_abun_sb = lm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"))
+summary(lm_abun_sb)                   
+anova(lm_abun_sb)
+
+#post hoc contrasts
+emmeans(lm_abun_sb, pairwise ~ Treatment|elevfact) 
+#only significant difference is at 2179, water exclusion different from control
+```
+#plot abundances, Figure 1
+```{r, echo= FALSE, message = FALSE, warning = FALSE}
+abun_means = abun_tots %>%
+  group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
+  summarize(meanabun = mean(totabun), sdabun = sd(totabun), samplesize = n()) %>%
+  mutate(seabun = sdabun/sqrt(samplesize))%>%
+  filter(type == "Aboveground") %>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+    elevation  == 1566 & Treatment == "Water Exclusion" ~ "*",
+    elevation  == 1930 & Treatment == "Water Exclusion" ~ "*",
+    elevation  == 2179 & Treatment == "Water Exclusion" ~ "*",
+    elevation  == 2591 & Treatment == "Water Exclusion" ~ "*"))
+
+abun_means_sb = abun_means %>%
+  filter(type == "Seedbank") %>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+    elevation  == 2179 & Treatment == "Water Exclusion" ~ "*"))
+
+abund_elevation_ab = ggplot(abun_means_ab, aes(x = elevation, y= meanabun, group = Treatment, color = Treatment)) + 
+  geom_point(position=position_dodge(25), size = 6, shape = 1, stroke =1) + #geom_line(position=position_dodge(0.3)) +
+  geom_errorbar(aes(ymin = meanabun - seabun, ymax = meanabun + seabun), width = 0.2,
+                position=position_dodge(25)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4", "dodgerblue4", "firebrick4" )) +
+  labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean cover)", color = "Treatment",
+       title = "Above ground community") +
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
+  theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 20)) +
+  xlim(c(1560,2610))
+
+abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group = Treatment, color = Treatment)) + 
+  geom_point(position=position_dodge(25), size = 6, shape = 18) + #geom_line(position=position_dodge(0.3)) +
+  geom_errorbar(aes(ymin = meanabun - seabun, ymax = meanabun + seabun), width = 0.2,
+                position=position_dodge(25)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4", "dodgerblue4", "firebrick4" )) +
+  labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean cover)", color = "Treatment",
+       title = "Seed bank community") +
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
+  theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 20)) +
+  xlim(c(1560,2610))
+
+#### Figure 1: raw abundances ####
+plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
+#ggsave("../Plots/Fig1_Mean abundance.jpg", height = 8, width = 12)
+
 ```
 
 #Relative abundance of plant functional types
@@ -121,14 +189,106 @@ anova(lm_abun_ab)
 
 ```
 
-#Species richness
+#Species richness and diversity calculation
 
 ```{r}
+#create dataframe that is just columns with relative abundances of each species
+allsp_rel = alldat_rel_wide %>%
+  #make rownames siteplot names
+  column_to_rownames(var = "ID") %>%
+  select(-Site, -Plot, -Treatment, -Year, -type, -site_byelev, -trt_order, -elevation, - elevfact) %>%
+  #make NAs = 0 (NA means species wasn't in that plot/sample)
+  mutate(across(everything(), ~replace_na(.x, 0))) 
 
+#calculate richness and diversity
+alldat_rel_wide = alldat_rel_wide %>%
+  filter(Site != "Blank") %>%
+  mutate(rich = specnumber(allsp_rel)) %>%
+  mutate(simp = diversity(allsp_rel, index = "simpson")) %>%
+  mutate(shannon = diversity(allsp_rel, index = "shannon")) 
+
+## richness  ##
+lm_rich_all = lm(rich ~ type*Treatment*elevfact, data = alldat_rel_wide)
+summary(lm_rich_all)                   
+anova(lm_rich_all)
+
+#posthoc comparison
+test(emmeans(lm_rich_all, pairwise ~ Treatment|elevfact, by=c("type")) )
+#aboveground:
+#exclusion different from control at 1930, 2179 no differences with addition
+#Seedbank:
+#no significant differences
 ```
 
 #Species diversity
 ```{r}
+lm_shannon_all = lm(shannon ~ type*Treatment*elevfact, data = alldat_rel_wide)
+summary(lm_shannon_all)                   
+anova(lm_shannon_all)
+
+#posthoc comparison
+test(emmeans(lm_shannon_all, pairwise ~ Treatment|elevfact, by=c("type")) )
+#aboveground:
+#exclusion different from control at 1636m, 1930 no differences with addition
+#seedbank: no significant differences
+
+
+```
+
+#Plot richness and diversity
+```{r,echo= FALSE, message = FALSE, warning = FALSE}
+#richness
+rich_means = alldat_rel_wide %>%
+  group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
+  summarize(meanrich = mean(rich), sdrich = sd(rich), samplesize = n()) %>%
+  mutate(serich = sdrich/sqrt(samplesize)) %>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+    type == "Aboveground" & elevation  == 1930 & Treatment == "Water Exclusion" ~ "*",
+    type == "Aboveground" & elevation  == 2179 & Treatment == "Water Exclusion" ~ "+" #marginally significant, P=0.061
+    ))
+
+rich_plot_elevation = ggplot(rich_means, aes(x = elevation, y= meanrich, color = Treatment, 
+                                             shape = type)) + 
+  geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanrich - serich, ymax =  meanrich + serich), width = 0.2,
+                position=position_dodge(10)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_shape_manual(values = c(1,18)) +
+  labs(x = "Elevation (m, asl)", y = "Species richness", color = "Treatment", linetype = "Community type", shape = "Community type") +
+  geom_text(aes(label = siglabel), hjust = -.75, size =10, show.legend = F) + #,   position = position_dodge() 
+  theme(legend.justification = c(0.05, .99),legend.position = c(0.05,.99), 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 20))
+
+#shannon diversity
+shannon_means = alldat_rel_wide %>%
+  group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
+  summarize(meanshannon = mean(shannon), sdshannon = sd(shannon), samplesize = n()) %>%
+  mutate(seshannon = sdshannon/sqrt(samplesize))%>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+    type == "Aboveground" &  elevation  == 1636  & Treatment == "Water Exclusion" ~ "*",
+    type == "Aboveground" & elevation  == 1930 & Treatment == "Water Exclusion" ~ "*"))
+
+shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation, y= meanshannon, color = Treatment, 
+                                             shape = type)) + 
+  geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanshannon - seshannon, ymax =  meanshannon + seshannon), width = 0.2,
+                position=position_dodge(10)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_shape_manual(values = c(1,18)) +
+  labs(x = "Elevation (m, asl)", y = "Shannon Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
+  geom_text(aes(label = siglabel), hjust = -.75, size =12, show.legend = F) + #,   position = position_dodge()
+  theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 20))
+#figure 3
+plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=20)
+#ggsave("../Plots/Fig3_richness_diversity.jpg", height = 8, width = 15)
+
 
 ```
 
@@ -141,5 +301,80 @@ anova(lm_abun_ab)
 #Species composition - Dissimilarity
 
 ```{r}
+all_bray_rel = vegdist(allsp_rel, method = 'bray')
 
+all_bray_long = all_bray_rel%>%
+                dist2list() %>% 
+                separate(col, "_", into= c("site1", "treatment1", "plot1", "type1")) %>%
+                separate(row, "_", into=(c("site2", "treatment2", "plot2", "type2"))) %>%
+                mutate(sitetreatplot1 = paste(site1, treatment1, plot1, sep="_")) %>%
+                mutate(sitetreatplot2 = paste(site2, treatment2, plot2, sep="_")) 
+
+bray_long_type = all_bray_long %>%
+                 filter(sitetreatplot1 == sitetreatplot2) %>%  #this filters to dissimilarities within plots
+                 filter(type1 != type2) %>% #this filters to seedbank vs above ground
+                 filter(!duplicated(sitetreatplot1)) %>%
+                 rename(bray = value) %>%
+                 mutate(Site = as.factor(site1), Treatment = as.factor(treatment1), Plot = as.numeric(plot1), 
+                        type1 = as.factor(type1), type2= as.factor(type2)) %>%
+                 select(-sitetreatplot1, -sitetreatplot2, -site2, -treatment2, -plot2, -site1, -treatment1, -plot1) %>%
+                 select(Site, Treatment, Plot, type1, type2, bray) 
+
+bray_long_type = bray_long_type %>% 
+  mutate(site_byelev = factor(Site, levels = c("Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition"))) %>%
+  mutate(elevation = case_when(
+    Site == "Black Point" ~ 1566,
+    Site == "Antelope" ~ 1636,
+    Site == "Blue Chute" ~ 1930,
+    Site == "Arboretum" ~ 2179,
+    Site == "Camp Colton" ~ 2591
+  )) %>%
+  mutate(elevfact = as.factor(elevation))
+  
+dim(bray_long_type) #60 plots in study - 1 plot had no seeds growout, so 59 to compare 
+summary(bray_long_type)
+#write.csv(bray_long_type, file = "../Formatted_data/bray_relabun_abovevssb_withinplot.csv")   
+
+lm_bray_full  = lm(bray ~ elevfact*Treatment, data = bray_long_type)
+summary(lm_bray_full)                   
+anova(lm_bray_full)
+
+#posthoc comparison
+test(emmeans(lm_bray_full, pairwise ~ Treatment|elevfact) )
+#Control vs water exclusion:
+# marg sig at 1636 (P=0.087), 1930m
+#water addition:
+#sig at 1566, 1930
+```
+#Plot dissimilarity
+```{r,echo= FALSE, message = FALSE, warning = FALSE}
+bray_means = bray_long_type %>%
+  group_by(Site, site_byelev, Treatment, trt_order, elevation, elevfact) %>%
+  summarize(meanbray = mean(bray), sdbray = sd(bray), samplesize = n()) %>%
+  mutate(sebray = sdbray/sqrt(samplesize)) %>%
+  #add labels from contrasts for graphing
+  mutate(siglabel = "Nonsignificant") %>%
+  mutate(siglabel = case_when(
+   elevation == 1566 & Treatment == "Water Addition" ~ "*", 
+   elevation == 1636  & Treatment == "Water Exclusion" ~ "+",
+   elevation == 1930  & Treatment == "Water Exclusion" ~ "*",
+   elevation == 1930  & Treatment == "Water Addition" ~ "*"))
+
+bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color = Treatment)) + 
+  geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2,
+                position=position_dodge(10)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_shape_manual(values = c(1,18)) +
+  labs(x = "Elevation (m, asl)", y = "Bray Curtis Dissimilarity", color = "Treatment", linetype = "Community type", shape = "Community type") +
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(), hjust = -1, size =12, show.legend = F) + 
+theme(legend.justification = c(0.95, .05),legend.position = c(0.95,.05), 
+     legend.key = element_rect(colour = NA, fill = NA),
+  text = element_text(size = 20))
+
+#Fig. 5: Bray-Curtis distance #
+bray_plot_elevation
+#ggsave("../Plots/fig5_braydissim.jpg", height = 8, width = 12)
 ```
