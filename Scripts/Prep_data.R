@@ -236,7 +236,7 @@ all_sptotabun_wide = alldat_long %>%
 summary(all_sprawabun_wide)
 str(all_sprawabun_wide)
 
-write.csv(all_sprawabun_wide, file = "Formatted_data/Rawabun_sbandab_merged_wide.csv")
+write.csv(all_sprawabun_wide, file = "Formatted_data/Totabun_sbandab_merged_wide.csv")
 
 #### Adding native vs non-native (introduced) ####
 summary(alldat_long)
