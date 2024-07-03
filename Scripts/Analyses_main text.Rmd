@@ -133,7 +133,9 @@ emmeans(lm_abun_sb, pairwise ~ Treatment|elevfact)
 abun_means = abun_tots %>%
   group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
   summarize(meanabun = mean(totabun), sdabun = sd(totabun), samplesize = n()) %>%
-  mutate(seabun = sdabun/sqrt(samplesize))%>%
+  mutate(seabun = sdabun/sqrt(samplesize))
+
+abun_means_ab = abun_means %>%
   filter(type == "Aboveground") %>%
   #add labels from contrasts for graphing
   mutate(siglabel = "Nonsignificant") %>%
@@ -169,7 +171,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
   geom_errorbar(aes(ymin = meanabun - seabun, ymax = meanabun + seabun), width = 0.2,
                 position=position_dodge(25)) + theme_bw() + 
   scale_color_manual(values = c("darkolivegreen4", "dodgerblue4", "firebrick4" )) +
-  labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean cover)", color = "Treatment",
+  labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean count)", color = "Treatment",
        title = "Seed bank community") +
   geom_text(aes(label = siglabel), 
             position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
@@ -514,6 +516,7 @@ nmds_all +
 
 #Species composition - permANOVA
 ```{r}
+all_bray_rel = vegdist(allsp_rel, method = 'bray')
 permanova_bray = adonis2(all_bray_rel ~ Treatment*type*elevfact, perm= 999, data = all_groups)
 summary(permanova_bray)
 permanova_bray
