@@ -1,945 +1,945 @@
-"","Site","Plot","Treatment","Species","PFT","tottally","blanktot","totabun","relabun","Year","type","rawabun"
-"1","Antelope","1","2","BOER","PG4",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"2","Antelope","1","2","CHSE","A",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"3","Antelope","1","2","PLJA","PG4",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"4","Antelope","1","2","SATR","A",15,0,15,0.833333333333333,2021,"seedbank",NA
-"5","Antelope","2","2","BASC","A",1,0,1,0.027027027027027,2021,"seedbank",NA
-"6","Antelope","2","2","BOER","PG4",1,0,1,0.027027027027027,2021,"seedbank",NA
-"7","Antelope","2","2","GUSA","S",3,0,3,0.0810810810810811,2021,"seedbank",NA
-"8","Antelope","2","2","SATR","A",32,0,32,0.864864864864865,2021,"seedbank",NA
-"9","Antelope","3","1","CHSE","A",1,0,1,0.0161290322580645,2021,"seedbank",NA
-"10","Antelope","3","1","ERSP","A",1,0,1,0.0161290322580645,2021,"seedbank",NA
-"11","Antelope","3","1","SATR","A",59,0,59,0.951612903225806,2021,"seedbank",NA
-"12","Antelope","3","1","SPHA","PF",1,0,1,0.0161290322580645,2021,"seedbank",NA
-"13","Antelope","4","3","ACMI","PF",4,0,4,0.0851063829787234,2021,"seedbank",NA
-"14","Antelope","4","3","ERSP","A",4,0,4,0.0851063829787234,2021,"seedbank",NA
-"15","Antelope","4","3","MEMO","A",1,0,1,0.0212765957446809,2021,"seedbank",NA
-"16","Antelope","4","3","SATR","A",37,0,37,0.787234042553192,2021,"seedbank",NA
-"17","Antelope","4","3","TAOF","PF",2,1,1,0.0212765957446809,2021,"seedbank",NA
-"18","Antelope","5","2","BOER","PG4",5,0,5,0.161290322580645,2021,"seedbank",NA
-"19","Antelope","5","2","ERSP","A",12,0,12,0.387096774193548,2021,"seedbank",NA
-"20","Antelope","5","2","PLJA","PG4",2,0,2,0.0645161290322581,2021,"seedbank",NA
-"21","Antelope","5","2","SATR","A",12,0,12,0.387096774193548,2021,"seedbank",NA
-"22","Antelope","6","3","CHSE","A",1,0,1,0.0588235294117647,2021,"seedbank",NA
-"23","Antelope","6","3","GUSA","S",2,0,2,0.117647058823529,2021,"seedbank",NA
-"24","Antelope","6","3","SATR","A",14,0,14,0.823529411764706,2021,"seedbank",NA
-"25","Antelope","7","1","ERSP","A",2,0,2,0.0357142857142857,2021,"seedbank",NA
-"26","Antelope","7","1","SATR","A",53,0,53,0.946428571428571,2021,"seedbank",NA
-"27","Antelope","7","1","SPHA","PF",1,0,1,0.0178571428571429,2021,"seedbank",NA
-"28","Antelope","8","1","BASC","A",1,0,1,0.125,2021,"seedbank",NA
-"29","Antelope","8","1","BOER","PG4",1,0,1,0.125,2021,"seedbank",NA
-"30","Antelope","8","1","SATR","A",6,0,6,0.75,2021,"seedbank",NA
-"31","Antelope","9","3","SATR","A",18,0,18,1,2021,"seedbank",NA
-"32","Antelope","10","1","BASC","A",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"33","Antelope","10","1","SATR","A",17,0,17,0.944444444444444,2021,"seedbank",NA
-"34","Antelope","11","2","BASC","A",1,0,1,0.0277777777777778,2021,"seedbank",NA
-"35","Antelope","11","2","BOER","PG4",3,0,3,0.0833333333333333,2021,"seedbank",NA
-"36","Antelope","11","2","ERSP","A",2,0,2,0.0555555555555556,2021,"seedbank",NA
-"37","Antelope","11","2","MEMO","A",1,0,1,0.0277777777777778,2021,"seedbank",NA
-"38","Antelope","11","2","PEVI","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA
-"39","Antelope","11","2","SATR","A",26,0,26,0.722222222222222,2021,"seedbank",NA
-"40","Antelope","11","2","SPHA","PF",1,0,1,0.0277777777777778,2021,"seedbank",NA
-"41","Antelope","11","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"42","Antelope","12","3","GUSA","S",1,0,1,0.0185185185185185,2021,"seedbank",NA
-"43","Antelope","12","3","PLJA","PG4",1,0,1,0.0185185185185185,2021,"seedbank",NA
-"44","Antelope","12","3","SATR","A",52,0,52,0.962962962962963,2021,"seedbank",NA
-"45","Arboretum","1","3","ACMI","PF",2,0,2,0.0344827586206897,2021,"seedbank",NA
-"46","Arboretum","1","3","ARFE","PF",3,0,3,0.0517241379310345,2021,"seedbank",NA
-"47","Arboretum","1","3","ERFL","A",1,0,1,0.0172413793103448,2021,"seedbank",NA
-"48","Arboretum","1","3","ERSP","A",40,0,40,0.689655172413793,2021,"seedbank",NA
-"49","Arboretum","1","3","LUKI","A",1,0,1,0.0172413793103448,2021,"seedbank",NA
-"50","Arboretum","1","3","SPHA","PF",6,0,6,0.103448275862069,2021,"seedbank",NA
-"51","Arboretum","1","3","TAOF","PF",6,1,5,0.0862068965517241,2021,"seedbank",NA
-"52","Arboretum","2","1","ACMI","PF",1,0,1,0.0303030303030303,2021,"seedbank",NA
-"53","Arboretum","2","1","ARFE","PF",4,0,4,0.121212121212121,2021,"seedbank",NA
-"54","Arboretum","2","1","CHSE","A",2,0,2,0.0606060606060606,2021,"seedbank",NA
-"55","Arboretum","2","1","ELEL","PG3",1,0,1,0.0303030303030303,2021,"seedbank",NA
-"56","Arboretum","2","1","ERSP","A",14,0,14,0.424242424242424,2021,"seedbank",NA
-"57","Arboretum","2","1","LUKI","A",1,0,1,0.0303030303030303,2021,"seedbank",NA
-"58","Arboretum","2","1","MUMO","PG4",1,0,1,0.0303030303030303,2021,"seedbank",NA
-"59","Arboretum","2","1","PEVI","PF",1,0,1,0.0303030303030303,2021,"seedbank",NA
-"60","Arboretum","2","1","SPHA","PF",6,0,6,0.181818181818182,2021,"seedbank",NA
-"61","Arboretum","2","1","TAOF","PF",3,1,2,0.0606060606060606,2021,"seedbank",NA
-"62","Arboretum","3","2","ACMI","PF",4,0,4,0.0396039603960396,2021,"seedbank",NA
-"63","Arboretum","3","2","ARCA","PF",2,0,2,0.0198019801980198,2021,"seedbank",NA
-"64","Arboretum","3","2","ARFE","PF",22,0,22,0.217821782178218,2021,"seedbank",NA
-"65","Arboretum","3","2","ASHU","PF",1,0,1,0.0099009900990099,2021,"seedbank",NA
-"66","Arboretum","3","2","ERSP","A",20,0,20,0.198019801980198,2021,"seedbank",NA
-"67","Arboretum","3","2","PEVI","PF",1,0,1,0.0099009900990099,2021,"seedbank",NA
-"68","Arboretum","3","2","POHI","PF",4,0,4,0.0396039603960396,2021,"seedbank",NA
-"69","Arboretum","3","2","SPHA","PF",42,0,42,0.415841584158416,2021,"seedbank",NA
-"70","Arboretum","3","2","TAOF","PF",6,1,5,0.0495049504950495,2021,"seedbank",NA
-"71","Arboretum","4","3","ACMI","PF",5,0,5,0.0354609929078014,2021,"seedbank",NA
-"72","Arboretum","4","3","ARCA","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"73","Arboretum","4","3","ARFE","PF",7,0,7,0.049645390070922,2021,"seedbank",NA
-"74","Arboretum","4","3","ASHU","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"75","Arboretum","4","3","CHAL","A",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"76","Arboretum","4","3","ERSP","A",72,0,72,0.51063829787234,2021,"seedbank",NA
-"77","Arboretum","4","3","LUKI","A",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"78","Arboretum","4","3","PEVI","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"79","Arboretum","4","3","POHI","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA
-"80","Arboretum","4","3","SPHA","PF",15,0,15,0.106382978723404,2021,"seedbank",NA
-"81","Arboretum","4","3","TAOF","PF",29,1,28,0.198581560283688,2021,"seedbank",NA
-"82","Arboretum","4","3","VETH","A",12,4,8,0.0567375886524823,2021,"seedbank",NA
-"83","Arboretum","5","1","ARFE","PF",16,0,16,0.533333333333333,2021,"seedbank",NA
-"84","Arboretum","5","1","ELEL","PG3",6,0,6,0.2,2021,"seedbank",NA
-"85","Arboretum","5","1","ERSP","A",5,0,5,0.166666666666667,2021,"seedbank",NA
-"86","Arboretum","5","1","SPHA","PF",1,0,1,0.0333333333333333,2021,"seedbank",NA
-"87","Arboretum","5","1","TAOF","PF",3,1,2,0.0666666666666667,2021,"seedbank",NA
-"88","Arboretum","5","1","VETH","A",1,4,0,0,2021,"seedbank",NA
-"89","Arboretum","6","1","ARCA","PF",4,0,4,0.148148148148148,2021,"seedbank",NA
-"90","Arboretum","6","1","ASHU","PF",1,0,1,0.037037037037037,2021,"seedbank",NA
-"91","Arboretum","6","1","BLTR","PG4",4,0,4,0.148148148148148,2021,"seedbank",NA
-"92","Arboretum","6","1","ELEL","PG3",5,0,5,0.185185185185185,2021,"seedbank",NA
-"93","Arboretum","6","1","TAOF","PF",14,1,13,0.481481481481481,2021,"seedbank",NA
-"94","Arboretum","6","1","VETH","A",1,4,0,0,2021,"seedbank",NA
-"95","Arboretum","7","3","ACMI","PF",1,0,1,0.00826446280991736,2021,"seedbank",NA
-"96","Arboretum","7","3","ANRO","PF",4,0,4,0.0330578512396694,2021,"seedbank",NA
-"97","Arboretum","7","3","ARFE","PF",8,0,8,0.0661157024793388,2021,"seedbank",NA
-"98","Arboretum","7","3","BLTR","PG4",4,0,4,0.0330578512396694,2021,"seedbank",NA
-"99","Arboretum","7","3","CHAL","A",1,0,1,0.00826446280991736,2021,"seedbank",NA
-"100","Arboretum","7","3","ELEL","PG3",6,0,6,0.0495867768595041,2021,"seedbank",NA
-"101","Arboretum","7","3","ERSP","A",32,0,32,0.264462809917355,2021,"seedbank",NA
-"102","Arboretum","7","3","SPHA","PF",1,0,1,0.00826446280991736,2021,"seedbank",NA
-"103","Arboretum","7","3","TAOF","PF",65,1,64,0.528925619834711,2021,"seedbank",NA
-"104","Arboretum","8","2","ARFE","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA
-"105","Arboretum","8","2","BLTR","PG4",11,0,11,0.305555555555556,2021,"seedbank",NA
-"106","Arboretum","8","2","CHAL","A",5,0,5,0.138888888888889,2021,"seedbank",NA
-"107","Arboretum","8","2","LUKI","A",1,0,1,0.0277777777777778,2021,"seedbank",NA
-"108","Arboretum","8","2","PEVI","PF",3,0,3,0.0833333333333333,2021,"seedbank",NA
-"109","Arboretum","8","2","POOL","A",4,1,3,0.0833333333333333,2021,"seedbank",NA
-"110","Arboretum","8","2","SPHA","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA
-"111","Arboretum","8","2","TAOF","PF",10,1,9,0.25,2021,"seedbank",NA
-"112","Arboretum","9","2","ACMI","PF",1,0,1,0.0217391304347826,2021,"seedbank",NA
-"113","Arboretum","9","2","ARCA","PF",3,0,3,0.0652173913043478,2021,"seedbank",NA
-"114","Arboretum","9","2","ARFE","PF",15,0,15,0.326086956521739,2021,"seedbank",NA
-"115","Arboretum","9","2","ASHU","PF",1,0,1,0.0217391304347826,2021,"seedbank",NA
-"116","Arboretum","9","2","ELEL","PG3",5,0,5,0.108695652173913,2021,"seedbank",NA
-"117","Arboretum","9","2","ERSP","A",12,0,12,0.260869565217391,2021,"seedbank",NA
-"118","Arboretum","9","2","SPHA","PF",9,0,9,0.195652173913043,2021,"seedbank",NA
-"119","Arboretum","10","3","ARFE","PF",4,0,4,0.0701754385964912,2021,"seedbank",NA
-"120","Arboretum","10","3","CHAL","A",1,0,1,0.0175438596491228,2021,"seedbank",NA
-"121","Arboretum","10","3","ERFL","A",1,0,1,0.0175438596491228,2021,"seedbank",NA
-"122","Arboretum","10","3","ERSP","A",26,0,26,0.456140350877193,2021,"seedbank",NA
-"123","Arboretum","10","3","PEVI","PF",2,0,2,0.0350877192982456,2021,"seedbank",NA
-"124","Arboretum","10","3","SPHA","PF",5,0,5,0.087719298245614,2021,"seedbank",NA
-"125","Arboretum","10","3","TAOF","PF",19,1,18,0.315789473684211,2021,"seedbank",NA
-"126","Arboretum","11","1","ACMI","PF",4,0,4,0.0597014925373134,2021,"seedbank",NA
-"127","Arboretum","11","1","ARCA","PF",2,0,2,0.0298507462686567,2021,"seedbank",NA
-"128","Arboretum","11","1","ELEL","PG3",1,0,1,0.0149253731343284,2021,"seedbank",NA
-"129","Arboretum","11","1","ERSP","A",33,0,33,0.492537313432836,2021,"seedbank",NA
-"130","Arboretum","11","1","PEVI","PF",2,0,2,0.0298507462686567,2021,"seedbank",NA
-"131","Arboretum","11","1","SPHA","PF",8,0,8,0.119402985074627,2021,"seedbank",NA
-"132","Arboretum","11","1","TAOF","PF",18,1,17,0.253731343283582,2021,"seedbank",NA
-"133","Arboretum","12","2","ANRO","PF",1,0,1,0.024390243902439,2021,"seedbank",NA
-"134","Arboretum","12","2","ARCA","PF",1,0,1,0.024390243902439,2021,"seedbank",NA
-"135","Arboretum","12","2","ARFE","PF",7,0,7,0.170731707317073,2021,"seedbank",NA
-"136","Arboretum","12","2","ELEL","PG3",3,0,3,0.0731707317073171,2021,"seedbank",NA
-"137","Arboretum","12","2","ERSP","A",17,0,17,0.414634146341463,2021,"seedbank",NA
-"138","Arboretum","12","2","SPHA","PF",10,0,10,0.24390243902439,2021,"seedbank",NA
-"139","Arboretum","12","2","TAOF","PF",3,1,2,0.0487804878048781,2021,"seedbank",NA
-"140","Arboretum","12","2","VETH","A",3,4,0,0,2021,"seedbank",NA
-"141","Black Point","1","3","SATR","A",0,0,0,NA,2021,"seedbank",NA
-"142","Black Point","2","3","SATR","A",4,0,4,1,2021,"seedbank",NA
-"143","Black Point","2","3","VETH","A",1,4,0,0,2021,"seedbank",NA
-"144","Black Point","3","1","PLJA","PG4",3,0,3,0.5,2021,"seedbank",NA
-"145","Black Point","3","1","SATR","A",3,0,3,0.5,2021,"seedbank",NA
-"146","Black Point","4","3","BOER","PG4",3,0,3,0.230769230769231,2021,"seedbank",NA
-"147","Black Point","4","3","PLJA","PG4",1,0,1,0.0769230769230769,2021,"seedbank",NA
-"148","Black Point","4","3","SATR","A",2,0,2,0.153846153846154,2021,"seedbank",NA
-"149","Black Point","4","3","SPHA","PF",7,0,7,0.538461538461538,2021,"seedbank",NA
-"150","Black Point","5","1","BOER","PG4",1,0,1,0.25,2021,"seedbank",NA
-"151","Black Point","5","1","CAJA","PF",1,0,1,0.25,2021,"seedbank",NA
-"152","Black Point","5","1","PLJA","PG4",2,0,2,0.5,2021,"seedbank",NA
-"153","Black Point","5","1","SATR","A",0,0,0,0,2021,"seedbank",NA
-"154","Black Point","6","1","SATR","A",1,0,1,1,2021,"seedbank",NA
-"155","Black Point","7","3","ERFL","A",1,0,1,0.0666666666666667,2021,"seedbank",NA
-"156","Black Point","7","3","PLJA","PG4",7,0,7,0.466666666666667,2021,"seedbank",NA
-"157","Black Point","7","3","SATR","A",7,0,7,0.466666666666667,2021,"seedbank",NA
-"158","Black Point","8","1","DAPU","PG4",1,0,1,0.0666666666666667,2021,"seedbank",NA
-"159","Black Point","8","1","ERSP","A",2,0,2,0.133333333333333,2021,"seedbank",NA
-"160","Black Point","8","1","SATR","A",11,0,11,0.733333333333333,2021,"seedbank",NA
-"161","Black Point","8","1","SPHA","PF",1,0,1,0.0666666666666667,2021,"seedbank",NA
-"162","Black Point","9","2","BOER","PG4",1,0,1,0.0434782608695652,2021,"seedbank",NA
-"163","Black Point","9","2","CHSE","A",1,0,1,0.0434782608695652,2021,"seedbank",NA
-"164","Black Point","9","2","PLJA","PG4",1,0,1,0.0434782608695652,2021,"seedbank",NA
-"165","Black Point","9","2","SATR","A",20,0,20,0.869565217391304,2021,"seedbank",NA
-"166","Black Point","10","2","BASC","A",2,0,2,0.125,2021,"seedbank",NA
-"167","Black Point","10","2","BOER","PG4",1,0,1,0.0625,2021,"seedbank",NA
-"168","Black Point","10","2","ERSP","A",1,0,1,0.0625,2021,"seedbank",NA
-"169","Black Point","10","2","PLJA","PG4",2,0,2,0.125,2021,"seedbank",NA
-"170","Black Point","10","2","SATR","A",10,0,10,0.625,2021,"seedbank",NA
-"171","Black Point","10","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"172","Black Point","11","2","ERFL","A",1,0,1,0.2,2021,"seedbank",NA
-"173","Black Point","11","2","PLJA","PG4",4,0,4,0.8,2021,"seedbank",NA
-"174","Black Point","11","2","SATR","A",0,0,0,0,2021,"seedbank",NA
-"175","Black Point","12","2","ERFL","A",1,0,1,0.25,2021,"seedbank",NA
-"176","Black Point","12","2","SATR","A",3,0,3,0.75,2021,"seedbank",NA
-"177","Blank","3","Blank","POOL","A",1,1,0,NA,2021,"seedbank",NA
-"178","Blank","6","Blank","TAOF","PF",1,1,0,NA,2021,"seedbank",NA
-"179","Blank","10","Blank","POOL","A",1,1,0,NA,2021,"seedbank",NA
-"180","Blank","10","Blank","TAOF","PF",1,1,0,NA,2021,"seedbank",NA
-"181","Blank","11","Blank","VETH","A",4,4,0,NA,2021,"seedbank",NA
-"182","Blue Chute","1","2","BASC","A",7,0,7,0.7,2021,"seedbank",NA
-"183","Blue Chute","1","2","BOGR","PG4",3,0,3,0.3,2021,"seedbank",NA
-"184","Blue Chute","2","1","BASC","A",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"185","Blue Chute","2","1","BOGR","PG4",6,0,6,0.333333333333333,2021,"seedbank",NA
-"186","Blue Chute","2","1","CAJA","PF",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"187","Blue Chute","2","1","ELEL","PG3",2,0,2,0.111111111111111,2021,"seedbank",NA
-"188","Blue Chute","2","1","ERSP","A",2,0,2,0.111111111111111,2021,"seedbank",NA
-"189","Blue Chute","2","1","MEAL","A",1,0,1,0.0555555555555556,2021,"seedbank",NA
-"190","Blue Chute","2","1","SATR","A",5,0,5,0.277777777777778,2021,"seedbank",NA
-"191","Blue Chute","3","1","BASC","A",3,0,3,0.428571428571429,2021,"seedbank",NA
-"192","Blue Chute","3","1","BOGR","PG4",4,0,4,0.571428571428571,2021,"seedbank",NA
-"193","Blue Chute","3","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"194","Blue Chute","4","3","BASC","A",1,0,1,0.25,2021,"seedbank",NA
-"195","Blue Chute","4","3","BOGR","PG4",1,0,1,0.25,2021,"seedbank",NA
-"196","Blue Chute","4","3","ELEL","PG3",2,0,2,0.5,2021,"seedbank",NA
-"197","Blue Chute","5","1","BASC","A",1,0,1,0.166666666666667,2021,"seedbank",NA
-"198","Blue Chute","5","1","BOGR","PG4",1,0,1,0.166666666666667,2021,"seedbank",NA
-"199","Blue Chute","5","1","CHSE","A",1,0,1,0.166666666666667,2021,"seedbank",NA
-"200","Blue Chute","5","1","ELEL","PG3",2,0,2,0.333333333333333,2021,"seedbank",NA
-"201","Blue Chute","5","1","LUKI","A",1,0,1,0.166666666666667,2021,"seedbank",NA
-"202","Blue Chute","6","2","BASC","A",6,0,6,0.230769230769231,2021,"seedbank",NA
-"203","Blue Chute","6","2","BOGR","PG4",16,0,16,0.615384615384615,2021,"seedbank",NA
-"204","Blue Chute","6","2","ELEL","PG3",4,0,4,0.153846153846154,2021,"seedbank",NA
-"205","Blue Chute","6","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"206","Blue Chute","6","2","VETH","A",1,4,0,0,2021,"seedbank",NA
-"207","Blue Chute","7","1","BASC","A",1,0,1,0.1,2021,"seedbank",NA
-"208","Blue Chute","7","1","BOGR","PG4",8,0,8,0.8,2021,"seedbank",NA
-"209","Blue Chute","7","1","SATR","A",1,0,1,0.1,2021,"seedbank",NA
-"210","Blue Chute","7","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"211","Blue Chute","8","3","BASC","A",3,0,3,0.375,2021,"seedbank",NA
-"212","Blue Chute","8","3","BOGR","PG4",2,0,2,0.25,2021,"seedbank",NA
-"213","Blue Chute","8","3","ELEL","PG3",2,0,2,0.25,2021,"seedbank",NA
-"214","Blue Chute","8","3","SATR","A",1,0,1,0.125,2021,"seedbank",NA
-"215","Blue Chute","9","2","BOGR","PG4",4,0,4,0.8,2021,"seedbank",NA
-"216","Blue Chute","9","2","CHER","PF",1,0,1,0.2,2021,"seedbank",NA
-"217","Blue Chute","10","3","AMDI","PF",1,0,1,0.027027027027027,2021,"seedbank",NA
-"218","Blue Chute","10","3","BASC","A",7,0,7,0.189189189189189,2021,"seedbank",NA
-"219","Blue Chute","10","3","BOGR","PG4",1,0,1,0.027027027027027,2021,"seedbank",NA
-"220","Blue Chute","10","3","CHER","PF",23,0,23,0.621621621621622,2021,"seedbank",NA
-"221","Blue Chute","10","3","ELEL","PG3",4,0,4,0.108108108108108,2021,"seedbank",NA
-"222","Blue Chute","10","3","MEAL","A",1,0,1,0.027027027027027,2021,"seedbank",NA
-"223","Blue Chute","11","2","BASC","A",2,0,2,0.4,2021,"seedbank",NA
-"224","Blue Chute","11","2","BOGR","PG4",2,0,2,0.4,2021,"seedbank",NA
-"225","Blue Chute","11","2","ELEL","PG3",1,0,1,0.2,2021,"seedbank",NA
-"226","Blue Chute","12","3","BASC","A",3,0,3,0.3,2021,"seedbank",NA
-"227","Blue Chute","12","3","BOGR","PG4",2,0,2,0.2,2021,"seedbank",NA
-"228","Blue Chute","12","3","CHER","PF",4,0,4,0.4,2021,"seedbank",NA
-"229","Blue Chute","12","3","ELEL","PG3",1,0,1,0.1,2021,"seedbank",NA
-"230","Camp Colton","1","1","ANRO","PF",27,0,27,0.152542372881356,2021,"seedbank",NA
-"231","Camp Colton","1","1","BRPO","PG3",3,0,3,0.0169491525423729,2021,"seedbank",NA
-"232","Camp Colton","1","1","ELEL","PG3",6,0,6,0.0338983050847458,2021,"seedbank",NA
-"233","Camp Colton","1","1","ERFL","A",1,0,1,0.00564971751412429,2021,"seedbank",NA
-"234","Camp Colton","1","1","MUMO","PG4",4,0,4,0.0225988700564972,2021,"seedbank",NA
-"235","Camp Colton","1","1","POPR","PG3",52,0,52,0.293785310734463,2021,"seedbank",NA
-"236","Camp Colton","1","1","VETH","A",88,4,84,0.474576271186441,2021,"seedbank",NA
-"237","Camp Colton","2","3","ANRO","PF",10,0,10,0.0740740740740741,2021,"seedbank",NA
-"238","Camp Colton","2","3","ELEL","PG3",1,0,1,0.00740740740740741,2021,"seedbank",NA
-"239","Camp Colton","2","3","MUMO","PG4",2,0,2,0.0148148148148148,2021,"seedbank",NA
-"240","Camp Colton","2","3","POPR","PG3",25,0,25,0.185185185185185,2021,"seedbank",NA
-"241","Camp Colton","2","3","SPHA","PF",1,0,1,0.00740740740740741,2021,"seedbank",NA
-"242","Camp Colton","2","3","VETH","A",100,4,96,0.711111111111111,2021,"seedbank",NA
-"243","Camp Colton","3","1","ANRO","PF",12,0,12,0.0502092050209205,2021,"seedbank",NA
-"244","Camp Colton","3","1","BRPO","PG3",1,0,1,0.00418410041841004,2021,"seedbank",NA
-"245","Camp Colton","3","1","ELEL","PG3",3,0,3,0.0125523012552301,2021,"seedbank",NA
-"246","Camp Colton","3","1","ERSP","A",5,0,5,0.0209205020920502,2021,"seedbank",NA
-"247","Camp Colton","3","1","MUMO","PG4",0,0,0,0,2021,"seedbank",NA
-"248","Camp Colton","3","1","POHI","PF",2,0,2,0.00836820083682008,2021,"seedbank",NA
-"249","Camp Colton","3","1","POPR","PG3",74,0,74,0.309623430962343,2021,"seedbank",NA
-"250","Camp Colton","3","1","TAOF","PF",5,1,4,0.0167364016736402,2021,"seedbank",NA
-"251","Camp Colton","3","1","VETH","A",142,4,138,0.577405857740586,2021,"seedbank",NA
-"252","Camp Colton","4","2","ANRO","PF",4,0,4,0.0218579234972678,2021,"seedbank",NA
-"253","Camp Colton","4","2","ARFE","PF",1,0,1,0.00546448087431694,2021,"seedbank",NA
-"254","Camp Colton","4","2","ELEL","PG3",15,0,15,0.0819672131147541,2021,"seedbank",NA
-"255","Camp Colton","4","2","ERSP","A",3,0,3,0.0163934426229508,2021,"seedbank",NA
-"256","Camp Colton","4","2","MUMO","PG4",4,0,4,0.0218579234972678,2021,"seedbank",NA
-"257","Camp Colton","4","2","POHI","PF",1,0,1,0.00546448087431694,2021,"seedbank",NA
-"258","Camp Colton","4","2","POPR","PG3",62,0,62,0.33879781420765,2021,"seedbank",NA
-"259","Camp Colton","4","2","VETH","A",97,4,93,0.508196721311475,2021,"seedbank",NA
-"260","Camp Colton","5","3","ANRO","PF",1,0,1,0.00549450549450549,2021,"seedbank",NA
-"261","Camp Colton","5","3","ELEL","PG3",2,0,2,0.010989010989011,2021,"seedbank",NA
-"262","Camp Colton","5","3","ERSP","A",8,0,8,0.043956043956044,2021,"seedbank",NA
-"263","Camp Colton","5","3","HYHO","PF",2,0,2,0.010989010989011,2021,"seedbank",NA
-"264","Camp Colton","5","3","IRMI","PF",2,0,2,0.010989010989011,2021,"seedbank",NA
-"265","Camp Colton","5","3","MUMO","PG4",1,0,1,0.00549450549450549,2021,"seedbank",NA
-"266","Camp Colton","5","3","POHI","PF",4,0,4,0.021978021978022,2021,"seedbank",NA
-"267","Camp Colton","5","3","POPR","PG3",62,0,62,0.340659340659341,2021,"seedbank",NA
-"268","Camp Colton","5","3","SPHA","PF",1,0,1,0.00549450549450549,2021,"seedbank",NA
-"269","Camp Colton","5","3","TAOF","PF",2,1,1,0.00549450549450549,2021,"seedbank",NA
-"270","Camp Colton","5","3","VETH","A",102,4,98,0.538461538461538,2021,"seedbank",NA
-"271","Camp Colton","6","2","ANRO","PF",10,0,10,0.078740157480315,2021,"seedbank",NA
-"272","Camp Colton","6","2","CHSE","A",1,0,1,0.0078740157480315,2021,"seedbank",NA
-"273","Camp Colton","6","2","ELEL","PG3",8,0,8,0.062992125984252,2021,"seedbank",NA
-"274","Camp Colton","6","2","MUMO","PG4",1,0,1,0.0078740157480315,2021,"seedbank",NA
-"275","Camp Colton","6","2","POHI","PF",1,0,1,0.0078740157480315,2021,"seedbank",NA
-"276","Camp Colton","6","2","POPR","PG3",38,0,38,0.299212598425197,2021,"seedbank",NA
-"277","Camp Colton","6","2","VETH","A",72,4,68,0.535433070866142,2021,"seedbank",NA
-"278","Camp Colton","7","1","ANRO","PF",2,0,2,0.0153846153846154,2021,"seedbank",NA
-"279","Camp Colton","7","1","BRPO","PG3",2,0,2,0.0153846153846154,2021,"seedbank",NA
-"280","Camp Colton","7","1","ELEL","PG3",11,0,11,0.0846153846153846,2021,"seedbank",NA
-"281","Camp Colton","7","1","ERSP","A",13,0,13,0.1,2021,"seedbank",NA
-"282","Camp Colton","7","1","MUMO","PG4",6,0,6,0.0461538461538462,2021,"seedbank",NA
-"283","Camp Colton","7","1","POHI","PF",1,0,1,0.00769230769230769,2021,"seedbank",NA
-"284","Camp Colton","7","1","POPR","PG3",40,0,40,0.307692307692308,2021,"seedbank",NA
-"285","Camp Colton","7","1","SPHA","PF",4,0,4,0.0307692307692308,2021,"seedbank",NA
-"286","Camp Colton","7","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"287","Camp Colton","7","1","VETH","A",55,4,51,0.392307692307692,2021,"seedbank",NA
-"288","Camp Colton","8","3","ANRO","PF",5,0,5,0.0241545893719807,2021,"seedbank",NA
-"289","Camp Colton","8","3","ELEL","PG3",3,0,3,0.0144927536231884,2021,"seedbank",NA
-"290","Camp Colton","8","3","ERSP","A",6,0,6,0.0289855072463768,2021,"seedbank",NA
-"291","Camp Colton","8","3","MUMO","PG4",2,0,2,0.00966183574879227,2021,"seedbank",NA
-"292","Camp Colton","8","3","OXLA","PF",1,0,1,0.00483091787439614,2021,"seedbank",NA
-"293","Camp Colton","8","3","POHI","PF",3,0,3,0.0144927536231884,2021,"seedbank",NA
-"294","Camp Colton","8","3","POPR","PG3",89,0,89,0.429951690821256,2021,"seedbank",NA
-"295","Camp Colton","8","3","SPHA","PF",1,0,1,0.00483091787439614,2021,"seedbank",NA
-"296","Camp Colton","8","3","VETH","A",101,4,97,0.468599033816425,2021,"seedbank",NA
-"297","Camp Colton","9","2","ANRO","PF",14,0,14,0.099290780141844,2021,"seedbank",NA
-"298","Camp Colton","9","2","ELEL","PG3",4,0,4,0.0283687943262411,2021,"seedbank",NA
-"299","Camp Colton","9","2","MUMO","PG4",2,0,2,0.0141843971631206,2021,"seedbank",NA
-"300","Camp Colton","9","2","POPR","PG3",84,0,84,0.595744680851064,2021,"seedbank",NA
-"301","Camp Colton","9","2","VETH","A",41,4,37,0.26241134751773,2021,"seedbank",NA
-"302","Camp Colton","10","3","ACMI","PF",3,0,3,0.025,2021,"seedbank",NA
-"303","Camp Colton","10","3","ANRO","PF",1,0,1,0.00833333333333333,2021,"seedbank",NA
-"304","Camp Colton","10","3","ELEL","PG3",5,0,5,0.0416666666666667,2021,"seedbank",NA
-"305","Camp Colton","10","3","ERFL","A",3,0,3,0.025,2021,"seedbank",NA
-"306","Camp Colton","10","3","MUMO","PG4",0,0,0,0,2021,"seedbank",NA
-"307","Camp Colton","10","3","OXLA","PF",1,0,1,0.00833333333333333,2021,"seedbank",NA
-"308","Camp Colton","10","3","PEVI","PF",2,0,2,0.0166666666666667,2021,"seedbank",NA
-"309","Camp Colton","10","3","POPR","PG3",60,0,60,0.5,2021,"seedbank",NA
-"310","Camp Colton","10","3","SPHA","PF",3,0,3,0.025,2021,"seedbank",NA
-"311","Camp Colton","10","3","VETH","A",46,4,42,0.35,2021,"seedbank",NA
-"312","Camp Colton","11","2","ANRO","PF",12,0,12,0.069364161849711,2021,"seedbank",NA
-"313","Camp Colton","11","2","ARFE","PF",3,0,3,0.0173410404624277,2021,"seedbank",NA
-"314","Camp Colton","11","2","BRPO","PG3",1,0,1,0.00578034682080925,2021,"seedbank",NA
-"315","Camp Colton","11","2","ELEL","PG3",10,0,10,0.0578034682080925,2021,"seedbank",NA
-"316","Camp Colton","11","2","ERSP","A",13,0,13,0.0751445086705202,2021,"seedbank",NA
-"317","Camp Colton","11","2","MUMO","PG4",5,0,5,0.0289017341040462,2021,"seedbank",NA
-"318","Camp Colton","11","2","POHI","PF",5,0,5,0.0289017341040462,2021,"seedbank",NA
-"319","Camp Colton","11","2","POPR","PG3",103,0,103,0.595375722543353,2021,"seedbank",NA
-"320","Camp Colton","11","2","SPHA","PF",6,0,6,0.0346820809248555,2021,"seedbank",NA
-"321","Camp Colton","11","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA
-"322","Camp Colton","11","2","VETH","A",19,4,15,0.0867052023121387,2021,"seedbank",NA
-"323","Camp Colton","12","1","ANRO","PF",13,0,13,0.1015625,2021,"seedbank",NA
-"324","Camp Colton","12","1","ERFL","A",1,0,1,0.0078125,2021,"seedbank",NA
-"325","Camp Colton","12","1","IRMI","PF",1,0,1,0.0078125,2021,"seedbank",NA
-"326","Camp Colton","12","1","MUMO","PG4",6,0,6,0.046875,2021,"seedbank",NA
-"327","Camp Colton","12","1","POHI","PF",1,0,1,0.0078125,2021,"seedbank",NA
-"328","Camp Colton","12","1","POPR","PG3",78,0,78,0.609375,2021,"seedbank",NA
-"329","Camp Colton","12","1","SPHA","PF",4,0,4,0.03125,2021,"seedbank",NA
-"330","Camp Colton","12","1","VETH","A",28,4,24,0.1875,2021,"seedbank",NA
-"331","Antelope","1","Water Addition","BOER","PG4",NA,NA,NA,0.178798241328774,2021,"aboveground",9.15
-"332","Antelope","1","Water Addition","CHSES","A",NA,NA,NA,0.00195407914020518,2021,"aboveground",0.1
-"333","Antelope","1","Water Addition","KOAM","PF",NA,NA,NA,0.0156326331216414,2021,"aboveground",0.8
-"334","Antelope","1","Water Addition","PLJA","PG4",NA,NA,NA,0.102589154860772,2021,"aboveground",5.25
-"335","Antelope","1","Water Addition","SATR","A",NA,NA,NA,0.701025891548608,2021,"aboveground",35.875
-"336","Antelope","2","Water Addition","BOER","PG4",NA,NA,NA,0.180290644868302,2021,"aboveground",9.925
-"337","Antelope","2","Water Addition","CHSES","A",NA,NA,NA,0.00136239782016349,2021,"aboveground",0.075
-"338","Antelope","2","Water Addition","PLJA","PG4",NA,NA,NA,0.163487738419619,2021,"aboveground",9
-"339","Antelope","2","Water Addition","SATR","A",NA,NA,NA,0.654859218891916,2021,"aboveground",36.05
-"340","Antelope","3","Control","BOER","PG4",NA,NA,NA,0.0472673559822747,2021,"aboveground",2.4
-"341","Antelope","3","Control","CAJA","PF",NA,NA,NA,0.068931560807484,2021,"aboveground",3.5
-"342","Antelope","3","Control","KOAM","PF",NA,NA,NA,0.000492368291482029,2021,"aboveground",0.025
-"343","Antelope","3","Control","PLJA","PG4",NA,NA,NA,0.103397341211226,2021,"aboveground",5.25
-"344","Antelope","3","Control","SATR","A",NA,NA,NA,0.779911373707533,2021,"aboveground",39.6
-"345","Antelope","4","Water Exclusion","BOER","PG4",NA,NA,NA,0.00878477306002928,2021,"aboveground",0.3
-"346","Antelope","4","Water Exclusion","CHEN","A",NA,NA,NA,0.00878477306002928,2021,"aboveground",0.3
-"347","Antelope","4","Water Exclusion","SATR","A",NA,NA,NA,0.982430453879941,2021,"aboveground",33.55
-"348","Antelope","5","Water Addition","BOER","PG4",NA,NA,NA,0.300286841161707,2021,"aboveground",16.75
-"349","Antelope","5","Water Addition","CHSES","A",NA,NA,NA,8.96378630333453e-05,2021,"aboveground",0.005
-"350","Antelope","5","Water Addition","PLJA","PG4",NA,NA,NA,0.124148440301183,2021,"aboveground",6.925
-"351","Antelope","5","Water Addition","SATR","A",NA,NA,NA,0.575475080674077,2021,"aboveground",32.1
-"352","Antelope","6","Water Exclusion","BOER","PG4",NA,NA,NA,0.0204220558202859,2021,"aboveground",0.75
-"353","Antelope","6","Water Exclusion","KOAM","PF",NA,NA,NA,0.00136147038801906,2021,"aboveground",0.05
-"354","Antelope","6","Water Exclusion","LILE","PF",NA,NA,NA,0.0136147038801906,2021,"aboveground",0.5
-"355","Antelope","6","Water Exclusion","SATR","A",NA,NA,NA,0.797821647379169,2021,"aboveground",29.3
-"356","Antelope","6","Water Exclusion","SPHA","PF",NA,NA,NA,0.163376446562287,2021,"aboveground",6
-"357","Antelope","6","Water Exclusion","UKFO","A",NA,NA,NA,0.00340367597004765,2021,"aboveground",0.125
-"358","Antelope","7","Control","BOER","PG4",NA,NA,NA,0.189646831156265,2021,"aboveground",9.8
-"359","Antelope","7","Control","CHSES","A",NA,NA,NA,0.000967585873246251,2021,"aboveground",0.05
-"360","Antelope","7","Control","KOAM","PF",NA,NA,NA,0.00290275761973875,2021,"aboveground",0.15
-"361","Antelope","7","Control","PLJA","PG4",NA,NA,NA,0.183841315916788,2021,"aboveground",9.5
-"362","Antelope","7","Control","SATR","A",NA,NA,NA,0.622157716497339,2021,"aboveground",32.15
-"363","Antelope","7","Control","UKFO","A",NA,NA,NA,0.000483792936623125,2021,"aboveground",0.025
-"364","Antelope","8","Control","BOER","PG4",NA,NA,NA,0.195522388059701,2021,"aboveground",9.825
-"365","Antelope","8","Control","CHSES","A",NA,NA,NA,0.00597014925373134,2021,"aboveground",0.3
-"366","Antelope","8","Control","KOAM","PF",NA,NA,NA,0.0378109452736318,2021,"aboveground",1.9
-"367","Antelope","8","Control","PLJA","PG4",NA,NA,NA,0.199004975124378,2021,"aboveground",10
-"368","Antelope","8","Control","SATR","A",NA,NA,NA,0.560696517412935,2021,"aboveground",28.175
-"369","Antelope","8","Control","SPHA","PF",NA,NA,NA,0.000995024875621891,2021,"aboveground",0.05
-"370","Antelope","9","Water Exclusion","PLJA","PG4",NA,NA,NA,0.00116144018583043,2021,"aboveground",0.05
-"371","Antelope","9","Water Exclusion","SATR","A",NA,NA,NA,0.99883855981417,2021,"aboveground",43
-"372","Antelope","10","Control","BOER","PG4",NA,NA,NA,0.159194876486734,2021,"aboveground",8.7
-"373","Antelope","10","Control","CHSES","A",NA,NA,NA,0.00274473924977127,2021,"aboveground",0.15
-"374","Antelope","10","Control","KOAM","PF",NA,NA,NA,0.000914913083257091,2021,"aboveground",0.05
-"375","Antelope","10","Control","SATR","A",NA,NA,NA,0.837145471180238,2021,"aboveground",45.75
-"376","Antelope","11","Water Addition","BOER","PG4",NA,NA,NA,0.247759620453347,2021,"aboveground",11.75
-"377","Antelope","11","Water Addition","CHSES","A",NA,NA,NA,0.00210859251449657,2021,"aboveground",0.1
-"378","Antelope","11","Water Addition","KOAM","PF",NA,NA,NA,0.00579862941486558,2021,"aboveground",0.275
-"379","Antelope","11","Water Addition","PLJA","PG4",NA,NA,NA,0.00105429625724829,2021,"aboveground",0.05
-"380","Antelope","11","Water Addition","SATR","A",NA,NA,NA,0.743278861360042,2021,"aboveground",35.25
-"381","Antelope","12","Water Exclusion","KOAM","PF",NA,NA,NA,0.00295508274231679,2021,"aboveground",0.125
-"382","Antelope","12","Water Exclusion","SATR","A",NA,NA,NA,0.997044917257683,2021,"aboveground",42.175
-"383","Arboretum","1","Water Exclusion","ACMI","PF",NA,NA,NA,0.00152683410947401,2021,"aboveground",0.1
-"384","Arboretum","1","Water Exclusion","ARCA","PF",NA,NA,NA,0.0152683410947401,2021,"aboveground",1
-"385","Arboretum","1","Water Exclusion","ARFE","PF",NA,NA,NA,0.00916100465684403,2021,"aboveground",0.6
-"386","Arboretum","1","Water Exclusion","ASHU","PF",NA,NA,NA,0.00381708527368501,2021,"aboveground",0.25
-"387","Arboretum","1","Water Exclusion","COAR","PF",NA,NA,NA,0.431330635926407,2021,"aboveground",28.25
-"388","Arboretum","1","Water Exclusion","ERFL","A",NA,NA,NA,0.00626001984884342,2021,"aboveground",0.41
-"389","Arboretum","1","Water Exclusion","LASE","A",NA,NA,NA,0.0229025116421101,2021,"aboveground",1.5
-"390","Arboretum","1","Water Exclusion","LUKI","A",NA,NA,NA,0.194671348957936,2021,"aboveground",12.75
-"391","Arboretum","1","Water Exclusion","PLRI","PG4",NA,NA,NA,0.00190854263684251,2021,"aboveground",0.125
-"392","Arboretum","1","Water Exclusion","POHI","PF",NA,NA,NA,0.221390945873731,2021,"aboveground",14.5
-"393","Arboretum","1","Water Exclusion","PSMO","PF",NA,NA,NA,0.0229025116421101,2021,"aboveground",1.5
-"394","Arboretum","1","Water Exclusion","TRDU","A",NA,NA,NA,0.0687075349263302,2021,"aboveground",4.5
-"395","Arboretum","1","Water Exclusion","UKGR","PG3",NA,NA,NA,0.000152683410947401,2021,"aboveground",0.01
-"396","Arboretum","2","Control","ACMI","PF",NA,NA,NA,0.0425143289034452,2021,"aboveground",3.375
-"397","Arboretum","2","Control","ALGE","PF",NA,NA,NA,0.053536562322857,2021,"aboveground",4.25
-"398","Arboretum","2","Control","ANRO","PF",NA,NA,NA,0.00157460477420168,2021,"aboveground",0.125
-"399","Arboretum","2","Control","ARCA","PF",NA,NA,NA,0.207847830194621,2021,"aboveground",16.5
-"400","Arboretum","2","Control","ARFE","PF",NA,NA,NA,0.0251936763872268,2021,"aboveground",2
-"401","Arboretum","2","Control","ASHU","PF",NA,NA,NA,0.0163758896516974,2021,"aboveground",1.3
-"402","Arboretum","2","Control","BOGR","PG4",NA,NA,NA,0.00503873527744536,2021,"aboveground",0.4
-"403","Arboretum","2","Control","BRPO","PG3",NA,NA,NA,0.0251936763872268,2021,"aboveground",2
-"404","Arboretum","2","Control","CHEN","A",NA,NA,NA,0.00503873527744536,2021,"aboveground",0.4
-"405","Arboretum","2","Control","COAR","PF",NA,NA,NA,0.0488127480002519,2021,"aboveground",3.875
-"406","Arboretum","2","Control","ELEL","PG3",NA,NA,NA,0.0053536562322857,2021,"aboveground",0.425
-"407","Arboretum","2","Control","EPBR","A",NA,NA,NA,0.0881778673552938,2021,"aboveground",7
-"408","Arboretum","2","Control","ERFL","A",NA,NA,NA,0.00264533602065881,2021,"aboveground",0.21
-"409","Arboretum","2","Control","FEAR","PG3",NA,NA,NA,0.0680229262455124,2021,"aboveground",5.4
-"410","Arboretum","2","Control","LILE","PF",NA,NA,NA,0.000314920954840335,2021,"aboveground",0.025
-"411","Arboretum","2","Control","LUKI","A",NA,NA,NA,0.110222334194117,2021,"aboveground",8.75
-"412","Arboretum","2","Control","MUMO","PG4",NA,NA,NA,0.0132266801032941,2021,"aboveground",1.05
-"413","Arboretum","2","Control","MURI","PG4",NA,NA,NA,0.0566857718712603,2021,"aboveground",4.5
-"414","Arboretum","2","Control","PODO","A",NA,NA,NA,0.00062984190968067,2021,"aboveground",0.05
-"415","Arboretum","2","Control","POHI","PF",NA,NA,NA,0.214146249291428,2021,"aboveground",17
-"416","Arboretum","2","Control","PSMO","PF",NA,NA,NA,0.00944762864521005,2021,"aboveground",0.75
-"417","Arboretum","3","Water Addition","ACMI","PF",NA,NA,NA,0.17289972899729,2021,"aboveground",15.95
-"418","Arboretum","3","Water Addition","ALGE","PF",NA,NA,NA,0.010840108401084,2021,"aboveground",1
-"419","Arboretum","3","Water Addition","ANRO","PF",NA,NA,NA,0.0300813008130081,2021,"aboveground",2.775
-"420","Arboretum","3","Water Addition","ARCA","PF",NA,NA,NA,0.043360433604336,2021,"aboveground",4
-"421","Arboretum","3","Water Addition","ARFE","PF",NA,NA,NA,0.013550135501355,2021,"aboveground",1.25
-"422","Arboretum","3","Water Addition","ASHU","PF",NA,NA,NA,0.100271002710027,2021,"aboveground",9.25
-"423","Arboretum","3","Water Addition","BOGR","PG4",NA,NA,NA,0.0257452574525745,2021,"aboveground",2.375
-"424","Arboretum","3","Water Addition","CAGE","PG3",NA,NA,NA,0.00813008130081301,2021,"aboveground",0.75
-"425","Arboretum","3","Water Addition","CIWH","PF",NA,NA,NA,0.0704607046070461,2021,"aboveground",6.5
-"426","Arboretum","3","Water Addition","ELEL","PG3",NA,NA,NA,0.0596205962059621,2021,"aboveground",5.5
-"427","Arboretum","3","Water Addition","ERFL","A",NA,NA,NA,0.0021680216802168,2021,"aboveground",0.2
-"428","Arboretum","3","Water Addition","ERRA","PF",NA,NA,NA,0.002710027100271,2021,"aboveground",0.25
-"429","Arboretum","3","Water Addition","FEAR","PG3",NA,NA,NA,0.0487804878048781,2021,"aboveground",4.5
-"430","Arboretum","3","Water Addition","LASE","A",NA,NA,NA,0.0013550135501355,2021,"aboveground",0.125
-"431","Arboretum","3","Water Addition","LILE","PF",NA,NA,NA,0.000542005420054201,2021,"aboveground",0.05
-"432","Arboretum","3","Water Addition","LUKI","A",NA,NA,NA,0.024390243902439,2021,"aboveground",2.25
-"433","Arboretum","3","Water Addition","MUMO","PG4",NA,NA,NA,0.0024390243902439,2021,"aboveground",0.225
-"434","Arboretum","3","Water Addition","MURI","PG4",NA,NA,NA,0.018970189701897,2021,"aboveground",1.75
-"435","Arboretum","3","Water Addition","PODO","A",NA,NA,NA,0.0303523035230352,2021,"aboveground",2.8
-"436","Arboretum","3","Water Addition","POHI","PF",NA,NA,NA,0.317073170731707,2021,"aboveground",29.25
-"437","Arboretum","3","Water Addition","TRDU","A",NA,NA,NA,0.016260162601626,2021,"aboveground",1.5
-"438","Arboretum","4","Water Exclusion","ANRO","PF",NA,NA,NA,0.0142726649920073,2021,"aboveground",0.625
-"439","Arboretum","4","Water Exclusion","ARCA","PF",NA,NA,NA,0.0799269239552409,2021,"aboveground",3.5
-"440","Arboretum","4","Water Exclusion","ARFE","PF",NA,NA,NA,0.0114181319936058,2021,"aboveground",0.5
-"441","Arboretum","4","Water Exclusion","ASHU","PF",NA,NA,NA,0.0342543959808175,2021,"aboveground",1.5
-"442","Arboretum","4","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00570906599680292,2021,"aboveground",0.25
-"443","Arboretum","4","Water Exclusion","CHEN","A",NA,NA,NA,0.00685087919616351,2021,"aboveground",0.3
-"444","Arboretum","4","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0222653573875314,2021,"aboveground",0.975
-"445","Arboretum","4","Water Exclusion","EPBR","A",NA,NA,NA,0.0456725279744234,2021,"aboveground",2
-"446","Arboretum","4","Water Exclusion","ERFL","A",NA,NA,NA,0.0013701758392327,2021,"aboveground",0.06
-"447","Arboretum","4","Water Exclusion","ERRA","PF",NA,NA,NA,0.0599451929664307,2021,"aboveground",2.625
-"448","Arboretum","4","Water Exclusion","FEAR","PG3",NA,NA,NA,0.00570906599680292,2021,"aboveground",0.25
-"449","Arboretum","4","Water Exclusion","LASE","A",NA,NA,NA,0.108472253939256,2021,"aboveground",4.75
-"450","Arboretum","4","Water Exclusion","LILE","PF",NA,NA,NA,0.00285453299840146,2021,"aboveground",0.125
-"451","Arboretum","4","Water Exclusion","LUKI","A",NA,NA,NA,0.108472253939256,2021,"aboveground",4.75
-"452","Arboretum","4","Water Exclusion","MESP","A",NA,NA,NA,0.00125599451929664,2021,"aboveground",0.055
-"453","Arboretum","4","Water Exclusion","POHI","PF",NA,NA,NA,0.445307147750628,2021,"aboveground",19.5
-"454","Arboretum","4","Water Exclusion","POOL","A",NA,NA,NA,0.000570906599680292,2021,"aboveground",0.025
-"455","Arboretum","4","Water Exclusion","TRDU","A",NA,NA,NA,0.0456725279744234,2021,"aboveground",2
-"456","Arboretum","5","Control","ACMI","PF",NA,NA,NA,0.0153762662807525,2021,"aboveground",1.275
-"457","Arboretum","5","Control","ARCA","PF",NA,NA,NA,0.228232030873131,2021,"aboveground",18.925
-"458","Arboretum","5","Control","ARFE","PF",NA,NA,NA,0.0195972021225277,2021,"aboveground",1.625
-"459","Arboretum","5","Control","ASHU","PF",NA,NA,NA,0.0120598166907863,2021,"aboveground",1
-"460","Arboretum","5","Control","BOGR","PG4",NA,NA,NA,0.0678364688856729,2021,"aboveground",5.625
-"461","Arboretum","5","Control","ELEL","PG3",NA,NA,NA,0.0367824409068982,2021,"aboveground",3.05
-"462","Arboretum","5","Control","EPBR","A",NA,NA,NA,0.00814037626628075,2021,"aboveground",0.675
-"463","Arboretum","5","Control","ERFL","A",NA,NA,NA,0.0011456825856247,2021,"aboveground",0.095
-"464","Arboretum","5","Control","FEAR","PG3",NA,NA,NA,0.147732754462132,2021,"aboveground",12.25
-"465","Arboretum","5","Control","LASE","A",NA,NA,NA,0.0120598166907863,2021,"aboveground",1
-"466","Arboretum","5","Control","LUKI","A",NA,NA,NA,0.00361794500723589,2021,"aboveground",0.3
-"467","Arboretum","5","Control","MUMO","PG4",NA,NA,NA,0.00301495417269657,2021,"aboveground",0.25
-"468","Arboretum","5","Control","MURI","PG4",NA,NA,NA,0.0934635793535938,2021,"aboveground",7.75
-"469","Arboretum","5","Control","PODO","A",NA,NA,NA,0.00150747708634829,2021,"aboveground",0.125
-"470","Arboretum","5","Control","POHI","PF",NA,NA,NA,0.346418234442836,2021,"aboveground",28.725
-"471","Arboretum","5","Control","PSMO","PF",NA,NA,NA,0.00301495417269657,2021,"aboveground",0.25
-"472","Arboretum","6","Control","ACMI","PF",NA,NA,NA,0.0752839096593084,2021,"aboveground",5.9
-"473","Arboretum","6","Control","ANRO","PF",NA,NA,NA,0.00446599464080643,2021,"aboveground",0.35
-"474","Arboretum","6","Control","ARCA","PF",NA,NA,NA,0.484879418144698,2021,"aboveground",38
-"475","Arboretum","6","Control","ARFE","PF",NA,NA,NA,0.00956998851601378,2021,"aboveground",0.75
-"476","Arboretum","6","Control","ASHU","PF",NA,NA,NA,0.027114967462039,2021,"aboveground",2.125
-"477","Arboretum","6","Control","CHSES","A",NA,NA,NA,0.000318999617200459,2021,"aboveground",0.025
-"478","Arboretum","6","Control","ELEL","PG3",NA,NA,NA,0.0414699502360597,2021,"aboveground",3.25
-"479","Arboretum","6","Control","EPBR","A",NA,NA,NA,0.0325379609544469,2021,"aboveground",2.55
-"480","Arboretum","6","Control","ERFL","A",NA,NA,NA,0.000574199310960827,2021,"aboveground",0.045
-"481","Arboretum","6","Control","ERRA","PF",NA,NA,NA,0.0015949980860023,2021,"aboveground",0.125
-"482","Arboretum","6","Control","FEAR","PG3",NA,NA,NA,0.0398749521500574,2021,"aboveground",3.125
-"483","Arboretum","6","Control","LASE","A",NA,NA,NA,0.00318999617200459,2021,"aboveground",0.25
-"484","Arboretum","6","Control","LILE","PF",NA,NA,NA,0.000318999617200459,2021,"aboveground",0.025
-"485","Arboretum","6","Control","LUKI","A",NA,NA,NA,0.0637999234400919,2021,"aboveground",5
-"486","Arboretum","6","Control","MURI","PG4",NA,NA,NA,0.00446599464080643,2021,"aboveground",0.35
-"487","Arboretum","6","Control","POHI","PF",NA,NA,NA,0.210539747352303,2021,"aboveground",16.5
-"488","Arboretum","7","Water Exclusion","ANRO","PF",NA,NA,NA,0.011997600479904,2021,"aboveground",0.5
-"489","Arboretum","7","Water Exclusion","ARCA","PF",NA,NA,NA,0.131973605278944,2021,"aboveground",5.5
-"490","Arboretum","7","Water Exclusion","ARFE","PF",NA,NA,NA,0.0011997600479904,2021,"aboveground",0.05
-"491","Arboretum","7","Water Exclusion","ASHU","PF",NA,NA,NA,0.101979604079184,2021,"aboveground",4.25
-"492","Arboretum","7","Water Exclusion","ELEL","PG3",NA,NA,NA,0.023995200959808,2021,"aboveground",1
-"493","Arboretum","7","Water Exclusion","EPBR","A",NA,NA,NA,0.0719856028794241,2021,"aboveground",3
-"494","Arboretum","7","Water Exclusion","ERFL","A",NA,NA,NA,0.0023995200959808,2021,"aboveground",0.1
-"495","Arboretum","7","Water Exclusion","ERFO","PF",NA,NA,NA,0.011997600479904,2021,"aboveground",0.5
-"496","Arboretum","7","Water Exclusion","FEAR","PG3",NA,NA,NA,0.023995200959808,2021,"aboveground",1
-"497","Arboretum","7","Water Exclusion","LASE","A",NA,NA,NA,0.425914817036593,2021,"aboveground",17.75
-"498","Arboretum","7","Water Exclusion","LUKI","A",NA,NA,NA,0.00359928014397121,2021,"aboveground",0.15
-"499","Arboretum","7","Water Exclusion","MURI","PG4",NA,NA,NA,0.0299940011997601,2021,"aboveground",1.25
-"500","Arboretum","7","Water Exclusion","POHI","PF",NA,NA,NA,0.155968806238752,2021,"aboveground",6.5
-"501","Arboretum","7","Water Exclusion","PSMO","PF",NA,NA,NA,0.002999400119976,2021,"aboveground",0.125
-"502","Arboretum","8","Water Addition","ACMI","PF",NA,NA,NA,0.0389720635900602,2021,"aboveground",2.525
-"503","Arboretum","8","Water Addition","ALGE","PF",NA,NA,NA,0.0192931007871585,2021,"aboveground",1.25
-"504","Arboretum","8","Water Addition","ANRO","PF",NA,NA,NA,0.0169779286926995,2021,"aboveground",1.1
-"505","Arboretum","8","Water Addition","ARFE","PF",NA,NA,NA,0.0115758604722951,2021,"aboveground",0.75
-"506","Arboretum","8","Water Addition","BOGR","PG4",NA,NA,NA,0.0740855070226887,2021,"aboveground",4.8
-"507","Arboretum","8","Water Addition","CHSES","A",NA,NA,NA,0.00192931007871585,2021,"aboveground",0.125
-"508","Arboretum","8","Water Addition","EPBR","A",NA,NA,NA,0.162062046612131,2021,"aboveground",10.5
-"509","Arboretum","8","Water Addition","ERFL","A",NA,NA,NA,0.00640530946133663,2021,"aboveground",0.415
-"510","Arboretum","8","Water Addition","ERFO","PF",NA,NA,NA,0.0162062046612131,2021,"aboveground",1.05
-"511","Arboretum","8","Water Addition","FEAR","PG3",NA,NA,NA,0.262386170705356,2021,"aboveground",17
-"512","Arboretum","8","Water Addition","LASE","A",NA,NA,NA,0.0077172403148634,2021,"aboveground",0.5
-"513","Arboretum","8","Water Addition","LUKI","A",NA,NA,NA,0.0173637907084427,2021,"aboveground",1.125
-"514","Arboretum","8","Water Addition","MESP","A",NA,NA,NA,0.00617379225189072,2021,"aboveground",0.4
-"515","Arboretum","8","Water Addition","MUMO","PG4",NA,NA,NA,0.0219941348973607,2021,"aboveground",1.425
-"516","Arboretum","8","Water Addition","MURI","PG4",NA,NA,NA,0.111128260534033,2021,"aboveground",7.2
-"517","Arboretum","8","Water Addition","PODO","A",NA,NA,NA,0.00192931007871585,2021,"aboveground",0.125
-"518","Arboretum","8","Water Addition","POHI","PF",NA,NA,NA,0.216082728816175,2021,"aboveground",14
-"519","Arboretum","8","Water Addition","PSMO","PF",NA,NA,NA,0.0077172403148634,2021,"aboveground",0.5
-"520","Arboretum","9","Water Addition","ACMI","PF",NA,NA,NA,0.0216432865731463,2021,"aboveground",1.35
-"521","Arboretum","9","Water Addition","ARCA","PF",NA,NA,NA,0.12064128256513,2021,"aboveground",7.525
-"522","Arboretum","9","Water Addition","ARFE","PF",NA,NA,NA,0.011623246492986,2021,"aboveground",0.725
-"523","Arboretum","9","Water Addition","ASHU","PF",NA,NA,NA,0.00400801603206413,2021,"aboveground",0.25
-"524","Arboretum","9","Water Addition","BOGR","PG4",NA,NA,NA,0.018436873747495,2021,"aboveground",1.15
-"525","Arboretum","9","Water Addition","ELEL","PG3",NA,NA,NA,0.07374749498998,2021,"aboveground",4.6
-"526","Arboretum","9","Water Addition","EPBR","A",NA,NA,NA,0.075751503006012,2021,"aboveground",4.725
-"527","Arboretum","9","Water Addition","ERFL","A",NA,NA,NA,0.00440881763527054,2021,"aboveground",0.275
-"528","Arboretum","9","Water Addition","FEAR","PG3",NA,NA,NA,0.125450901803607,2021,"aboveground",7.825
-"529","Arboretum","9","Water Addition","LASE","A",NA,NA,NA,0.0661322645290581,2021,"aboveground",4.125
-"530","Arboretum","9","Water Addition","LILE","PF",NA,NA,NA,0.000801603206412826,2021,"aboveground",0.05
-"531","Arboretum","9","Water Addition","LUKI","A",NA,NA,NA,0.128256513026052,2021,"aboveground",8
-"532","Arboretum","9","Water Addition","MUMO","PG4",NA,NA,NA,0.0865731462925852,2021,"aboveground",5.4
-"533","Arboretum","9","Water Addition","PEVI","PF",NA,NA,NA,0.0340681362725451,2021,"aboveground",2.125
-"534","Arboretum","9","Water Addition","PODO","A",NA,NA,NA,0.0120240480961924,2021,"aboveground",0.75
-"535","Arboretum","9","Water Addition","POHI","PF",NA,NA,NA,0.214428857715431,2021,"aboveground",13.375
-"536","Arboretum","9","Water Addition","UKFO","A",NA,NA,NA,0.00200400801603206,2021,"aboveground",0.125
-"537","Arboretum","10","Water Exclusion","ANRO","PF",NA,NA,NA,0.00152858453072455,2021,"aboveground",0.05
-"538","Arboretum","10","Water Exclusion","ARCA","PF",NA,NA,NA,0.0152858453072455,2021,"aboveground",0.5
-"539","Arboretum","10","Water Exclusion","ARFE","PF",NA,NA,NA,0.0206358911647814,2021,"aboveground",0.675
-"540","Arboretum","10","Water Exclusion","ASHU","PF",NA,NA,NA,0.172730051971874,2021,"aboveground",5.65
-"541","Arboretum","10","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00535004585753592,2021,"aboveground",0.175
-"542","Arboretum","10","Water Exclusion","CHSES","A",NA,NA,NA,0.00535004585753592,2021,"aboveground",0.175
-"543","Arboretum","10","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0152858453072455,2021,"aboveground",0.5
-"544","Arboretum","10","Water Exclusion","ERFL","A",NA,NA,NA,0.0359217364720269,2021,"aboveground",1.175
-"545","Arboretum","10","Water Exclusion","ERRA","PF",NA,NA,NA,0.0535004585753592,2021,"aboveground",1.75
-"546","Arboretum","10","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0458575359217365,2021,"aboveground",1.5
-"547","Arboretum","10","Water Exclusion","LUKI","A",NA,NA,NA,0.107000917150718,2021,"aboveground",3.5
-"548","Arboretum","10","Water Exclusion","PODO","A",NA,NA,NA,0.00764292265362275,2021,"aboveground",0.25
-"549","Arboretum","10","Water Exclusion","POHI","PF",NA,NA,NA,0.343931519413024,2021,"aboveground",11.25
-"550","Arboretum","10","Water Exclusion","TRDU","A",NA,NA,NA,0.1681442983797,2021,"aboveground",5.5
-"551","Arboretum","10","Water Exclusion","UKFO","A",NA,NA,NA,0.00183430143686946,2021,"aboveground",0.06
-"552","Arboretum","11","Control","ACMI","PF",NA,NA,NA,0.103251130642546,2021,"aboveground",6.05
-"553","Arboretum","11","Control","ALGE","PF",NA,NA,NA,0.00853315129277242,2021,"aboveground",0.5
-"554","Arboretum","11","Control","ARCA","PF",NA,NA,NA,0.183462752794607,2021,"aboveground",10.75
-"555","Arboretum","11","Control","ARFE","PF",NA,NA,NA,0.000853315129277242,2021,"aboveground",0.05
-"556","Arboretum","11","Control","BOGR","PG4",NA,NA,NA,0.00213328782319311,2021,"aboveground",0.125
-"557","Arboretum","11","Control","CHEN","A",NA,NA,NA,0.00255994538783173,2021,"aboveground",0.15
-"558","Arboretum","11","Control","ELEL","PG3",NA,NA,NA,0.0127997269391586,2021,"aboveground",0.75
-"559","Arboretum","11","Control","EPBR","A",NA,NA,NA,0.0981312398668828,2021,"aboveground",5.75
-"560","Arboretum","11","Control","ERFL","A",NA,NA,NA,0.00162129874562676,2021,"aboveground",0.095
-"561","Arboretum","11","Control","FEAR","PG3",NA,NA,NA,0.0571721136615752,2021,"aboveground",3.35
-"562","Arboretum","11","Control","LASE","A",NA,NA,NA,0.0115197542452428,2021,"aboveground",0.675
-"563","Arboretum","11","Control","LILE","PF",NA,NA,NA,0.00213328782319311,2021,"aboveground",0.125
-"564","Arboretum","11","Control","LUKI","A",NA,NA,NA,0.0452257018516938,2021,"aboveground",2.65
-"565","Arboretum","11","Control","MUMO","PG4",NA,NA,NA,0.0170663025855448,2021,"aboveground",1
-"566","Arboretum","11","Control","MURI","PG4",NA,NA,NA,0.127997269391586,2021,"aboveground",7.5
-"567","Arboretum","11","Control","PODO","A",NA,NA,NA,0.00127997269391586,2021,"aboveground",0.075
-"568","Arboretum","11","Control","POHI","PF",NA,NA,NA,0.290127143954262,2021,"aboveground",17
-"569","Arboretum","11","Control","PSMO","PF",NA,NA,NA,0.00426657564638621,2021,"aboveground",0.25
-"570","Arboretum","11","Control","TRDU","A",NA,NA,NA,0.0298660295247035,2021,"aboveground",1.75
-"571","Arboretum","12","Water Addition","ACMI","PF",NA,NA,NA,0.0160439247005134,2021,"aboveground",1.125
-"572","Arboretum","12","Water Addition","ANRO","PF",NA,NA,NA,0.0135482030804335,2021,"aboveground",0.95
-"573","Arboretum","12","Water Addition","ARCA","PF",NA,NA,NA,0.15687393040502,2021,"aboveground",11
-"574","Arboretum","12","Water Addition","ARFE","PF",NA,NA,NA,0.00926982316029663,2021,"aboveground",0.65
-"575","Arboretum","12","Water Addition","ASHU","PF",NA,NA,NA,0.0730889903023388,2021,"aboveground",5.125
-"576","Arboretum","12","Water Addition","BOGR","PG4",NA,NA,NA,0.0695236737022248,2021,"aboveground",4.875
-"577","Arboretum","12","Water Addition","CHEN","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025
-"578","Arboretum","12","Water Addition","ELEL","PG3",NA,NA,NA,0.0356531660011409,2021,"aboveground",2.5
-"579","Arboretum","12","Water Addition","ERFL","A",NA,NA,NA,0.000285225328009127,2021,"aboveground",0.02
-"580","Arboretum","12","Water Addition","ERRA","PF",NA,NA,NA,0.0106959498003423,2021,"aboveground",0.75
-"581","Arboretum","12","Water Addition","FEAR","PG3",NA,NA,NA,0.160439247005134,2021,"aboveground",11.25
-"582","Arboretum","12","Water Addition","LASE","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025
-"583","Arboretum","12","Water Addition","LILE","PF",NA,NA,NA,0.000713063320022818,2021,"aboveground",0.05
-"584","Arboretum","12","Water Addition","LUKI","A",NA,NA,NA,0.00926982316029663,2021,"aboveground",0.65
-"585","Arboretum","12","Water Addition","MUMO","PG4",NA,NA,NA,0.0477752424415288,2021,"aboveground",3.35
-"586","Arboretum","12","Water Addition","MURI","PG4",NA,NA,NA,0.0320878494010268,2021,"aboveground",2.25
-"587","Arboretum","12","Water Addition","PODO","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025
-"588","Arboretum","12","Water Addition","POHI","PF",NA,NA,NA,0.356531660011409,2021,"aboveground",25
-"589","Arboretum","12","Water Addition","UKFO","A",NA,NA,NA,0.00713063320022818,2021,"aboveground",0.5
-"590","Black Point","1","Water Exclusion","ATCO","S",NA,NA,NA,0.796703296703297,2021,"aboveground",3.625
-"591","Black Point","1","Water Exclusion","BOER","PG4",NA,NA,NA,0.0274725274725275,2021,"aboveground",0.125
-"592","Black Point","1","Water Exclusion","CHSES","A",NA,NA,NA,0.0274725274725275,2021,"aboveground",0.125
-"593","Black Point","1","Water Exclusion","SATR","A",NA,NA,NA,0.148351648351648,2021,"aboveground",0.675
-"594","Black Point","2","Water Exclusion","ATCO","S",NA,NA,NA,0.505902192242833,2021,"aboveground",3
-"595","Black Point","2","Water Exclusion","BOER","PG4",NA,NA,NA,0.0168634064080944,2021,"aboveground",0.1
-"596","Black Point","2","Water Exclusion","CHSES","A",NA,NA,NA,0.130691399662732,2021,"aboveground",0.775
-"597","Black Point","2","Water Exclusion","SATR","A",NA,NA,NA,0.345699831365936,2021,"aboveground",2.05
-"598","Black Point","2","Water Exclusion","SPHA","PF",NA,NA,NA,0.000843170320404722,2021,"aboveground",0.005
-"599","Black Point","3","Control","ATCO","S",NA,NA,NA,0.180265654648956,2021,"aboveground",4.75
-"600","Black Point","3","Control","BOER","PG4",NA,NA,NA,0.313092979127135,2021,"aboveground",8.25
-"601","Black Point","3","Control","CHSES","A",NA,NA,NA,0.240986717267552,2021,"aboveground",6.35
-"602","Black Point","3","Control","SATR","A",NA,NA,NA,0.265654648956357,2021,"aboveground",7
-"603","Black Point","4","Water Exclusion","ATCO","S",NA,NA,NA,0.750750750750751,2021,"aboveground",5
-"604","Black Point","4","Water Exclusion","BOER","PG4",NA,NA,NA,0.232732732732733,2021,"aboveground",1.55
-"605","Black Point","4","Water Exclusion","CHSES","A",NA,NA,NA,0.0127627627627628,2021,"aboveground",0.085
-"606","Black Point","4","Water Exclusion","SATR","A",NA,NA,NA,0.00375375375375375,2021,"aboveground",0.025
-"607","Black Point","5","Control","ATCO","S",NA,NA,NA,0.243111831442464,2021,"aboveground",7.5
-"608","Black Point","5","Control","BOER","PG4",NA,NA,NA,0.157212317666126,2021,"aboveground",4.85
-"609","Black Point","5","Control","CHSES","A",NA,NA,NA,0.177471636952998,2021,"aboveground",5.475
-"610","Black Point","5","Control","SATR","A",NA,NA,NA,0.421393841166937,2021,"aboveground",13
-"611","Black Point","5","Control","SPHA","PF",NA,NA,NA,0.000810372771474879,2021,"aboveground",0.025
-"612","Black Point","6","Control","ATCO","S",NA,NA,NA,0.0483675937122128,2021,"aboveground",1
-"613","Black Point","6","Control","BOER","PG4",NA,NA,NA,0.217654171704958,2021,"aboveground",4.5
-"614","Black Point","6","Control","CHSES","A",NA,NA,NA,0.367593712212817,2021,"aboveground",7.6
-"615","Black Point","6","Control","SATR","A",NA,NA,NA,0.362756952841596,2021,"aboveground",7.5
-"616","Black Point","6","Control","SPHA","PF",NA,NA,NA,0.00362756952841596,2021,"aboveground",0.075
-"617","Black Point","7","Water Exclusion","ATCO","S",NA,NA,NA,0.536585365853659,2021,"aboveground",5.5
-"618","Black Point","7","Water Exclusion","BOER","PG4",NA,NA,NA,0.0121951219512195,2021,"aboveground",0.125
-"619","Black Point","7","Water Exclusion","CHSES","A",NA,NA,NA,0.0048780487804878,2021,"aboveground",0.05
-"620","Black Point","7","Water Exclusion","EPVI","S",NA,NA,NA,0.195121951219512,2021,"aboveground",2
-"621","Black Point","7","Water Exclusion","SATR","A",NA,NA,NA,0.251219512195122,2021,"aboveground",2.575
-"622","Black Point","8","Control","ATCO","S",NA,NA,NA,0.0405875531503672,2021,"aboveground",1.05
-"623","Black Point","8","Control","BOER","PG4",NA,NA,NA,0.0262852725164283,2021,"aboveground",0.68
-"624","Black Point","8","Control","CHSES","A",NA,NA,NA,0.350792423656745,2021,"aboveground",9.075
-"625","Black Point","8","Control","DAPU","PG4",NA,NA,NA,0.00154619250096637,2021,"aboveground",0.04
-"626","Black Point","8","Control","SATR","A",NA,NA,NA,0.579822187862389,2021,"aboveground",15
-"627","Black Point","8","Control","SPHA","PF",NA,NA,NA,0.000966370313103981,2021,"aboveground",0.025
-"628","Black Point","9","Water Addition","ATCO","S",NA,NA,NA,0.393013100436681,2021,"aboveground",9
-"629","Black Point","9","Water Addition","BOER","PG4",NA,NA,NA,0.356986899563319,2021,"aboveground",8.175
-"630","Black Point","9","Water Addition","CHSES","A",NA,NA,NA,0.126637554585153,2021,"aboveground",2.9
-"631","Black Point","9","Water Addition","DAPU","PG4",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025
-"632","Black Point","9","Water Addition","SATR","A",NA,NA,NA,0.109170305676856,2021,"aboveground",2.5
-"633","Black Point","9","Water Addition","SPAI","PG4",NA,NA,NA,0.0109170305676856,2021,"aboveground",0.25
-"634","Black Point","9","Water Addition","SPHA","PF",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025
-"635","Black Point","9","Water Addition","UKFO","A",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025
-"636","Black Point","10","Water Addition","ATCO","S",NA,NA,NA,0.21112600536193,2021,"aboveground",7.875
-"637","Black Point","10","Water Addition","BOER","PG4",NA,NA,NA,0.126675603217158,2021,"aboveground",4.725
-"638","Black Point","10","Water Addition","CHSES","A",NA,NA,NA,0.601876675603217,2021,"aboveground",22.45
-"639","Black Point","10","Water Addition","SATR","A",NA,NA,NA,0.0603217158176944,2021,"aboveground",2.25
-"640","Black Point","11","Water Addition","ATCO","S",NA,NA,NA,0.00777121541809139,2021,"aboveground",0.125
-"641","Black Point","11","Water Addition","BOER","PG4",NA,NA,NA,0.345041964563258,2021,"aboveground",5.55
-"642","Black Point","11","Water Addition","CHSES","A",NA,NA,NA,0.271059993783028,2021,"aboveground",4.36
-"643","Black Point","11","Water Addition","KRLA","S",NA,NA,NA,0.373018340068387,2021,"aboveground",6
-"644","Black Point","11","Water Addition","SPHA","PF",NA,NA,NA,0.00155424308361828,2021,"aboveground",0.025
-"645","Black Point","11","Water Addition","UKFO","A",NA,NA,NA,0.00155424308361828,2021,"aboveground",0.025
-"646","Black Point","12","Water Addition","BOER","PG4",NA,NA,NA,0.495164410058027,2021,"aboveground",12.8
-"647","Black Point","12","Water Addition","CHSES","A",NA,NA,NA,0.253384912959381,2021,"aboveground",6.55
-"648","Black Point","12","Water Addition","SATR","A",NA,NA,NA,0.251450676982592,2021,"aboveground",6.5
-"649","Blue Chute","1","Water Addition","BOGR","PG4",NA,NA,NA,0.466824244470707,2021,"aboveground",13.825
-"650","Blue Chute","1","Water Addition","CHEN","A",NA,NA,NA,0.130001688333615,2021,"aboveground",3.85
-"651","Blue Chute","1","Water Addition","CHRE","A",NA,NA,NA,0.142326523721087,2021,"aboveground",4.215
-"652","Blue Chute","1","Water Addition","ERNA","S",NA,NA,NA,0.18571669761945,2021,"aboveground",5.5
-"653","Blue Chute","1","Water Addition","GUSA","S",NA,NA,NA,0.025325004220834,2021,"aboveground",0.75
-"654","Blue Chute","1","Water Addition","HECO","PG3",NA,NA,NA,0.0337666722944454,2021,"aboveground",1
-"655","Blue Chute","1","Water Addition","JUMO","S",NA,NA,NA,0.00844166807361135,2021,"aboveground",0.25
-"656","Blue Chute","1","Water Addition","POOL","A",NA,NA,NA,0.00168833361472227,2021,"aboveground",0.05
-"657","Blue Chute","1","Water Addition","SATR","A",NA,NA,NA,0.00168833361472227,2021,"aboveground",0.05
-"658","Blue Chute","1","Water Addition","SPHA","PF",NA,NA,NA,0.00422083403680567,2021,"aboveground",0.125
-"659","Blue Chute","2","Control","BOGR","PG4",NA,NA,NA,0.536949685534591,2021,"aboveground",17.075
-"660","Blue Chute","2","Control","CHEN","A",NA,NA,NA,0.0786163522012578,2021,"aboveground",2.5
-"661","Blue Chute","2","Control","CHER","PF",NA,NA,NA,0.00786163522012578,2021,"aboveground",0.25
-"662","Blue Chute","2","Control","CHRE","A",NA,NA,NA,0.074685534591195,2021,"aboveground",2.375
-"663","Blue Chute","2","Control","ERNA","S",NA,NA,NA,0.0511006289308176,2021,"aboveground",1.625
-"664","Blue Chute","2","Control","HECO","PG3",NA,NA,NA,0.0314465408805031,2021,"aboveground",1
-"665","Blue Chute","2","Control","HELO","A",NA,NA,NA,0.102201257861635,2021,"aboveground",3.25
-"666","Blue Chute","2","Control","KOAM","PF",NA,NA,NA,0.020440251572327,2021,"aboveground",0.65
-"667","Blue Chute","2","Control","SATR","A",NA,NA,NA,0.00707547169811321,2021,"aboveground",0.225
-"668","Blue Chute","2","Control","SPHA","PF",NA,NA,NA,0.00157232704402516,2021,"aboveground",0.05
-"669","Blue Chute","2","Control","UKFO","A",NA,NA,NA,0.00157232704402516,2021,"aboveground",0.05
-"670","Blue Chute","2","Control","ZIGR","PF",NA,NA,NA,0.0864779874213836,2021,"aboveground",2.75
-"671","Blue Chute","3","Control","ARPU","PG4",NA,NA,NA,0.0123304562268804,2021,"aboveground",0.5
-"672","Blue Chute","3","Control","BOGR","PG4",NA,NA,NA,0.149815043156597,2021,"aboveground",6.075
-"673","Blue Chute","3","Control","BOGR ","PG4",NA,NA,NA,0.0493218249075216,2021,"aboveground",2
-"674","Blue Chute","3","Control","CHER","PF",NA,NA,NA,0.0172626387176326,2021,"aboveground",0.7
-"675","Blue Chute","3","Control","CHRE","A",NA,NA,NA,0.376078914919852,2021,"aboveground",15.25
-"676","Blue Chute","3","Control","ERNA","S",NA,NA,NA,0.0863131935881628,2021,"aboveground",3.5
-"677","Blue Chute","3","Control","GUSA","S",NA,NA,NA,0.0986436498150432,2021,"aboveground",4
-"678","Blue Chute","3","Control","HECO","PG3",NA,NA,NA,0.0678175092478422,2021,"aboveground",2.75
-"679","Blue Chute","3","Control","HELO","A",NA,NA,NA,0.0493218249075216,2021,"aboveground",2
-"680","Blue Chute","3","Control","KOAM","PF",NA,NA,NA,0.0369913686806412,2021,"aboveground",1.5
-"681","Blue Chute","3","Control","KRLA","S",NA,NA,NA,0.0339087546239211,2021,"aboveground",1.375
-"682","Blue Chute","3","Control","SATR","A",NA,NA,NA,0.0061652281134402,2021,"aboveground",0.25
-"683","Blue Chute","3","Control","SPHA","PF",NA,NA,NA,0.00061652281134402,2021,"aboveground",0.025
-"684","Blue Chute","3","Control","UKFO","A",NA,NA,NA,0.0154130702836005,2021,"aboveground",0.625
-"685","Blue Chute","4","Water Exclusion","CHEN","A",NA,NA,NA,0.0580474934036939,2021,"aboveground",0.55
-"686","Blue Chute","4","Water Exclusion","CHER","PF",NA,NA,NA,0.00263852242744063,2021,"aboveground",0.025
-"687","Blue Chute","4","Water Exclusion","CHSES","A",NA,NA,NA,0.0422163588390501,2021,"aboveground",0.4
-"688","Blue Chute","4","Water Exclusion","ERNA","S",NA,NA,NA,0.316622691292876,2021,"aboveground",3
-"689","Blue Chute","4","Water Exclusion","GUSA","S",NA,NA,NA,0.263852242744063,2021,"aboveground",2.5
-"690","Blue Chute","4","Water Exclusion","HECO","PG3",NA,NA,NA,0.316622691292876,2021,"aboveground",3
-"691","Blue Chute","5","Control","BOGR","PG4",NA,NA,NA,0.250727919767066,2021,"aboveground",7.75
-"692","Blue Chute","5","Control","CHEN","A",NA,NA,NA,0.113231963765772,2021,"aboveground",3.5
-"693","Blue Chute","5","Control","CHER","PF",NA,NA,NA,0.000808799741184083,2021,"aboveground",0.025
-"694","Blue Chute","5","Control","CHRE","A",NA,NA,NA,0.214331931413782,2021,"aboveground",6.625
-"695","Blue Chute","5","Control","ERNA","S",NA,NA,NA,0.0161759948236817,2021,"aboveground",0.5
-"696","Blue Chute","5","Control","GUSA","S",NA,NA,NA,0.0727919767065675,2021,"aboveground",2.25
-"697","Blue Chute","5","Control","HECO","PG3",NA,NA,NA,0.274991912002588,2021,"aboveground",8.5
-"698","Blue Chute","5","Control","HELO","A",NA,NA,NA,0.0363959883532837,2021,"aboveground",1.125
-"699","Blue Chute","5","Control","KOAM","PF",NA,NA,NA,0.00161759948236817,2021,"aboveground",0.05
-"700","Blue Chute","5","Control","POOL","A",NA,NA,NA,0.0181171142025235,2021,"aboveground",0.56
-"701","Blue Chute","5","Control","SPHA","PF",NA,NA,NA,0.000808799741184083,2021,"aboveground",0.025
-"702","Blue Chute","6","Water Addition","BOGR","PG4",NA,NA,NA,0.529619181946403,2021,"aboveground",18.775
-"703","Blue Chute","6","Water Addition","CHEN","A",NA,NA,NA,0.0916784203102962,2021,"aboveground",3.25
-"704","Blue Chute","6","Water Addition","CHER","PF",NA,NA,NA,0.00423131170662906,2021,"aboveground",0.15
-"705","Blue Chute","6","Water Addition","CHRE","A",NA,NA,NA,0.0916784203102962,2021,"aboveground",3.25
-"706","Blue Chute","6","Water Addition","CHSES","A",NA,NA,NA,0.00141043723554302,2021,"aboveground",0.05
-"707","Blue Chute","6","Water Addition","HECO","PG3",NA,NA,NA,0.260930888575458,2021,"aboveground",9.25
-"708","Blue Chute","6","Water Addition","KOAM","PF",NA,NA,NA,0.00282087447108604,2021,"aboveground",0.1
-"709","Blue Chute","6","Water Addition","POOL","A",NA,NA,NA,0.0176304654442877,2021,"aboveground",0.625
-"710","Blue Chute","7","Control","BOGR","PG4",NA,NA,NA,0.283345892991711,2021,"aboveground",9.4
-"711","Blue Chute","7","Control","CHEN","A",NA,NA,NA,0.00376789751318764,2021,"aboveground",0.125
-"712","Blue Chute","7","Control","CHER","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025
-"713","Blue Chute","7","Control","CHRE","A",NA,NA,NA,0.270535041446873,2021,"aboveground",8.975
-"714","Blue Chute","7","Control","CHSES","A",NA,NA,NA,0.0195930670685757,2021,"aboveground",0.65
-"715","Blue Chute","7","Control","HECO","PG3",NA,NA,NA,0.275056518462698,2021,"aboveground",9.125
-"716","Blue Chute","7","Control","HELO","A",NA,NA,NA,0.0150715900527506,2021,"aboveground",0.5
-"717","Blue Chute","7","Control","KOAM","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025
-"718","Blue Chute","7","Control","KRLA","S",NA,NA,NA,0.105501130369254,2021,"aboveground",3.5
-"719","Blue Chute","7","Control","POOL","A",NA,NA,NA,0.00150715900527506,2021,"aboveground",0.05
-"720","Blue Chute","7","Control","SOEL","PF",NA,NA,NA,0.00376789751318764,2021,"aboveground",0.125
-"721","Blue Chute","7","Control","SPHA","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025
-"722","Blue Chute","7","Control","UKFO","A",NA,NA,NA,0.0195930670685757,2021,"aboveground",0.65
-"723","Blue Chute","8","Water Exclusion","BOGR","PG4",NA,NA,NA,0.111368909512761,2021,"aboveground",1.2
-"724","Blue Chute","8","Water Exclusion","CHEN","A",NA,NA,NA,0.215777262180974,2021,"aboveground",2.325
-"725","Blue Chute","8","Water Exclusion","CHSES","A",NA,NA,NA,0.0139211136890951,2021,"aboveground",0.15
-"726","Blue Chute","8","Water Exclusion","ERNA","S",NA,NA,NA,0.556844547563805,2021,"aboveground",6
-"727","Blue Chute","8","Water Exclusion","HELO","A",NA,NA,NA,0.0232018561484919,2021,"aboveground",0.25
-"728","Blue Chute","8","Water Exclusion","KOAM","PF",NA,NA,NA,0.00232018561484919,2021,"aboveground",0.025
-"729","Blue Chute","8","Water Exclusion","POOL","A",NA,NA,NA,0.00696055684454756,2021,"aboveground",0.075
-"730","Blue Chute","8","Water Exclusion","SATR","A",NA,NA,NA,0.0696055684454756,2021,"aboveground",0.75
-"731","Blue Chute","9","Water Addition","BOGR","PG4",NA,NA,NA,0.635937715309356,2021,"aboveground",23.075
-"732","Blue Chute","9","Water Addition","CHEN","A",NA,NA,NA,0.0275595976298746,2021,"aboveground",1
-"733","Blue Chute","9","Water Addition","CHER","PF",NA,NA,NA,0.0020669698222406,2021,"aboveground",0.075
-"734","Blue Chute","9","Water Addition","CHRE","A",NA,NA,NA,0.00413393964448119,2021,"aboveground",0.15
-"735","Blue Chute","9","Water Addition","CHSES","A",NA,NA,NA,0.00620090946672178,2021,"aboveground",0.225
-"736","Blue Chute","9","Water Addition","ERNA","S",NA,NA,NA,0.137797988149373,2021,"aboveground",5
-"737","Blue Chute","9","Water Addition","GLGO","PF",NA,NA,NA,0.00826787928896238,2021,"aboveground",0.3
-"738","Blue Chute","9","Water Addition","GUSA","S",NA,NA,NA,0.0413393964448119,2021,"aboveground",1.5
-"739","Blue Chute","9","Water Addition","HECO","PG3",NA,NA,NA,0.0895686922970925,2021,"aboveground",3.25
-"740","Blue Chute","9","Water Addition","HELO","A",NA,NA,NA,0.020669698222406,2021,"aboveground",0.75
-"741","Blue Chute","9","Water Addition","KOAM","PF",NA,NA,NA,0.00482292958522806,2021,"aboveground",0.175
-"742","Blue Chute","9","Water Addition","POOL","A",NA,NA,NA,0.0179137384594185,2021,"aboveground",0.65
-"743","Blue Chute","9","Water Addition","SATR","A",NA,NA,NA,0.00137797988149373,2021,"aboveground",0.05
-"744","Blue Chute","9","Water Addition","UKFO","A",NA,NA,NA,0.00234256579853934,2021,"aboveground",0.085
-"745","Blue Chute","10","Water Exclusion","CHEN","A",NA,NA,NA,0.0544464609800363,2021,"aboveground",0.75
-"746","Blue Chute","10","Water Exclusion","CHER","PF",NA,NA,NA,0.00725952813067151,2021,"aboveground",0.1
-"747","Blue Chute","10","Water Exclusion","ERNA","S",NA,NA,NA,0.780399274047187,2021,"aboveground",10.75
-"748","Blue Chute","10","Water Exclusion","HELO","A",NA,NA,NA,0.0308529945553539,2021,"aboveground",0.425
-"749","Blue Chute","10","Water Exclusion","SATR","A",NA,NA,NA,0.127041742286751,2021,"aboveground",1.75
-"750","Blue Chute","11","Water Addition","BOGR","PG4",NA,NA,NA,0.233669443226655,2021,"aboveground",13.325
-"751","Blue Chute","11","Water Addition","CHDE","S",NA,NA,NA,0.0701446733888645,2021,"aboveground",4
-"752","Blue Chute","11","Water Addition","CHEN","A",NA,NA,NA,0.0482244629548444,2021,"aboveground",2.75
-"753","Blue Chute","11","Water Addition","CHRE","A",NA,NA,NA,0.0631302060499781,2021,"aboveground",3.6
-"754","Blue Chute","11","Water Addition","CHSES","A",NA,NA,NA,0.133713283647523,2021,"aboveground",7.625
-"755","Blue Chute","11","Water Addition","ERNA","S",NA,NA,NA,0.0876808417360807,2021,"aboveground",5
-"756","Blue Chute","11","Water Addition","GUSA","S",NA,NA,NA,0.0701446733888645,2021,"aboveground",4
-"757","Blue Chute","11","Water Addition","HECO","PG3",NA,NA,NA,0.241122314774222,2021,"aboveground",13.75
-"758","Blue Chute","11","Water Addition","KOAM","PF",NA,NA,NA,0.0109601052170101,2021,"aboveground",0.625
-"759","Blue Chute","11","Water Addition","KRLA","S",NA,NA,NA,0.00438404208680403,2021,"aboveground",0.25
-"760","Blue Chute","11","Water Addition","POOL","A",NA,NA,NA,0.000876808417360807,2021,"aboveground",0.05
-"761","Blue Chute","11","Water Addition","SATR","A",NA,NA,NA,0.00876808417360807,2021,"aboveground",0.5
-"762","Blue Chute","11","Water Addition","STTE","PF",NA,NA,NA,0.0263042525208242,2021,"aboveground",1.5
-"763","Blue Chute","11","Water Addition","UKFO","A",NA,NA,NA,0.000876808417360807,2021,"aboveground",0.05
-"764","Blue Chute","12","Water Exclusion","ATCA","S",NA,NA,NA,0.0547645125958379,2021,"aboveground",0.5
-"765","Blue Chute","12","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00547645125958379,2021,"aboveground",0.05
-"766","Blue Chute","12","Water Exclusion","CHRE","A",NA,NA,NA,0.0498357064622125,2021,"aboveground",0.455
-"767","Blue Chute","12","Water Exclusion","ERNA","S",NA,NA,NA,0.219058050383352,2021,"aboveground",2
-"768","Blue Chute","12","Water Exclusion","GUSA","S",NA,NA,NA,0.602409638554217,2021,"aboveground",5.5
-"769","Blue Chute","12","Water Exclusion","KOAM","PF",NA,NA,NA,0.0273822562979189,2021,"aboveground",0.25
-"770","Blue Chute","12","Water Exclusion","POOL","A",NA,NA,NA,0.0136911281489595,2021,"aboveground",0.125
-"771","Blue Chute","12","Water Exclusion","SATR","A",NA,NA,NA,0.0273822562979189,2021,"aboveground",0.25
-"772","Camp Colton","1","Control","BRPO","PG3",NA,NA,NA,0.10629816635663,2021,"aboveground",8
-"773","Camp Colton","1","Control","CAGE","PG3",NA,NA,NA,0.077066170608557,2021,"aboveground",5.8
-"774","Camp Colton","1","Control","CAPA","PF",NA,NA,NA,0.0866994419346266,2021,"aboveground",6.525
-"775","Camp Colton","1","Control","ELEL","PG3",NA,NA,NA,0.0298963592878023,2021,"aboveground",2.25
-"776","Camp Colton","1","Control","ERFL","A",NA,NA,NA,0.00604570821153335,2021,"aboveground",0.455
-"777","Camp Colton","1","Control","ERFO","PF",NA,NA,NA,0.0158118522455488,2021,"aboveground",1.19
-"778","Camp Colton","1","Control","ERRA","PF",NA,NA,NA,0.0132872707945788,2021,"aboveground",1
-"779","Camp Colton","1","Control","FEAR","PG3",NA,NA,NA,0.066436353972894,2021,"aboveground",5
-"780","Camp Colton","1","Control","GETR","PF",NA,NA,NA,0.0930108955620516,2021,"aboveground",7
-"781","Camp Colton","1","Control","IRMI","PF",NA,NA,NA,0.066436353972894,2021,"aboveground",5
-"782","Camp Colton","1","Control","MUMO","PG4",NA,NA,NA,0.184693064044645,2021,"aboveground",13.9
-"783","Camp Colton","1","Control","POHI","PF",NA,NA,NA,0.0498272654796705,2021,"aboveground",3.75
-"784","Camp Colton","1","Control","POPR","PG3",NA,NA,NA,0.142173797501993,2021,"aboveground",10.7
-"785","Camp Colton","1","Control","ROWO","S",NA,NA,NA,0.0315572681371246,2021,"aboveground",2.375
-"786","Camp Colton","1","Control","VETH","A",NA,NA,NA,0.00817167153866596,2021,"aboveground",0.615
-"787","Camp Colton","1","Control","VIAM","PF",NA,NA,NA,0.022588360350784,2021,"aboveground",1.7
-"788","Camp Colton","2","Water Exclusion","ACMI","PF",NA,NA,NA,0.00412087912087912,2021,"aboveground",0.225
-"789","Camp Colton","2","Water Exclusion","ASSP","PF",NA,NA,NA,0.0114468864468864,2021,"aboveground",0.625
-"790","Camp Colton","2","Water Exclusion","CAGE","PG3",NA,NA,NA,0.173534798534799,2021,"aboveground",9.475
-"791","Camp Colton","2","Water Exclusion","CAPA","PF",NA,NA,NA,0.0283882783882784,2021,"aboveground",1.55
-"792","Camp Colton","2","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0251831501831502,2021,"aboveground",1.375
-"793","Camp Colton","2","Water Exclusion","ERFL","A",NA,NA,NA,0.00274725274725275,2021,"aboveground",0.15
-"794","Camp Colton","2","Water Exclusion","ERFO","PF",NA,NA,NA,0.032967032967033,2021,"aboveground",1.8
-"795","Camp Colton","2","Water Exclusion","ERRA","PF",NA,NA,NA,0.032051282051282,2021,"aboveground",1.75
-"796","Camp Colton","2","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0915750915750916,2021,"aboveground",5
-"797","Camp Colton","2","Water Exclusion","GETR","PF",NA,NA,NA,0.407509157509158,2021,"aboveground",22.25
-"798","Camp Colton","2","Water Exclusion","IRMI","PF",NA,NA,NA,0.0778388278388278,2021,"aboveground",4.25
-"799","Camp Colton","2","Water Exclusion","LUAR","PF",NA,NA,NA,0.0274725274725275,2021,"aboveground",1.5
-"800","Camp Colton","2","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00457875457875458,2021,"aboveground",0.25
-"801","Camp Colton","2","Water Exclusion","POHI","PF",NA,NA,NA,0.0274725274725275,2021,"aboveground",1.5
-"802","Camp Colton","2","Water Exclusion","POPR","PG3",NA,NA,NA,0.0448717948717949,2021,"aboveground",2.45
-"803","Camp Colton","2","Water Exclusion","TRDU","A",NA,NA,NA,0.00457875457875458,2021,"aboveground",0.25
-"804","Camp Colton","2","Water Exclusion","VIAM","PF",NA,NA,NA,0.00366300366300366,2021,"aboveground",0.2
-"805","Camp Colton","3","Control","ACMI","PF",NA,NA,NA,0.0250471316994344,2021,"aboveground",2.325
-"806","Camp Colton","3","Control","ASSP","PF",NA,NA,NA,0.00269323996768112,2021,"aboveground",0.25
-"807","Camp Colton","3","Control","BRPO","PG3",NA,NA,NA,0.0107729598707245,2021,"aboveground",1
-"808","Camp Colton","3","Control","CAGE","PG3",NA,NA,NA,0.0390519795313762,2021,"aboveground",3.625
-"809","Camp Colton","3","Control","CAPA","PF",NA,NA,NA,0.00484783194182602,2021,"aboveground",0.45
-"810","Camp Colton","3","Control","CIWH","PF",NA,NA,NA,0.0377053595475357,2021,"aboveground",3.5
-"811","Camp Colton","3","Control","ELEL","PG3",NA,NA,NA,0.00807971990304336,2021,"aboveground",0.75
-"812","Camp Colton","3","Control","ERFL","A",NA,NA,NA,0.00107729598707245,2021,"aboveground",0.1
-"813","Camp Colton","3","Control","ERFO","PF",NA,NA,NA,0.00538647993536224,2021,"aboveground",0.5
-"814","Camp Colton","3","Control","FEAR","PG3",NA,NA,NA,0.290869916509561,2021,"aboveground",27
-"815","Camp Colton","3","Control","GETR","PF",NA,NA,NA,0.36089415566927,2021,"aboveground",33.5
-"816","Camp Colton","3","Control","HYHO","PF",NA,NA,NA,0.140048478319418,2021,"aboveground",13
-"817","Camp Colton","3","Control","IRMI","PF",NA,NA,NA,0.0175060597899273,2021,"aboveground",1.625
-"818","Camp Colton","3","Control","MUMO","PG4",NA,NA,NA,0.0403985995152168,2021,"aboveground",3.75
-"819","Camp Colton","3","Control","POHI","PF",NA,NA,NA,0.000538647993536224,2021,"aboveground",0.05
-"820","Camp Colton","3","Control","POPR","PG3",NA,NA,NA,0.0123889038513332,2021,"aboveground",1.15
-"821","Camp Colton","3","Control","TAOF","PF",NA,NA,NA,0.00134661998384056,2021,"aboveground",0.125
-"822","Camp Colton","3","Control","VETH","A",NA,NA,NA,0.000269323996768112,2021,"aboveground",0.025
-"823","Camp Colton","3","Control","VIAM","PF",NA,NA,NA,0.00107729598707245,2021,"aboveground",0.1
-"824","Camp Colton","4","Water Addition","BRPO","PG3",NA,NA,NA,0.00866035182679296,2021,"aboveground",0.8
-"825","Camp Colton","4","Water Addition","CAGE","PG3",NA,NA,NA,0.00568335588633288,2021,"aboveground",0.525
-"826","Camp Colton","4","Water Addition","CAPA","PF",NA,NA,NA,0.0132611637347767,2021,"aboveground",1.225
-"827","Camp Colton","4","Water Addition","ELEL","PG3",NA,NA,NA,0.0054127198917456,2021,"aboveground",0.5
-"828","Camp Colton","4","Water Addition","ERFL","A",NA,NA,NA,0.00324763193504736,2021,"aboveground",0.3
-"829","Camp Colton","4","Water Addition","ERFO","PF",NA,NA,NA,0.00595399188092016,2021,"aboveground",0.55
-"830","Camp Colton","4","Water Addition","ERRA","PF",NA,NA,NA,0.0311231393775372,2021,"aboveground",2.875
-"831","Camp Colton","4","Water Addition","FEAR","PG3",NA,NA,NA,0.276048714479026,2021,"aboveground",25.5
-"832","Camp Colton","4","Water Addition","GETR","PF",NA,NA,NA,0.146143437077131,2021,"aboveground",13.5
-"833","Camp Colton","4","Water Addition","HYHO","PF",NA,NA,NA,0.0649526387009472,2021,"aboveground",6
-"834","Camp Colton","4","Water Addition","IRMI","PF",NA,NA,NA,0.0460081190798376,2021,"aboveground",4.25
-"835","Camp Colton","4","Water Addition","MUMO","PG4",NA,NA,NA,0.148849797023004,2021,"aboveground",13.75
-"836","Camp Colton","4","Water Addition","POHI","PF",NA,NA,NA,0.054127198917456,2021,"aboveground",5
-"837","Camp Colton","4","Water Addition","POPR","PG3",NA,NA,NA,0.0384303112313938,2021,"aboveground",3.55
-"838","Camp Colton","4","Water Addition","PTAQ","PF",NA,NA,NA,0.0433017591339648,2021,"aboveground",4
-"839","Camp Colton","4","Water Addition","TAOF","PF",NA,NA,NA,0.0216508795669824,2021,"aboveground",2
-"840","Camp Colton","4","Water Addition","VETH","A",NA,NA,NA,0.0817320703653586,2021,"aboveground",7.55
-"841","Camp Colton","4","Water Addition","VIAM","PF",NA,NA,NA,0.0054127198917456,2021,"aboveground",0.5
-"842","Camp Colton","5","Water Exclusion","ACMI","PF",NA,NA,NA,0.00455109640049648,2021,"aboveground",0.275
-"843","Camp Colton","5","Water Exclusion","ASSP","PF",NA,NA,NA,0.0496483243690525,2021,"aboveground",3
-"844","Camp Colton","5","Water Exclusion","CAGE","PG3",NA,NA,NA,0.16177079023583,2021,"aboveground",9.775
-"845","Camp Colton","5","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0475796441870087,2021,"aboveground",2.875
-"846","Camp Colton","5","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0223417459660736,2021,"aboveground",1.35
-"847","Camp Colton","5","Water Exclusion","GETR","PF",NA,NA,NA,0.422010757136947,2021,"aboveground",25.5
-"848","Camp Colton","5","Water Exclusion","HYHO","PF",NA,NA,NA,0.0330988829127017,2021,"aboveground",2
-"849","Camp Colton","5","Water Exclusion","IRMI","PF",NA,NA,NA,0.130326851468763,2021,"aboveground",7.875
-"850","Camp Colton","5","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00165494414563508,2021,"aboveground",0.1
-"851","Camp Colton","5","Water Exclusion","POHI","PF",NA,NA,NA,0.0992966487381051,2021,"aboveground",6
-"852","Camp Colton","5","Water Exclusion","POPR","PG3",NA,NA,NA,0.0153082333471245,2021,"aboveground",0.925
-"853","Camp Colton","5","Water Exclusion","VIAM","PF",NA,NA,NA,0.0124120810922631,2021,"aboveground",0.75
-"854","Camp Colton","6","Water Addition","ACMI","PF",NA,NA,NA,0.00896366269047783,2021,"aboveground",0.65
-"855","Camp Colton","6","Water Addition","ASSP","PF",NA,NA,NA,0.0420602633937806,2021,"aboveground",3.05
-"856","Camp Colton","6","Water Addition","BRPO","PG3",NA,NA,NA,0.0358546507619113,2021,"aboveground",2.6
-"857","Camp Colton","6","Water Addition","CAPA","PF",NA,NA,NA,0.00310280631593463,2021,"aboveground",0.225
-"858","Camp Colton","6","Water Addition","ELEL","PG3",NA,NA,NA,0.0137902502930428,2021,"aboveground",1
-"859","Camp Colton","6","Water Addition","ERFL","A",NA,NA,NA,0.000206853754395642,2021,"aboveground",0.015
-"860","Camp Colton","6","Water Addition","ERFO","PF",NA,NA,NA,0.014824519065021,2021,"aboveground",1.075
-"861","Camp Colton","6","Water Addition","FEAR","PG3",NA,NA,NA,0.38957457077846,2021,"aboveground",28.25
-"862","Camp Colton","6","Water Addition","GETR","PF",NA,NA,NA,0.337861132179549,2021,"aboveground",24.5
-"863","Camp Colton","6","Water Addition","HYHO","PF",NA,NA,NA,0.0206853754395642,2021,"aboveground",1.5
-"864","Camp Colton","6","Water Addition","IRMI","PF",NA,NA,NA,0.00689512514652141,2021,"aboveground",0.5
-"865","Camp Colton","6","Water Addition","MUMO","PG4",NA,NA,NA,0.0624008825760188,2021,"aboveground",4.525
-"866","Camp Colton","6","Water Addition","POHI","PF",NA,NA,NA,0.00689512514652141,2021,"aboveground",0.5
-"867","Camp Colton","6","Water Addition","POPR","PG3",NA,NA,NA,0.0513686823415845,2021,"aboveground",3.725
-"868","Camp Colton","6","Water Addition","VIAM","PF",NA,NA,NA,0.00551610011721713,2021,"aboveground",0.4
-"869","Camp Colton","7","Control","BRPO","PG3",NA,NA,NA,0.0194069243906226,2021,"aboveground",1.25
-"870","Camp Colton","7","Control","CAPA","PF",NA,NA,NA,0.000776276975624903,2021,"aboveground",0.05
-"871","Camp Colton","7","Control","ELEL","PG3",NA,NA,NA,0.275578326346841,2021,"aboveground",17.75
-"872","Camp Colton","7","Control","ERRA","PF",NA,NA,NA,0.0271696941468716,2021,"aboveground",1.75
-"873","Camp Colton","7","Control","FEAR","PG3",NA,NA,NA,0.145551932929669,2021,"aboveground",9.375
-"874","Camp Colton","7","Control","GETR","PF",NA,NA,NA,0.221238938053097,2021,"aboveground",14.25
-"875","Camp Colton","7","Control","IRMI","PF",NA,NA,NA,0.0310510790249961,2021,"aboveground",2
-"876","Camp Colton","7","Control","MUMO","PG4",NA,NA,NA,0.147492625368732,2021,"aboveground",9.5
-"877","Camp Colton","7","Control","POHI","PF",NA,NA,NA,0.0232883092687471,2021,"aboveground",1.5
-"878","Camp Colton","7","Control","POPR","PG3",NA,NA,NA,0.064430988976867,2021,"aboveground",4.15
-"879","Camp Colton","7","Control","VETH","A",NA,NA,NA,0.00908244061481137,2021,"aboveground",0.585
-"880","Camp Colton","7","Control","VIAM","PF",NA,NA,NA,0.0349324639031206,2021,"aboveground",2.25
-"881","Camp Colton","8","Water Exclusion","CAGE","PG3",NA,NA,NA,0.18606627017842,2021,"aboveground",10.95
-"882","Camp Colton","8","Water Exclusion","ELEL","PG3",NA,NA,NA,0.133814783347494,2021,"aboveground",7.875
-"883","Camp Colton","8","Water Exclusion","ERFL","A",NA,NA,NA,0.133814783347494,2021,"aboveground",7.875
-"884","Camp Colton","8","Water Exclusion","ERFO","PF",NA,NA,NA,0.0212404418011895,2021,"aboveground",1.25
-"885","Camp Colton","8","Water Exclusion","FEAR","PG3",NA,NA,NA,0.123194562446899,2021,"aboveground",7.25
-"886","Camp Colton","8","Water Exclusion","GETR","PF",NA,NA,NA,0.00849617672047579,2021,"aboveground",0.5
-"887","Camp Colton","8","Water Exclusion","MUMO","PG4",NA,NA,NA,0.0127442650807137,2021,"aboveground",0.75
-"888","Camp Colton","8","Water Exclusion","POHI","PF",NA,NA,NA,0.174171622769754,2021,"aboveground",10.25
-"889","Camp Colton","8","Water Exclusion","POPR","PG3",NA,NA,NA,0.046304163126593,2021,"aboveground",2.725
-"890","Camp Colton","8","Water Exclusion","TAOF","PF",NA,NA,NA,0.00424808836023789,2021,"aboveground",0.25
-"891","Camp Colton","8","Water Exclusion","TRDU","A",NA,NA,NA,0.0998300764655905,2021,"aboveground",5.875
-"892","Camp Colton","8","Water Exclusion","VETH","A",NA,NA,NA,0.00297366185216653,2021,"aboveground",0.175
-"893","Camp Colton","8","Water Exclusion","VIAM","PF",NA,NA,NA,0.0531011045029737,2021,"aboveground",3.125
-"894","Camp Colton","9","Water Addition","BRPO","PG3",NA,NA,NA,0.029585798816568,2021,"aboveground",2.875
-"895","Camp Colton","9","Water Addition","CAGE","PG3",NA,NA,NA,0.0113197838950347,2021,"aboveground",1.1
-"896","Camp Colton","9","Water Addition","ELEL","PG3",NA,NA,NA,0.0352456907640854,2021,"aboveground",3.425
-"897","Camp Colton","9","Water Addition","ERFL","A",NA,NA,NA,0.00205814252636995,2021,"aboveground",0.2
-"898","Camp Colton","9","Water Addition","FEAR","PG3",NA,NA,NA,0.241831746848469,2021,"aboveground",23.5
-"899","Camp Colton","9","Water Addition","GETR","PF",NA,NA,NA,0.0771803447388732,2021,"aboveground",7.5
-"900","Camp Colton","9","Water Addition","HYHO","PF",NA,NA,NA,0.277849241059943,2021,"aboveground",27
-"901","Camp Colton","9","Water Addition","IRMI","PF",NA,NA,NA,0.100334448160535,2021,"aboveground",9.75
-"902","Camp Colton","9","Water Addition","MUMO","PG4",NA,NA,NA,0.0656032930280422,2021,"aboveground",6.375
-"903","Camp Colton","9","Water Addition","POHI","PF",NA,NA,NA,0.108052482634422,2021,"aboveground",10.5
-"904","Camp Colton","9","Water Addition","POPR","PG3",NA,NA,NA,0.0149215333161821,2021,"aboveground",1.45
-"905","Camp Colton","9","Water Addition","VETH","A",NA,NA,NA,0.0154360689477746,2021,"aboveground",1.5
-"906","Camp Colton","9","Water Addition","VIAM","PF",NA,NA,NA,0.0205814252636995,2021,"aboveground",2
-"907","Camp Colton","10","Water Exclusion","ACMI","PF",NA,NA,NA,0.0499486828600753,2021,"aboveground",3.65
-"908","Camp Colton","10","Water Exclusion","ASSP","PF",NA,NA,NA,0.0273691412931919,2021,"aboveground",2
-"909","Camp Colton","10","Water Exclusion","CAGE","PG3",NA,NA,NA,0.0157372562435854,2021,"aboveground",1.15
-"910","Camp Colton","10","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0567909681833733,2021,"aboveground",4.15
-"911","Camp Colton","10","Water Exclusion","FEAR","PG3",NA,NA,NA,0.153951419774205,2021,"aboveground",11.25
-"912","Camp Colton","10","Water Exclusion","GETR","PF",NA,NA,NA,0.431063975367773,2021,"aboveground",31.5
-"913","Camp Colton","10","Water Exclusion","HYHO","PF",NA,NA,NA,0.0821074238795758,2021,"aboveground",6
-"914","Camp Colton","10","Water Exclusion","IRMI","PF",NA,NA,NA,0.0410537119397879,2021,"aboveground",3
-"915","Camp Colton","10","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00923708518645227,2021,"aboveground",0.675
-"916","Camp Colton","10","Water Exclusion","POHI","PF",NA,NA,NA,0.109476565172768,2021,"aboveground",8
-"917","Camp Colton","10","Water Exclusion","POPR","PG3",NA,NA,NA,0.0010263427984947,2021,"aboveground",0.075
-"918","Camp Colton","10","Water Exclusion","TRDU","A",NA,NA,NA,0.0205268559698939,2021,"aboveground",1.5
-"919","Camp Colton","10","Water Exclusion","VIAM","PF",NA,NA,NA,0.0017105713308245,2021,"aboveground",0.125
-"920","Camp Colton","11","Water Addition","ACMI","PF",NA,NA,NA,0.00300364728599013,2021,"aboveground",0.35
-"921","Camp Colton","11","Water Addition","ANRO","PF",NA,NA,NA,0.0010727311735679,2021,"aboveground",0.125
-"922","Camp Colton","11","Water Addition","BRPO","PG3",NA,NA,NA,0.0759493670886076,2021,"aboveground",8.85
-"923","Camp Colton","11","Water Addition","CAGE","PG3",NA,NA,NA,0.00922548809268397,2021,"aboveground",1.075
-"924","Camp Colton","11","Water Addition","ELEL","PG3",NA,NA,NA,0.0278910105127655,2021,"aboveground",3.25
-"925","Camp Colton","11","Water Addition","FEAR","PG3",NA,NA,NA,0.364728599013087,2021,"aboveground",42.5
-"926","Camp Colton","11","Water Addition","GETR","PF",NA,NA,NA,0.261746406350569,2021,"aboveground",30.5
-"927","Camp Colton","11","Water Addition","HYHO","PF",NA,NA,NA,0.0858184938854323,2021,"aboveground",10
-"928","Camp Colton","11","Water Addition","IRMI","PF",NA,NA,NA,0.0579274833726668,2021,"aboveground",6.75
-"929","Camp Colton","11","Water Addition","MUMO","PG4",NA,NA,NA,0.0313237502681828,2021,"aboveground",3.65
-"930","Camp Colton","11","Water Addition","POHI","PF",NA,NA,NA,0.0514910963312594,2021,"aboveground",6
-"931","Camp Colton","11","Water Addition","POPR","PG3",NA,NA,NA,0.0148036901952371,2021,"aboveground",1.725
-"932","Camp Colton","11","Water Addition","TRDU","A",NA,NA,NA,0.00214546234713581,2021,"aboveground",0.25
-"933","Camp Colton","11","Water Addition","VIAM","PF",NA,NA,NA,0.0128727740828148,2021,"aboveground",1.5
-"934","Camp Colton","12","Control","CAGE","PG3",NA,NA,NA,0.0202069985214391,2021,"aboveground",2.05
-"935","Camp Colton","12","Control","ELEL","PG3",NA,NA,NA,0.0295712173484475,2021,"aboveground",3
-"936","Camp Colton","12","Control","ERFO","PF",NA,NA,NA,0.0125677673730902,2021,"aboveground",1.275
-"937","Camp Colton","12","Control","FEAR","PG3",NA,NA,NA,0.146623952686052,2021,"aboveground",14.875
-"938","Camp Colton","12","Control","GETR","PF",NA,NA,NA,0.310497782158699,2021,"aboveground",31.5
-"939","Camp Colton","12","Control","HYHO","PF",NA,NA,NA,0.206998521439133,2021,"aboveground",21
-"940","Camp Colton","12","Control","IRMI","PF",NA,NA,NA,0.0110892065056678,2021,"aboveground",1.125
-"941","Camp Colton","12","Control","MUMO","PG4",NA,NA,NA,0.0372104484967965,2021,"aboveground",3.775
-"942","Camp Colton","12","Control","POHI","PF",NA,NA,NA,0.172498767865944,2021,"aboveground",17.5
-"943","Camp Colton","12","Control","POPR","PG3",NA,NA,NA,0.0133070478068014,2021,"aboveground",1.35
-"944","Camp Colton","12","Control","VIAM","PF",NA,NA,NA,0.03942828979793,2021,"aboveground",4
+"","Site","Plot","Treatment","Species","PFT","tottally","blanktot","totabun","relabun","Year","type","rawabun","Native.Introduced"
+"1","Antelope","1","2","BOER","PG4",1,0,1,0.0555555555555556,2021,"seedbank",NA,"N"
+"2","Antelope","1","2","CHSE","A",1,0,1,0.0555555555555556,2021,"seedbank",NA,"N"
+"3","Antelope","1","2","PLJA","PG4",1,0,1,0.0555555555555556,2021,"seedbank",NA,"N"
+"4","Antelope","1","2","SATR","A",15,0,15,0.833333333333333,2021,"seedbank",NA,"I"
+"5","Antelope","2","2","BASC","A",1,0,1,0.027027027027027,2021,"seedbank",NA,"I"
+"6","Antelope","2","2","BOER","PG4",1,0,1,0.027027027027027,2021,"seedbank",NA,"N"
+"7","Antelope","2","2","GUSA","S",3,0,3,0.0810810810810811,2021,"seedbank",NA,"N"
+"8","Antelope","2","2","SATR","A",32,0,32,0.864864864864865,2021,"seedbank",NA,"I"
+"9","Antelope","3","1","CHSE","A",1,0,1,0.0161290322580645,2021,"seedbank",NA,"N"
+"10","Antelope","3","1","ERSP","A",1,0,1,0.0161290322580645,2021,"seedbank",NA,"N"
+"11","Antelope","3","1","SATR","A",59,0,59,0.951612903225806,2021,"seedbank",NA,"I"
+"12","Antelope","3","1","SPHA","PF",1,0,1,0.0161290322580645,2021,"seedbank",NA,"N"
+"13","Antelope","4","3","ACMI","PF",4,0,4,0.0851063829787234,2021,"seedbank",NA,"N"
+"14","Antelope","4","3","ERSP","A",4,0,4,0.0851063829787234,2021,"seedbank",NA,"N"
+"15","Antelope","4","3","MEMO","A",1,0,1,0.0212765957446809,2021,"seedbank",NA,"N"
+"16","Antelope","4","3","SATR","A",37,0,37,0.787234042553192,2021,"seedbank",NA,"I"
+"17","Antelope","4","3","TAOF","PF",2,1,1,0.0212765957446809,2021,"seedbank",NA,"I"
+"18","Antelope","5","2","BOER","PG4",5,0,5,0.161290322580645,2021,"seedbank",NA,"N"
+"19","Antelope","5","2","ERSP","A",12,0,12,0.387096774193548,2021,"seedbank",NA,"N"
+"20","Antelope","5","2","PLJA","PG4",2,0,2,0.0645161290322581,2021,"seedbank",NA,"N"
+"21","Antelope","5","2","SATR","A",12,0,12,0.387096774193548,2021,"seedbank",NA,"I"
+"22","Antelope","6","3","CHSE","A",1,0,1,0.0588235294117647,2021,"seedbank",NA,"N"
+"23","Antelope","6","3","GUSA","S",2,0,2,0.117647058823529,2021,"seedbank",NA,"N"
+"24","Antelope","6","3","SATR","A",14,0,14,0.823529411764706,2021,"seedbank",NA,"I"
+"25","Antelope","7","1","ERSP","A",2,0,2,0.0357142857142857,2021,"seedbank",NA,"N"
+"26","Antelope","7","1","SATR","A",53,0,53,0.946428571428571,2021,"seedbank",NA,"I"
+"27","Antelope","7","1","SPHA","PF",1,0,1,0.0178571428571429,2021,"seedbank",NA,"N"
+"28","Antelope","8","1","BASC","A",1,0,1,0.125,2021,"seedbank",NA,"I"
+"29","Antelope","8","1","BOER","PG4",1,0,1,0.125,2021,"seedbank",NA,"N"
+"30","Antelope","8","1","SATR","A",6,0,6,0.75,2021,"seedbank",NA,"I"
+"31","Antelope","9","3","SATR","A",18,0,18,1,2021,"seedbank",NA,"I"
+"32","Antelope","10","1","BASC","A",1,0,1,0.0555555555555556,2021,"seedbank",NA,"I"
+"33","Antelope","10","1","SATR","A",17,0,17,0.944444444444444,2021,"seedbank",NA,"I"
+"34","Antelope","11","2","BASC","A",1,0,1,0.0277777777777778,2021,"seedbank",NA,"I"
+"35","Antelope","11","2","BOER","PG4",3,0,3,0.0833333333333333,2021,"seedbank",NA,"N"
+"36","Antelope","11","2","ERSP","A",2,0,2,0.0555555555555556,2021,"seedbank",NA,"N"
+"37","Antelope","11","2","MEMO","A",1,0,1,0.0277777777777778,2021,"seedbank",NA,"N"
+"38","Antelope","11","2","PEVI","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA,"N"
+"39","Antelope","11","2","SATR","A",26,0,26,0.722222222222222,2021,"seedbank",NA,"I"
+"40","Antelope","11","2","SPHA","PF",1,0,1,0.0277777777777778,2021,"seedbank",NA,"N"
+"41","Antelope","11","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"42","Antelope","12","3","GUSA","S",1,0,1,0.0185185185185185,2021,"seedbank",NA,"N"
+"43","Antelope","12","3","PLJA","PG4",1,0,1,0.0185185185185185,2021,"seedbank",NA,"N"
+"44","Antelope","12","3","SATR","A",52,0,52,0.962962962962963,2021,"seedbank",NA,"I"
+"45","Arboretum","1","3","ACMI","PF",2,0,2,0.0344827586206897,2021,"seedbank",NA,"N"
+"46","Arboretum","1","3","ARFE","PF",3,0,3,0.0517241379310345,2021,"seedbank",NA,"N"
+"47","Arboretum","1","3","ERFL","A",1,0,1,0.0172413793103448,2021,"seedbank",NA,"N"
+"48","Arboretum","1","3","ERSP","A",40,0,40,0.689655172413793,2021,"seedbank",NA,"N"
+"49","Arboretum","1","3","LUKI","A",1,0,1,0.0172413793103448,2021,"seedbank",NA,"N"
+"50","Arboretum","1","3","SPHA","PF",6,0,6,0.103448275862069,2021,"seedbank",NA,"N"
+"51","Arboretum","1","3","TAOF","PF",6,1,5,0.0862068965517241,2021,"seedbank",NA,"I"
+"52","Arboretum","2","1","ACMI","PF",1,0,1,0.0303030303030303,2021,"seedbank",NA,"N"
+"53","Arboretum","2","1","ARFE","PF",4,0,4,0.121212121212121,2021,"seedbank",NA,"N"
+"54","Arboretum","2","1","CHSE","A",2,0,2,0.0606060606060606,2021,"seedbank",NA,"N"
+"55","Arboretum","2","1","ELEL","PG3",1,0,1,0.0303030303030303,2021,"seedbank",NA,"N"
+"56","Arboretum","2","1","ERSP","A",14,0,14,0.424242424242424,2021,"seedbank",NA,"N"
+"57","Arboretum","2","1","LUKI","A",1,0,1,0.0303030303030303,2021,"seedbank",NA,"N"
+"58","Arboretum","2","1","MUMO","PG4",1,0,1,0.0303030303030303,2021,"seedbank",NA,"N"
+"59","Arboretum","2","1","PEVI","PF",1,0,1,0.0303030303030303,2021,"seedbank",NA,"N"
+"60","Arboretum","2","1","SPHA","PF",6,0,6,0.181818181818182,2021,"seedbank",NA,"N"
+"61","Arboretum","2","1","TAOF","PF",3,1,2,0.0606060606060606,2021,"seedbank",NA,"I"
+"62","Arboretum","3","2","ACMI","PF",4,0,4,0.0396039603960396,2021,"seedbank",NA,"N"
+"63","Arboretum","3","2","ARCA","PF",2,0,2,0.0198019801980198,2021,"seedbank",NA,"N"
+"64","Arboretum","3","2","ARFE","PF",22,0,22,0.217821782178218,2021,"seedbank",NA,"N"
+"65","Arboretum","3","2","ASHU","PF",1,0,1,0.0099009900990099,2021,"seedbank",NA,"N"
+"66","Arboretum","3","2","ERSP","A",20,0,20,0.198019801980198,2021,"seedbank",NA,"N"
+"67","Arboretum","3","2","PEVI","PF",1,0,1,0.0099009900990099,2021,"seedbank",NA,"N"
+"68","Arboretum","3","2","POHI","PF",4,0,4,0.0396039603960396,2021,"seedbank",NA,"N"
+"69","Arboretum","3","2","SPHA","PF",42,0,42,0.415841584158416,2021,"seedbank",NA,"N"
+"70","Arboretum","3","2","TAOF","PF",6,1,5,0.0495049504950495,2021,"seedbank",NA,"I"
+"71","Arboretum","4","3","ACMI","PF",5,0,5,0.0354609929078014,2021,"seedbank",NA,"N"
+"72","Arboretum","4","3","ARCA","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA,"N"
+"73","Arboretum","4","3","ARFE","PF",7,0,7,0.049645390070922,2021,"seedbank",NA,"N"
+"74","Arboretum","4","3","ASHU","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA,"N"
+"75","Arboretum","4","3","CHAL","A",1,0,1,0.00709219858156028,2021,"seedbank",NA,"I"
+"76","Arboretum","4","3","ERSP","A",72,0,72,0.51063829787234,2021,"seedbank",NA,"N"
+"77","Arboretum","4","3","LUKI","A",1,0,1,0.00709219858156028,2021,"seedbank",NA,"N"
+"78","Arboretum","4","3","PEVI","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA,"N"
+"79","Arboretum","4","3","POHI","PF",1,0,1,0.00709219858156028,2021,"seedbank",NA,"N"
+"80","Arboretum","4","3","SPHA","PF",15,0,15,0.106382978723404,2021,"seedbank",NA,"N"
+"81","Arboretum","4","3","TAOF","PF",29,1,28,0.198581560283688,2021,"seedbank",NA,"I"
+"82","Arboretum","4","3","VETH","A",12,4,8,0.0567375886524823,2021,"seedbank",NA,"I"
+"83","Arboretum","5","1","ARFE","PF",16,0,16,0.533333333333333,2021,"seedbank",NA,"N"
+"84","Arboretum","5","1","ELEL","PG3",6,0,6,0.2,2021,"seedbank",NA,"N"
+"85","Arboretum","5","1","ERSP","A",5,0,5,0.166666666666667,2021,"seedbank",NA,"N"
+"86","Arboretum","5","1","SPHA","PF",1,0,1,0.0333333333333333,2021,"seedbank",NA,"N"
+"87","Arboretum","5","1","TAOF","PF",3,1,2,0.0666666666666667,2021,"seedbank",NA,"I"
+"88","Arboretum","5","1","VETH","A",1,4,0,0,2021,"seedbank",NA,"I"
+"89","Arboretum","6","1","ARCA","PF",4,0,4,0.148148148148148,2021,"seedbank",NA,"N"
+"90","Arboretum","6","1","ASHU","PF",1,0,1,0.037037037037037,2021,"seedbank",NA,"N"
+"91","Arboretum","6","1","BLTR","PG4",4,0,4,0.148148148148148,2021,"seedbank",NA,"N"
+"92","Arboretum","6","1","ELEL","PG3",5,0,5,0.185185185185185,2021,"seedbank",NA,"N"
+"93","Arboretum","6","1","TAOF","PF",14,1,13,0.481481481481481,2021,"seedbank",NA,"I"
+"94","Arboretum","6","1","VETH","A",1,4,0,0,2021,"seedbank",NA,"I"
+"95","Arboretum","7","3","ACMI","PF",1,0,1,0.00826446280991736,2021,"seedbank",NA,"N"
+"96","Arboretum","7","3","ANRO","PF",4,0,4,0.0330578512396694,2021,"seedbank",NA,"N"
+"97","Arboretum","7","3","ARFE","PF",8,0,8,0.0661157024793388,2021,"seedbank",NA,"N"
+"98","Arboretum","7","3","BLTR","PG4",4,0,4,0.0330578512396694,2021,"seedbank",NA,"N"
+"99","Arboretum","7","3","CHAL","A",1,0,1,0.00826446280991736,2021,"seedbank",NA,"I"
+"100","Arboretum","7","3","ELEL","PG3",6,0,6,0.0495867768595041,2021,"seedbank",NA,"N"
+"101","Arboretum","7","3","ERSP","A",32,0,32,0.264462809917355,2021,"seedbank",NA,"N"
+"102","Arboretum","7","3","SPHA","PF",1,0,1,0.00826446280991736,2021,"seedbank",NA,"N"
+"103","Arboretum","7","3","TAOF","PF",65,1,64,0.528925619834711,2021,"seedbank",NA,"I"
+"104","Arboretum","8","2","ARFE","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA,"N"
+"105","Arboretum","8","2","BLTR","PG4",11,0,11,0.305555555555556,2021,"seedbank",NA,"N"
+"106","Arboretum","8","2","CHAL","A",5,0,5,0.138888888888889,2021,"seedbank",NA,"I"
+"107","Arboretum","8","2","LUKI","A",1,0,1,0.0277777777777778,2021,"seedbank",NA,"N"
+"108","Arboretum","8","2","PEVI","PF",3,0,3,0.0833333333333333,2021,"seedbank",NA,"N"
+"109","Arboretum","8","2","POOL","A",4,1,3,0.0833333333333333,2021,"seedbank",NA,"I"
+"110","Arboretum","8","2","SPHA","PF",2,0,2,0.0555555555555556,2021,"seedbank",NA,"N"
+"111","Arboretum","8","2","TAOF","PF",10,1,9,0.25,2021,"seedbank",NA,"I"
+"112","Arboretum","9","2","ACMI","PF",1,0,1,0.0217391304347826,2021,"seedbank",NA,"N"
+"113","Arboretum","9","2","ARCA","PF",3,0,3,0.0652173913043478,2021,"seedbank",NA,"N"
+"114","Arboretum","9","2","ARFE","PF",15,0,15,0.326086956521739,2021,"seedbank",NA,"N"
+"115","Arboretum","9","2","ASHU","PF",1,0,1,0.0217391304347826,2021,"seedbank",NA,"N"
+"116","Arboretum","9","2","ELEL","PG3",5,0,5,0.108695652173913,2021,"seedbank",NA,"N"
+"117","Arboretum","9","2","ERSP","A",12,0,12,0.260869565217391,2021,"seedbank",NA,"N"
+"118","Arboretum","9","2","SPHA","PF",9,0,9,0.195652173913043,2021,"seedbank",NA,"N"
+"119","Arboretum","10","3","ARFE","PF",4,0,4,0.0701754385964912,2021,"seedbank",NA,"N"
+"120","Arboretum","10","3","CHAL","A",1,0,1,0.0175438596491228,2021,"seedbank",NA,"I"
+"121","Arboretum","10","3","ERFL","A",1,0,1,0.0175438596491228,2021,"seedbank",NA,"N"
+"122","Arboretum","10","3","ERSP","A",26,0,26,0.456140350877193,2021,"seedbank",NA,"N"
+"123","Arboretum","10","3","PEVI","PF",2,0,2,0.0350877192982456,2021,"seedbank",NA,"N"
+"124","Arboretum","10","3","SPHA","PF",5,0,5,0.087719298245614,2021,"seedbank",NA,"N"
+"125","Arboretum","10","3","TAOF","PF",19,1,18,0.315789473684211,2021,"seedbank",NA,"I"
+"126","Arboretum","11","1","ACMI","PF",4,0,4,0.0597014925373134,2021,"seedbank",NA,"N"
+"127","Arboretum","11","1","ARCA","PF",2,0,2,0.0298507462686567,2021,"seedbank",NA,"N"
+"128","Arboretum","11","1","ELEL","PG3",1,0,1,0.0149253731343284,2021,"seedbank",NA,"N"
+"129","Arboretum","11","1","ERSP","A",33,0,33,0.492537313432836,2021,"seedbank",NA,"N"
+"130","Arboretum","11","1","PEVI","PF",2,0,2,0.0298507462686567,2021,"seedbank",NA,"N"
+"131","Arboretum","11","1","SPHA","PF",8,0,8,0.119402985074627,2021,"seedbank",NA,"N"
+"132","Arboretum","11","1","TAOF","PF",18,1,17,0.253731343283582,2021,"seedbank",NA,"I"
+"133","Arboretum","12","2","ANRO","PF",1,0,1,0.024390243902439,2021,"seedbank",NA,"N"
+"134","Arboretum","12","2","ARCA","PF",1,0,1,0.024390243902439,2021,"seedbank",NA,"N"
+"135","Arboretum","12","2","ARFE","PF",7,0,7,0.170731707317073,2021,"seedbank",NA,"N"
+"136","Arboretum","12","2","ELEL","PG3",3,0,3,0.0731707317073171,2021,"seedbank",NA,"N"
+"137","Arboretum","12","2","ERSP","A",17,0,17,0.414634146341463,2021,"seedbank",NA,"N"
+"138","Arboretum","12","2","SPHA","PF",10,0,10,0.24390243902439,2021,"seedbank",NA,"N"
+"139","Arboretum","12","2","TAOF","PF",3,1,2,0.0487804878048781,2021,"seedbank",NA,"I"
+"140","Arboretum","12","2","VETH","A",3,4,0,0,2021,"seedbank",NA,"I"
+"141","Black Point","1","3","SATR","A",0,0,0,NA,2021,"seedbank",NA,"I"
+"142","Black Point","2","3","SATR","A",4,0,4,1,2021,"seedbank",NA,"I"
+"143","Black Point","2","3","VETH","A",1,4,0,0,2021,"seedbank",NA,"I"
+"144","Black Point","3","1","PLJA","PG4",3,0,3,0.5,2021,"seedbank",NA,"N"
+"145","Black Point","3","1","SATR","A",3,0,3,0.5,2021,"seedbank",NA,"I"
+"146","Black Point","4","3","BOER","PG4",3,0,3,0.230769230769231,2021,"seedbank",NA,"N"
+"147","Black Point","4","3","PLJA","PG4",1,0,1,0.0769230769230769,2021,"seedbank",NA,"N"
+"148","Black Point","4","3","SATR","A",2,0,2,0.153846153846154,2021,"seedbank",NA,"I"
+"149","Black Point","4","3","SPHA","PF",7,0,7,0.538461538461538,2021,"seedbank",NA,"N"
+"150","Black Point","5","1","BOER","PG4",1,0,1,0.25,2021,"seedbank",NA,"N"
+"151","Black Point","5","1","CAJA","PF",1,0,1,0.25,2021,"seedbank",NA,"N"
+"152","Black Point","5","1","PLJA","PG4",2,0,2,0.5,2021,"seedbank",NA,"N"
+"153","Black Point","5","1","SATR","A",0,0,0,0,2021,"seedbank",NA,"I"
+"154","Black Point","6","1","SATR","A",1,0,1,1,2021,"seedbank",NA,"I"
+"155","Black Point","7","3","ERFL","A",1,0,1,0.0666666666666667,2021,"seedbank",NA,"N"
+"156","Black Point","7","3","PLJA","PG4",7,0,7,0.466666666666667,2021,"seedbank",NA,"N"
+"157","Black Point","7","3","SATR","A",7,0,7,0.466666666666667,2021,"seedbank",NA,"I"
+"158","Black Point","8","1","DAPU","PG4",1,0,1,0.0666666666666667,2021,"seedbank",NA,"N"
+"159","Black Point","8","1","ERSP","A",2,0,2,0.133333333333333,2021,"seedbank",NA,"N"
+"160","Black Point","8","1","SATR","A",11,0,11,0.733333333333333,2021,"seedbank",NA,"I"
+"161","Black Point","8","1","SPHA","PF",1,0,1,0.0666666666666667,2021,"seedbank",NA,"N"
+"162","Black Point","9","2","BOER","PG4",1,0,1,0.0434782608695652,2021,"seedbank",NA,"N"
+"163","Black Point","9","2","CHSE","A",1,0,1,0.0434782608695652,2021,"seedbank",NA,"N"
+"164","Black Point","9","2","PLJA","PG4",1,0,1,0.0434782608695652,2021,"seedbank",NA,"N"
+"165","Black Point","9","2","SATR","A",20,0,20,0.869565217391304,2021,"seedbank",NA,"I"
+"166","Black Point","10","2","BASC","A",2,0,2,0.125,2021,"seedbank",NA,"I"
+"167","Black Point","10","2","BOER","PG4",1,0,1,0.0625,2021,"seedbank",NA,"N"
+"168","Black Point","10","2","ERSP","A",1,0,1,0.0625,2021,"seedbank",NA,"N"
+"169","Black Point","10","2","PLJA","PG4",2,0,2,0.125,2021,"seedbank",NA,"N"
+"170","Black Point","10","2","SATR","A",10,0,10,0.625,2021,"seedbank",NA,"I"
+"171","Black Point","10","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"172","Black Point","11","2","ERFL","A",1,0,1,0.2,2021,"seedbank",NA,"N"
+"173","Black Point","11","2","PLJA","PG4",4,0,4,0.8,2021,"seedbank",NA,"N"
+"174","Black Point","11","2","SATR","A",0,0,0,0,2021,"seedbank",NA,"I"
+"175","Black Point","12","2","ERFL","A",1,0,1,0.25,2021,"seedbank",NA,"N"
+"176","Black Point","12","2","SATR","A",3,0,3,0.75,2021,"seedbank",NA,"I"
+"177","Blank","3","Blank","POOL","A",1,1,0,NA,2021,"seedbank",NA,"I"
+"178","Blank","6","Blank","TAOF","PF",1,1,0,NA,2021,"seedbank",NA,"I"
+"179","Blank","10","Blank","POOL","A",1,1,0,NA,2021,"seedbank",NA,"I"
+"180","Blank","10","Blank","TAOF","PF",1,1,0,NA,2021,"seedbank",NA,"I"
+"181","Blank","11","Blank","VETH","A",4,4,0,NA,2021,"seedbank",NA,"I"
+"182","Blue Chute","1","2","BASC","A",7,0,7,0.7,2021,"seedbank",NA,"I"
+"183","Blue Chute","1","2","BOGR","PG4",3,0,3,0.3,2021,"seedbank",NA,"N"
+"184","Blue Chute","2","1","BASC","A",1,0,1,0.0555555555555556,2021,"seedbank",NA,"I"
+"185","Blue Chute","2","1","BOGR","PG4",6,0,6,0.333333333333333,2021,"seedbank",NA,"N"
+"186","Blue Chute","2","1","CAJA","PF",1,0,1,0.0555555555555556,2021,"seedbank",NA,"N"
+"187","Blue Chute","2","1","ELEL","PG3",2,0,2,0.111111111111111,2021,"seedbank",NA,"N"
+"188","Blue Chute","2","1","ERSP","A",2,0,2,0.111111111111111,2021,"seedbank",NA,"N"
+"189","Blue Chute","2","1","MEAL","A",1,0,1,0.0555555555555556,2021,"seedbank",NA,"N"
+"190","Blue Chute","2","1","SATR","A",5,0,5,0.277777777777778,2021,"seedbank",NA,"I"
+"191","Blue Chute","3","1","BASC","A",3,0,3,0.428571428571429,2021,"seedbank",NA,"I"
+"192","Blue Chute","3","1","BOGR","PG4",4,0,4,0.571428571428571,2021,"seedbank",NA,"N"
+"193","Blue Chute","3","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"194","Blue Chute","4","3","BASC","A",1,0,1,0.25,2021,"seedbank",NA,"I"
+"195","Blue Chute","4","3","BOGR","PG4",1,0,1,0.25,2021,"seedbank",NA,"N"
+"196","Blue Chute","4","3","ELEL","PG3",2,0,2,0.5,2021,"seedbank",NA,"N"
+"197","Blue Chute","5","1","BASC","A",1,0,1,0.166666666666667,2021,"seedbank",NA,"I"
+"198","Blue Chute","5","1","BOGR","PG4",1,0,1,0.166666666666667,2021,"seedbank",NA,"N"
+"199","Blue Chute","5","1","CHSE","A",1,0,1,0.166666666666667,2021,"seedbank",NA,"N"
+"200","Blue Chute","5","1","ELEL","PG3",2,0,2,0.333333333333333,2021,"seedbank",NA,"N"
+"201","Blue Chute","5","1","LUKI","A",1,0,1,0.166666666666667,2021,"seedbank",NA,"N"
+"202","Blue Chute","6","2","BASC","A",6,0,6,0.230769230769231,2021,"seedbank",NA,"I"
+"203","Blue Chute","6","2","BOGR","PG4",16,0,16,0.615384615384615,2021,"seedbank",NA,"N"
+"204","Blue Chute","6","2","ELEL","PG3",4,0,4,0.153846153846154,2021,"seedbank",NA,"N"
+"205","Blue Chute","6","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"206","Blue Chute","6","2","VETH","A",1,4,0,0,2021,"seedbank",NA,"I"
+"207","Blue Chute","7","1","BASC","A",1,0,1,0.1,2021,"seedbank",NA,"I"
+"208","Blue Chute","7","1","BOGR","PG4",8,0,8,0.8,2021,"seedbank",NA,"N"
+"209","Blue Chute","7","1","SATR","A",1,0,1,0.1,2021,"seedbank",NA,"I"
+"210","Blue Chute","7","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"211","Blue Chute","8","3","BASC","A",3,0,3,0.375,2021,"seedbank",NA,"I"
+"212","Blue Chute","8","3","BOGR","PG4",2,0,2,0.25,2021,"seedbank",NA,"N"
+"213","Blue Chute","8","3","ELEL","PG3",2,0,2,0.25,2021,"seedbank",NA,"N"
+"214","Blue Chute","8","3","SATR","A",1,0,1,0.125,2021,"seedbank",NA,"I"
+"215","Blue Chute","9","2","BOGR","PG4",4,0,4,0.8,2021,"seedbank",NA,"N"
+"216","Blue Chute","9","2","CHER","PF",1,0,1,0.2,2021,"seedbank",NA,"N"
+"217","Blue Chute","10","3","AMDI","PF",1,0,1,0.027027027027027,2021,"seedbank",NA,"N"
+"218","Blue Chute","10","3","BASC","A",7,0,7,0.189189189189189,2021,"seedbank",NA,"I"
+"219","Blue Chute","10","3","BOGR","PG4",1,0,1,0.027027027027027,2021,"seedbank",NA,"N"
+"220","Blue Chute","10","3","CHER","PF",23,0,23,0.621621621621622,2021,"seedbank",NA,"N"
+"221","Blue Chute","10","3","ELEL","PG3",4,0,4,0.108108108108108,2021,"seedbank",NA,"N"
+"222","Blue Chute","10","3","MEAL","A",1,0,1,0.027027027027027,2021,"seedbank",NA,"N"
+"223","Blue Chute","11","2","BASC","A",2,0,2,0.4,2021,"seedbank",NA,"I"
+"224","Blue Chute","11","2","BOGR","PG4",2,0,2,0.4,2021,"seedbank",NA,"N"
+"225","Blue Chute","11","2","ELEL","PG3",1,0,1,0.2,2021,"seedbank",NA,"N"
+"226","Blue Chute","12","3","BASC","A",3,0,3,0.3,2021,"seedbank",NA,"I"
+"227","Blue Chute","12","3","BOGR","PG4",2,0,2,0.2,2021,"seedbank",NA,"N"
+"228","Blue Chute","12","3","CHER","PF",4,0,4,0.4,2021,"seedbank",NA,"N"
+"229","Blue Chute","12","3","ELEL","PG3",1,0,1,0.1,2021,"seedbank",NA,"N"
+"230","Camp Colton","1","1","ANRO","PF",27,0,27,0.152542372881356,2021,"seedbank",NA,"N"
+"231","Camp Colton","1","1","BRPO","PG3",3,0,3,0.0169491525423729,2021,"seedbank",NA,"N"
+"232","Camp Colton","1","1","ELEL","PG3",6,0,6,0.0338983050847458,2021,"seedbank",NA,"N"
+"233","Camp Colton","1","1","ERFL","A",1,0,1,0.00564971751412429,2021,"seedbank",NA,"N"
+"234","Camp Colton","1","1","MUMO","PG4",4,0,4,0.0225988700564972,2021,"seedbank",NA,"N"
+"235","Camp Colton","1","1","POPR","PG3",52,0,52,0.293785310734463,2021,"seedbank",NA,"I"
+"236","Camp Colton","1","1","VETH","A",88,4,84,0.474576271186441,2021,"seedbank",NA,"I"
+"237","Camp Colton","2","3","ANRO","PF",10,0,10,0.0740740740740741,2021,"seedbank",NA,"N"
+"238","Camp Colton","2","3","ELEL","PG3",1,0,1,0.00740740740740741,2021,"seedbank",NA,"N"
+"239","Camp Colton","2","3","MUMO","PG4",2,0,2,0.0148148148148148,2021,"seedbank",NA,"N"
+"240","Camp Colton","2","3","POPR","PG3",25,0,25,0.185185185185185,2021,"seedbank",NA,"I"
+"241","Camp Colton","2","3","SPHA","PF",1,0,1,0.00740740740740741,2021,"seedbank",NA,"N"
+"242","Camp Colton","2","3","VETH","A",100,4,96,0.711111111111111,2021,"seedbank",NA,"I"
+"243","Camp Colton","3","1","ANRO","PF",12,0,12,0.0502092050209205,2021,"seedbank",NA,"N"
+"244","Camp Colton","3","1","BRPO","PG3",1,0,1,0.00418410041841004,2021,"seedbank",NA,"N"
+"245","Camp Colton","3","1","ELEL","PG3",3,0,3,0.0125523012552301,2021,"seedbank",NA,"N"
+"246","Camp Colton","3","1","ERSP","A",5,0,5,0.0209205020920502,2021,"seedbank",NA,"N"
+"247","Camp Colton","3","1","MUMO","PG4",0,0,0,0,2021,"seedbank",NA,"N"
+"248","Camp Colton","3","1","POHI","PF",2,0,2,0.00836820083682008,2021,"seedbank",NA,"N"
+"249","Camp Colton","3","1","POPR","PG3",74,0,74,0.309623430962343,2021,"seedbank",NA,"I"
+"250","Camp Colton","3","1","TAOF","PF",5,1,4,0.0167364016736402,2021,"seedbank",NA,"I"
+"251","Camp Colton","3","1","VETH","A",142,4,138,0.577405857740586,2021,"seedbank",NA,"I"
+"252","Camp Colton","4","2","ANRO","PF",4,0,4,0.0218579234972678,2021,"seedbank",NA,"N"
+"253","Camp Colton","4","2","ARFE","PF",1,0,1,0.00546448087431694,2021,"seedbank",NA,"N"
+"254","Camp Colton","4","2","ELEL","PG3",15,0,15,0.0819672131147541,2021,"seedbank",NA,"N"
+"255","Camp Colton","4","2","ERSP","A",3,0,3,0.0163934426229508,2021,"seedbank",NA,"N"
+"256","Camp Colton","4","2","MUMO","PG4",4,0,4,0.0218579234972678,2021,"seedbank",NA,"N"
+"257","Camp Colton","4","2","POHI","PF",1,0,1,0.00546448087431694,2021,"seedbank",NA,"N"
+"258","Camp Colton","4","2","POPR","PG3",62,0,62,0.33879781420765,2021,"seedbank",NA,"I"
+"259","Camp Colton","4","2","VETH","A",97,4,93,0.508196721311475,2021,"seedbank",NA,"I"
+"260","Camp Colton","5","3","ANRO","PF",1,0,1,0.00549450549450549,2021,"seedbank",NA,"N"
+"261","Camp Colton","5","3","ELEL","PG3",2,0,2,0.010989010989011,2021,"seedbank",NA,"N"
+"262","Camp Colton","5","3","ERSP","A",8,0,8,0.043956043956044,2021,"seedbank",NA,"N"
+"263","Camp Colton","5","3","HYHO","PF",2,0,2,0.010989010989011,2021,"seedbank",NA,"N"
+"264","Camp Colton","5","3","IRMI","PF",2,0,2,0.010989010989011,2021,"seedbank",NA,"N"
+"265","Camp Colton","5","3","MUMO","PG4",1,0,1,0.00549450549450549,2021,"seedbank",NA,"N"
+"266","Camp Colton","5","3","POHI","PF",4,0,4,0.021978021978022,2021,"seedbank",NA,"N"
+"267","Camp Colton","5","3","POPR","PG3",62,0,62,0.340659340659341,2021,"seedbank",NA,"I"
+"268","Camp Colton","5","3","SPHA","PF",1,0,1,0.00549450549450549,2021,"seedbank",NA,"N"
+"269","Camp Colton","5","3","TAOF","PF",2,1,1,0.00549450549450549,2021,"seedbank",NA,"I"
+"270","Camp Colton","5","3","VETH","A",102,4,98,0.538461538461538,2021,"seedbank",NA,"I"
+"271","Camp Colton","6","2","ANRO","PF",10,0,10,0.078740157480315,2021,"seedbank",NA,"N"
+"272","Camp Colton","6","2","CHSE","A",1,0,1,0.0078740157480315,2021,"seedbank",NA,"N"
+"273","Camp Colton","6","2","ELEL","PG3",8,0,8,0.062992125984252,2021,"seedbank",NA,"N"
+"274","Camp Colton","6","2","MUMO","PG4",1,0,1,0.0078740157480315,2021,"seedbank",NA,"N"
+"275","Camp Colton","6","2","POHI","PF",1,0,1,0.0078740157480315,2021,"seedbank",NA,"N"
+"276","Camp Colton","6","2","POPR","PG3",38,0,38,0.299212598425197,2021,"seedbank",NA,"I"
+"277","Camp Colton","6","2","VETH","A",72,4,68,0.535433070866142,2021,"seedbank",NA,"I"
+"278","Camp Colton","7","1","ANRO","PF",2,0,2,0.0153846153846154,2021,"seedbank",NA,"N"
+"279","Camp Colton","7","1","BRPO","PG3",2,0,2,0.0153846153846154,2021,"seedbank",NA,"N"
+"280","Camp Colton","7","1","ELEL","PG3",11,0,11,0.0846153846153846,2021,"seedbank",NA,"N"
+"281","Camp Colton","7","1","ERSP","A",13,0,13,0.1,2021,"seedbank",NA,"N"
+"282","Camp Colton","7","1","MUMO","PG4",6,0,6,0.0461538461538462,2021,"seedbank",NA,"N"
+"283","Camp Colton","7","1","POHI","PF",1,0,1,0.00769230769230769,2021,"seedbank",NA,"N"
+"284","Camp Colton","7","1","POPR","PG3",40,0,40,0.307692307692308,2021,"seedbank",NA,"I"
+"285","Camp Colton","7","1","SPHA","PF",4,0,4,0.0307692307692308,2021,"seedbank",NA,"N"
+"286","Camp Colton","7","1","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"287","Camp Colton","7","1","VETH","A",55,4,51,0.392307692307692,2021,"seedbank",NA,"I"
+"288","Camp Colton","8","3","ANRO","PF",5,0,5,0.0241545893719807,2021,"seedbank",NA,"N"
+"289","Camp Colton","8","3","ELEL","PG3",3,0,3,0.0144927536231884,2021,"seedbank",NA,"N"
+"290","Camp Colton","8","3","ERSP","A",6,0,6,0.0289855072463768,2021,"seedbank",NA,"N"
+"291","Camp Colton","8","3","MUMO","PG4",2,0,2,0.00966183574879227,2021,"seedbank",NA,"N"
+"292","Camp Colton","8","3","OXLA","PF",1,0,1,0.00483091787439614,2021,"seedbank",NA,"N"
+"293","Camp Colton","8","3","POHI","PF",3,0,3,0.0144927536231884,2021,"seedbank",NA,"N"
+"294","Camp Colton","8","3","POPR","PG3",89,0,89,0.429951690821256,2021,"seedbank",NA,"I"
+"295","Camp Colton","8","3","SPHA","PF",1,0,1,0.00483091787439614,2021,"seedbank",NA,"N"
+"296","Camp Colton","8","3","VETH","A",101,4,97,0.468599033816425,2021,"seedbank",NA,"I"
+"297","Camp Colton","9","2","ANRO","PF",14,0,14,0.099290780141844,2021,"seedbank",NA,"N"
+"298","Camp Colton","9","2","ELEL","PG3",4,0,4,0.0283687943262411,2021,"seedbank",NA,"N"
+"299","Camp Colton","9","2","MUMO","PG4",2,0,2,0.0141843971631206,2021,"seedbank",NA,"N"
+"300","Camp Colton","9","2","POPR","PG3",84,0,84,0.595744680851064,2021,"seedbank",NA,"I"
+"301","Camp Colton","9","2","VETH","A",41,4,37,0.26241134751773,2021,"seedbank",NA,"I"
+"302","Camp Colton","10","3","ACMI","PF",3,0,3,0.025,2021,"seedbank",NA,"N"
+"303","Camp Colton","10","3","ANRO","PF",1,0,1,0.00833333333333333,2021,"seedbank",NA,"N"
+"304","Camp Colton","10","3","ELEL","PG3",5,0,5,0.0416666666666667,2021,"seedbank",NA,"N"
+"305","Camp Colton","10","3","ERFL","A",3,0,3,0.025,2021,"seedbank",NA,"N"
+"306","Camp Colton","10","3","MUMO","PG4",0,0,0,0,2021,"seedbank",NA,"N"
+"307","Camp Colton","10","3","OXLA","PF",1,0,1,0.00833333333333333,2021,"seedbank",NA,"N"
+"308","Camp Colton","10","3","PEVI","PF",2,0,2,0.0166666666666667,2021,"seedbank",NA,"N"
+"309","Camp Colton","10","3","POPR","PG3",60,0,60,0.5,2021,"seedbank",NA,"I"
+"310","Camp Colton","10","3","SPHA","PF",3,0,3,0.025,2021,"seedbank",NA,"N"
+"311","Camp Colton","10","3","VETH","A",46,4,42,0.35,2021,"seedbank",NA,"I"
+"312","Camp Colton","11","2","ANRO","PF",12,0,12,0.069364161849711,2021,"seedbank",NA,"N"
+"313","Camp Colton","11","2","ARFE","PF",3,0,3,0.0173410404624277,2021,"seedbank",NA,"N"
+"314","Camp Colton","11","2","BRPO","PG3",1,0,1,0.00578034682080925,2021,"seedbank",NA,"N"
+"315","Camp Colton","11","2","ELEL","PG3",10,0,10,0.0578034682080925,2021,"seedbank",NA,"N"
+"316","Camp Colton","11","2","ERSP","A",13,0,13,0.0751445086705202,2021,"seedbank",NA,"N"
+"317","Camp Colton","11","2","MUMO","PG4",5,0,5,0.0289017341040462,2021,"seedbank",NA,"N"
+"318","Camp Colton","11","2","POHI","PF",5,0,5,0.0289017341040462,2021,"seedbank",NA,"N"
+"319","Camp Colton","11","2","POPR","PG3",103,0,103,0.595375722543353,2021,"seedbank",NA,"I"
+"320","Camp Colton","11","2","SPHA","PF",6,0,6,0.0346820809248555,2021,"seedbank",NA,"N"
+"321","Camp Colton","11","2","TAOF","PF",1,1,0,0,2021,"seedbank",NA,"I"
+"322","Camp Colton","11","2","VETH","A",19,4,15,0.0867052023121387,2021,"seedbank",NA,"I"
+"323","Camp Colton","12","1","ANRO","PF",13,0,13,0.1015625,2021,"seedbank",NA,"N"
+"324","Camp Colton","12","1","ERFL","A",1,0,1,0.0078125,2021,"seedbank",NA,"N"
+"325","Camp Colton","12","1","IRMI","PF",1,0,1,0.0078125,2021,"seedbank",NA,"N"
+"326","Camp Colton","12","1","MUMO","PG4",6,0,6,0.046875,2021,"seedbank",NA,"N"
+"327","Camp Colton","12","1","POHI","PF",1,0,1,0.0078125,2021,"seedbank",NA,"N"
+"328","Camp Colton","12","1","POPR","PG3",78,0,78,0.609375,2021,"seedbank",NA,"I"
+"329","Camp Colton","12","1","SPHA","PF",4,0,4,0.03125,2021,"seedbank",NA,"N"
+"330","Camp Colton","12","1","VETH","A",28,4,24,0.1875,2021,"seedbank",NA,"I"
+"331","Antelope","1","Water Addition","BOER","PG4",NA,NA,NA,0.178798241328774,2021,"aboveground",9.15,"N"
+"332","Antelope","1","Water Addition","CHSES","A",NA,NA,NA,0.00195407914020518,2021,"aboveground",0.1,"N"
+"333","Antelope","1","Water Addition","KOAM","PF",NA,NA,NA,0.0156326331216414,2021,"aboveground",0.8,"I"
+"334","Antelope","1","Water Addition","PLJA","PG4",NA,NA,NA,0.102589154860772,2021,"aboveground",5.25,"N"
+"335","Antelope","1","Water Addition","SATR","A",NA,NA,NA,0.701025891548608,2021,"aboveground",35.875,"I"
+"336","Antelope","2","Water Addition","BOER","PG4",NA,NA,NA,0.180290644868302,2021,"aboveground",9.925,"N"
+"337","Antelope","2","Water Addition","CHSES","A",NA,NA,NA,0.00136239782016349,2021,"aboveground",0.075,"N"
+"338","Antelope","2","Water Addition","PLJA","PG4",NA,NA,NA,0.163487738419619,2021,"aboveground",9,"N"
+"339","Antelope","2","Water Addition","SATR","A",NA,NA,NA,0.654859218891916,2021,"aboveground",36.05,"I"
+"340","Antelope","3","Control","BOER","PG4",NA,NA,NA,0.0472673559822747,2021,"aboveground",2.4,"N"
+"341","Antelope","3","Control","CAJA","PF",NA,NA,NA,0.068931560807484,2021,"aboveground",3.5,"N"
+"342","Antelope","3","Control","KOAM","PF",NA,NA,NA,0.000492368291482029,2021,"aboveground",0.025,"I"
+"343","Antelope","3","Control","PLJA","PG4",NA,NA,NA,0.103397341211226,2021,"aboveground",5.25,"N"
+"344","Antelope","3","Control","SATR","A",NA,NA,NA,0.779911373707533,2021,"aboveground",39.6,"I"
+"345","Antelope","4","Water Exclusion","BOER","PG4",NA,NA,NA,0.00878477306002928,2021,"aboveground",0.3,"N"
+"346","Antelope","4","Water Exclusion","CHEN","A",NA,NA,NA,0.00878477306002928,2021,"aboveground",0.3,"I"
+"347","Antelope","4","Water Exclusion","SATR","A",NA,NA,NA,0.982430453879941,2021,"aboveground",33.55,"I"
+"348","Antelope","5","Water Addition","BOER","PG4",NA,NA,NA,0.300286841161707,2021,"aboveground",16.75,"N"
+"349","Antelope","5","Water Addition","CHSES","A",NA,NA,NA,8.96378630333453e-05,2021,"aboveground",0.005,"N"
+"350","Antelope","5","Water Addition","PLJA","PG4",NA,NA,NA,0.124148440301183,2021,"aboveground",6.925,"N"
+"351","Antelope","5","Water Addition","SATR","A",NA,NA,NA,0.575475080674077,2021,"aboveground",32.1,"I"
+"352","Antelope","6","Water Exclusion","BOER","PG4",NA,NA,NA,0.0204220558202859,2021,"aboveground",0.75,"N"
+"353","Antelope","6","Water Exclusion","KOAM","PF",NA,NA,NA,0.00136147038801906,2021,"aboveground",0.05,"I"
+"354","Antelope","6","Water Exclusion","LILE","PF",NA,NA,NA,0.0136147038801906,2021,"aboveground",0.5,"N"
+"355","Antelope","6","Water Exclusion","SATR","A",NA,NA,NA,0.797821647379169,2021,"aboveground",29.3,"I"
+"356","Antelope","6","Water Exclusion","SPHA","PF",NA,NA,NA,0.163376446562287,2021,"aboveground",6,"N"
+"357","Antelope","6","Water Exclusion","UKFO","A",NA,NA,NA,0.00340367597004765,2021,"aboveground",0.125,NA
+"358","Antelope","7","Control","BOER","PG4",NA,NA,NA,0.189646831156265,2021,"aboveground",9.8,"N"
+"359","Antelope","7","Control","CHSES","A",NA,NA,NA,0.000967585873246251,2021,"aboveground",0.05,"N"
+"360","Antelope","7","Control","KOAM","PF",NA,NA,NA,0.00290275761973875,2021,"aboveground",0.15,"I"
+"361","Antelope","7","Control","PLJA","PG4",NA,NA,NA,0.183841315916788,2021,"aboveground",9.5,"N"
+"362","Antelope","7","Control","SATR","A",NA,NA,NA,0.622157716497339,2021,"aboveground",32.15,"I"
+"363","Antelope","7","Control","UKFO","A",NA,NA,NA,0.000483792936623125,2021,"aboveground",0.025,NA
+"364","Antelope","8","Control","BOER","PG4",NA,NA,NA,0.195522388059701,2021,"aboveground",9.825,"N"
+"365","Antelope","8","Control","CHSES","A",NA,NA,NA,0.00597014925373134,2021,"aboveground",0.3,"N"
+"366","Antelope","8","Control","KOAM","PF",NA,NA,NA,0.0378109452736318,2021,"aboveground",1.9,"I"
+"367","Antelope","8","Control","PLJA","PG4",NA,NA,NA,0.199004975124378,2021,"aboveground",10,"N"
+"368","Antelope","8","Control","SATR","A",NA,NA,NA,0.560696517412935,2021,"aboveground",28.175,"I"
+"369","Antelope","8","Control","SPHA","PF",NA,NA,NA,0.000995024875621891,2021,"aboveground",0.05,"N"
+"370","Antelope","9","Water Exclusion","PLJA","PG4",NA,NA,NA,0.00116144018583043,2021,"aboveground",0.05,"N"
+"371","Antelope","9","Water Exclusion","SATR","A",NA,NA,NA,0.99883855981417,2021,"aboveground",43,"I"
+"372","Antelope","10","Control","BOER","PG4",NA,NA,NA,0.159194876486734,2021,"aboveground",8.7,"N"
+"373","Antelope","10","Control","CHSES","A",NA,NA,NA,0.00274473924977127,2021,"aboveground",0.15,"N"
+"374","Antelope","10","Control","KOAM","PF",NA,NA,NA,0.000914913083257091,2021,"aboveground",0.05,"I"
+"375","Antelope","10","Control","SATR","A",NA,NA,NA,0.837145471180238,2021,"aboveground",45.75,"I"
+"376","Antelope","11","Water Addition","BOER","PG4",NA,NA,NA,0.247759620453347,2021,"aboveground",11.75,"N"
+"377","Antelope","11","Water Addition","CHSES","A",NA,NA,NA,0.00210859251449657,2021,"aboveground",0.1,"N"
+"378","Antelope","11","Water Addition","KOAM","PF",NA,NA,NA,0.00579862941486558,2021,"aboveground",0.275,"I"
+"379","Antelope","11","Water Addition","PLJA","PG4",NA,NA,NA,0.00105429625724829,2021,"aboveground",0.05,"N"
+"380","Antelope","11","Water Addition","SATR","A",NA,NA,NA,0.743278861360042,2021,"aboveground",35.25,"I"
+"381","Antelope","12","Water Exclusion","KOAM","PF",NA,NA,NA,0.00295508274231679,2021,"aboveground",0.125,"I"
+"382","Antelope","12","Water Exclusion","SATR","A",NA,NA,NA,0.997044917257683,2021,"aboveground",42.175,"I"
+"383","Arboretum","1","Water Exclusion","ACMI","PF",NA,NA,NA,0.00152683410947401,2021,"aboveground",0.1,"N"
+"384","Arboretum","1","Water Exclusion","ARCA","PF",NA,NA,NA,0.0152683410947401,2021,"aboveground",1,"N"
+"385","Arboretum","1","Water Exclusion","ARFE","PF",NA,NA,NA,0.00916100465684403,2021,"aboveground",0.6,"N"
+"386","Arboretum","1","Water Exclusion","ASHU","PF",NA,NA,NA,0.00381708527368501,2021,"aboveground",0.25,"N"
+"387","Arboretum","1","Water Exclusion","COAR","PF",NA,NA,NA,0.431330635926407,2021,"aboveground",28.25,"I"
+"388","Arboretum","1","Water Exclusion","ERFL","A",NA,NA,NA,0.00626001984884342,2021,"aboveground",0.41,"N"
+"389","Arboretum","1","Water Exclusion","LASE","A",NA,NA,NA,0.0229025116421101,2021,"aboveground",1.5,"I"
+"390","Arboretum","1","Water Exclusion","LUKI","A",NA,NA,NA,0.194671348957936,2021,"aboveground",12.75,"N"
+"391","Arboretum","1","Water Exclusion","PLRI","PG4",NA,NA,NA,0.00190854263684251,2021,"aboveground",0.125,"N"
+"392","Arboretum","1","Water Exclusion","POHI","PF",NA,NA,NA,0.221390945873731,2021,"aboveground",14.5,"N"
+"393","Arboretum","1","Water Exclusion","PSMO","PF",NA,NA,NA,0.0229025116421101,2021,"aboveground",1.5,"N"
+"394","Arboretum","1","Water Exclusion","TRDU","A",NA,NA,NA,0.0687075349263302,2021,"aboveground",4.5,"I"
+"395","Arboretum","1","Water Exclusion","UKGR","PG3",NA,NA,NA,0.000152683410947401,2021,"aboveground",0.01,NA
+"396","Arboretum","2","Control","ACMI","PF",NA,NA,NA,0.0425143289034452,2021,"aboveground",3.375,"N"
+"397","Arboretum","2","Control","ALGE","PF",NA,NA,NA,0.053536562322857,2021,"aboveground",4.25,"N"
+"398","Arboretum","2","Control","ANRO","PF",NA,NA,NA,0.00157460477420168,2021,"aboveground",0.125,"N"
+"399","Arboretum","2","Control","ARCA","PF",NA,NA,NA,0.207847830194621,2021,"aboveground",16.5,"N"
+"400","Arboretum","2","Control","ARFE","PF",NA,NA,NA,0.0251936763872268,2021,"aboveground",2,"N"
+"401","Arboretum","2","Control","ASHU","PF",NA,NA,NA,0.0163758896516974,2021,"aboveground",1.3,"N"
+"402","Arboretum","2","Control","BOGR","PG4",NA,NA,NA,0.00503873527744536,2021,"aboveground",0.4,"N"
+"403","Arboretum","2","Control","BRPO","PG3",NA,NA,NA,0.0251936763872268,2021,"aboveground",2,"N"
+"404","Arboretum","2","Control","CHEN","A",NA,NA,NA,0.00503873527744536,2021,"aboveground",0.4,"I"
+"405","Arboretum","2","Control","COAR","PF",NA,NA,NA,0.0488127480002519,2021,"aboveground",3.875,"I"
+"406","Arboretum","2","Control","ELEL","PG3",NA,NA,NA,0.0053536562322857,2021,"aboveground",0.425,"N"
+"407","Arboretum","2","Control","EPBR","A",NA,NA,NA,0.0881778673552938,2021,"aboveground",7,"N"
+"408","Arboretum","2","Control","ERFL","A",NA,NA,NA,0.00264533602065881,2021,"aboveground",0.21,"N"
+"409","Arboretum","2","Control","FEAR","PG3",NA,NA,NA,0.0680229262455124,2021,"aboveground",5.4,"N"
+"410","Arboretum","2","Control","LILE","PF",NA,NA,NA,0.000314920954840335,2021,"aboveground",0.025,"N"
+"411","Arboretum","2","Control","LUKI","A",NA,NA,NA,0.110222334194117,2021,"aboveground",8.75,"N"
+"412","Arboretum","2","Control","MUMO","PG4",NA,NA,NA,0.0132266801032941,2021,"aboveground",1.05,"N"
+"413","Arboretum","2","Control","MURI","PG4",NA,NA,NA,0.0566857718712603,2021,"aboveground",4.5,"N"
+"414","Arboretum","2","Control","PODO","A",NA,NA,NA,0.00062984190968067,2021,"aboveground",0.05,"N"
+"415","Arboretum","2","Control","POHI","PF",NA,NA,NA,0.214146249291428,2021,"aboveground",17,"N"
+"416","Arboretum","2","Control","PSMO","PF",NA,NA,NA,0.00944762864521005,2021,"aboveground",0.75,"N"
+"417","Arboretum","3","Water Addition","ACMI","PF",NA,NA,NA,0.17289972899729,2021,"aboveground",15.95,"N"
+"418","Arboretum","3","Water Addition","ALGE","PF",NA,NA,NA,0.010840108401084,2021,"aboveground",1,"N"
+"419","Arboretum","3","Water Addition","ANRO","PF",NA,NA,NA,0.0300813008130081,2021,"aboveground",2.775,"N"
+"420","Arboretum","3","Water Addition","ARCA","PF",NA,NA,NA,0.043360433604336,2021,"aboveground",4,"N"
+"421","Arboretum","3","Water Addition","ARFE","PF",NA,NA,NA,0.013550135501355,2021,"aboveground",1.25,"N"
+"422","Arboretum","3","Water Addition","ASHU","PF",NA,NA,NA,0.100271002710027,2021,"aboveground",9.25,"N"
+"423","Arboretum","3","Water Addition","BOGR","PG4",NA,NA,NA,0.0257452574525745,2021,"aboveground",2.375,"N"
+"424","Arboretum","3","Water Addition","CAGE","PG3",NA,NA,NA,0.00813008130081301,2021,"aboveground",0.75,"N"
+"425","Arboretum","3","Water Addition","CIWH","PF",NA,NA,NA,0.0704607046070461,2021,"aboveground",6.5,"N"
+"426","Arboretum","3","Water Addition","ELEL","PG3",NA,NA,NA,0.0596205962059621,2021,"aboveground",5.5,"N"
+"427","Arboretum","3","Water Addition","ERFL","A",NA,NA,NA,0.0021680216802168,2021,"aboveground",0.2,"N"
+"428","Arboretum","3","Water Addition","ERRA","PF",NA,NA,NA,0.002710027100271,2021,"aboveground",0.25,"N"
+"429","Arboretum","3","Water Addition","FEAR","PG3",NA,NA,NA,0.0487804878048781,2021,"aboveground",4.5,"N"
+"430","Arboretum","3","Water Addition","LASE","A",NA,NA,NA,0.0013550135501355,2021,"aboveground",0.125,"I"
+"431","Arboretum","3","Water Addition","LILE","PF",NA,NA,NA,0.000542005420054201,2021,"aboveground",0.05,"N"
+"432","Arboretum","3","Water Addition","LUKI","A",NA,NA,NA,0.024390243902439,2021,"aboveground",2.25,"N"
+"433","Arboretum","3","Water Addition","MUMO","PG4",NA,NA,NA,0.0024390243902439,2021,"aboveground",0.225,"N"
+"434","Arboretum","3","Water Addition","MURI","PG4",NA,NA,NA,0.018970189701897,2021,"aboveground",1.75,"N"
+"435","Arboretum","3","Water Addition","PODO","A",NA,NA,NA,0.0303523035230352,2021,"aboveground",2.8,"N"
+"436","Arboretum","3","Water Addition","POHI","PF",NA,NA,NA,0.317073170731707,2021,"aboveground",29.25,"N"
+"437","Arboretum","3","Water Addition","TRDU","A",NA,NA,NA,0.016260162601626,2021,"aboveground",1.5,"I"
+"438","Arboretum","4","Water Exclusion","ANRO","PF",NA,NA,NA,0.0142726649920073,2021,"aboveground",0.625,"N"
+"439","Arboretum","4","Water Exclusion","ARCA","PF",NA,NA,NA,0.0799269239552409,2021,"aboveground",3.5,"N"
+"440","Arboretum","4","Water Exclusion","ARFE","PF",NA,NA,NA,0.0114181319936058,2021,"aboveground",0.5,"N"
+"441","Arboretum","4","Water Exclusion","ASHU","PF",NA,NA,NA,0.0342543959808175,2021,"aboveground",1.5,"N"
+"442","Arboretum","4","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00570906599680292,2021,"aboveground",0.25,"N"
+"443","Arboretum","4","Water Exclusion","CHEN","A",NA,NA,NA,0.00685087919616351,2021,"aboveground",0.3,"I"
+"444","Arboretum","4","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0222653573875314,2021,"aboveground",0.975,"N"
+"445","Arboretum","4","Water Exclusion","EPBR","A",NA,NA,NA,0.0456725279744234,2021,"aboveground",2,"N"
+"446","Arboretum","4","Water Exclusion","ERFL","A",NA,NA,NA,0.0013701758392327,2021,"aboveground",0.06,"N"
+"447","Arboretum","4","Water Exclusion","ERRA","PF",NA,NA,NA,0.0599451929664307,2021,"aboveground",2.625,"N"
+"448","Arboretum","4","Water Exclusion","FEAR","PG3",NA,NA,NA,0.00570906599680292,2021,"aboveground",0.25,"N"
+"449","Arboretum","4","Water Exclusion","LASE","A",NA,NA,NA,0.108472253939256,2021,"aboveground",4.75,"I"
+"450","Arboretum","4","Water Exclusion","LILE","PF",NA,NA,NA,0.00285453299840146,2021,"aboveground",0.125,"N"
+"451","Arboretum","4","Water Exclusion","LUKI","A",NA,NA,NA,0.108472253939256,2021,"aboveground",4.75,"N"
+"452","Arboretum","4","Water Exclusion","MESP","A",NA,NA,NA,0.00125599451929664,2021,"aboveground",0.055,"N"
+"453","Arboretum","4","Water Exclusion","POHI","PF",NA,NA,NA,0.445307147750628,2021,"aboveground",19.5,"N"
+"454","Arboretum","4","Water Exclusion","POOL","A",NA,NA,NA,0.000570906599680292,2021,"aboveground",0.025,"I"
+"455","Arboretum","4","Water Exclusion","TRDU","A",NA,NA,NA,0.0456725279744234,2021,"aboveground",2,"I"
+"456","Arboretum","5","Control","ACMI","PF",NA,NA,NA,0.0153762662807525,2021,"aboveground",1.275,"N"
+"457","Arboretum","5","Control","ARCA","PF",NA,NA,NA,0.228232030873131,2021,"aboveground",18.925,"N"
+"458","Arboretum","5","Control","ARFE","PF",NA,NA,NA,0.0195972021225277,2021,"aboveground",1.625,"N"
+"459","Arboretum","5","Control","ASHU","PF",NA,NA,NA,0.0120598166907863,2021,"aboveground",1,"N"
+"460","Arboretum","5","Control","BOGR","PG4",NA,NA,NA,0.0678364688856729,2021,"aboveground",5.625,"N"
+"461","Arboretum","5","Control","ELEL","PG3",NA,NA,NA,0.0367824409068982,2021,"aboveground",3.05,"N"
+"462","Arboretum","5","Control","EPBR","A",NA,NA,NA,0.00814037626628075,2021,"aboveground",0.675,"N"
+"463","Arboretum","5","Control","ERFL","A",NA,NA,NA,0.0011456825856247,2021,"aboveground",0.095,"N"
+"464","Arboretum","5","Control","FEAR","PG3",NA,NA,NA,0.147732754462132,2021,"aboveground",12.25,"N"
+"465","Arboretum","5","Control","LASE","A",NA,NA,NA,0.0120598166907863,2021,"aboveground",1,"I"
+"466","Arboretum","5","Control","LUKI","A",NA,NA,NA,0.00361794500723589,2021,"aboveground",0.3,"N"
+"467","Arboretum","5","Control","MUMO","PG4",NA,NA,NA,0.00301495417269657,2021,"aboveground",0.25,"N"
+"468","Arboretum","5","Control","MURI","PG4",NA,NA,NA,0.0934635793535938,2021,"aboveground",7.75,"N"
+"469","Arboretum","5","Control","PODO","A",NA,NA,NA,0.00150747708634829,2021,"aboveground",0.125,"N"
+"470","Arboretum","5","Control","POHI","PF",NA,NA,NA,0.346418234442836,2021,"aboveground",28.725,"N"
+"471","Arboretum","5","Control","PSMO","PF",NA,NA,NA,0.00301495417269657,2021,"aboveground",0.25,"N"
+"472","Arboretum","6","Control","ACMI","PF",NA,NA,NA,0.0752839096593084,2021,"aboveground",5.9,"N"
+"473","Arboretum","6","Control","ANRO","PF",NA,NA,NA,0.00446599464080643,2021,"aboveground",0.35,"N"
+"474","Arboretum","6","Control","ARCA","PF",NA,NA,NA,0.484879418144698,2021,"aboveground",38,"N"
+"475","Arboretum","6","Control","ARFE","PF",NA,NA,NA,0.00956998851601378,2021,"aboveground",0.75,"N"
+"476","Arboretum","6","Control","ASHU","PF",NA,NA,NA,0.027114967462039,2021,"aboveground",2.125,"N"
+"477","Arboretum","6","Control","CHSES","A",NA,NA,NA,0.000318999617200459,2021,"aboveground",0.025,"N"
+"478","Arboretum","6","Control","ELEL","PG3",NA,NA,NA,0.0414699502360597,2021,"aboveground",3.25,"N"
+"479","Arboretum","6","Control","EPBR","A",NA,NA,NA,0.0325379609544469,2021,"aboveground",2.55,"N"
+"480","Arboretum","6","Control","ERFL","A",NA,NA,NA,0.000574199310960827,2021,"aboveground",0.045,"N"
+"481","Arboretum","6","Control","ERRA","PF",NA,NA,NA,0.0015949980860023,2021,"aboveground",0.125,"N"
+"482","Arboretum","6","Control","FEAR","PG3",NA,NA,NA,0.0398749521500574,2021,"aboveground",3.125,"N"
+"483","Arboretum","6","Control","LASE","A",NA,NA,NA,0.00318999617200459,2021,"aboveground",0.25,"I"
+"484","Arboretum","6","Control","LILE","PF",NA,NA,NA,0.000318999617200459,2021,"aboveground",0.025,"N"
+"485","Arboretum","6","Control","LUKI","A",NA,NA,NA,0.0637999234400919,2021,"aboveground",5,"N"
+"486","Arboretum","6","Control","MURI","PG4",NA,NA,NA,0.00446599464080643,2021,"aboveground",0.35,"N"
+"487","Arboretum","6","Control","POHI","PF",NA,NA,NA,0.210539747352303,2021,"aboveground",16.5,"N"
+"488","Arboretum","7","Water Exclusion","ANRO","PF",NA,NA,NA,0.011997600479904,2021,"aboveground",0.5,"N"
+"489","Arboretum","7","Water Exclusion","ARCA","PF",NA,NA,NA,0.131973605278944,2021,"aboveground",5.5,"N"
+"490","Arboretum","7","Water Exclusion","ARFE","PF",NA,NA,NA,0.0011997600479904,2021,"aboveground",0.05,"N"
+"491","Arboretum","7","Water Exclusion","ASHU","PF",NA,NA,NA,0.101979604079184,2021,"aboveground",4.25,"N"
+"492","Arboretum","7","Water Exclusion","ELEL","PG3",NA,NA,NA,0.023995200959808,2021,"aboveground",1,"N"
+"493","Arboretum","7","Water Exclusion","EPBR","A",NA,NA,NA,0.0719856028794241,2021,"aboveground",3,"N"
+"494","Arboretum","7","Water Exclusion","ERFL","A",NA,NA,NA,0.0023995200959808,2021,"aboveground",0.1,"N"
+"495","Arboretum","7","Water Exclusion","ERFO","PF",NA,NA,NA,0.011997600479904,2021,"aboveground",0.5,"N"
+"496","Arboretum","7","Water Exclusion","FEAR","PG3",NA,NA,NA,0.023995200959808,2021,"aboveground",1,"N"
+"497","Arboretum","7","Water Exclusion","LASE","A",NA,NA,NA,0.425914817036593,2021,"aboveground",17.75,"I"
+"498","Arboretum","7","Water Exclusion","LUKI","A",NA,NA,NA,0.00359928014397121,2021,"aboveground",0.15,"N"
+"499","Arboretum","7","Water Exclusion","MURI","PG4",NA,NA,NA,0.0299940011997601,2021,"aboveground",1.25,"N"
+"500","Arboretum","7","Water Exclusion","POHI","PF",NA,NA,NA,0.155968806238752,2021,"aboveground",6.5,"N"
+"501","Arboretum","7","Water Exclusion","PSMO","PF",NA,NA,NA,0.002999400119976,2021,"aboveground",0.125,"N"
+"502","Arboretum","8","Water Addition","ACMI","PF",NA,NA,NA,0.0389720635900602,2021,"aboveground",2.525,"N"
+"503","Arboretum","8","Water Addition","ALGE","PF",NA,NA,NA,0.0192931007871585,2021,"aboveground",1.25,"N"
+"504","Arboretum","8","Water Addition","ANRO","PF",NA,NA,NA,0.0169779286926995,2021,"aboveground",1.1,"N"
+"505","Arboretum","8","Water Addition","ARFE","PF",NA,NA,NA,0.0115758604722951,2021,"aboveground",0.75,"N"
+"506","Arboretum","8","Water Addition","BOGR","PG4",NA,NA,NA,0.0740855070226887,2021,"aboveground",4.8,"N"
+"507","Arboretum","8","Water Addition","CHSES","A",NA,NA,NA,0.00192931007871585,2021,"aboveground",0.125,"N"
+"508","Arboretum","8","Water Addition","EPBR","A",NA,NA,NA,0.162062046612131,2021,"aboveground",10.5,"N"
+"509","Arboretum","8","Water Addition","ERFL","A",NA,NA,NA,0.00640530946133663,2021,"aboveground",0.415,"N"
+"510","Arboretum","8","Water Addition","ERFO","PF",NA,NA,NA,0.0162062046612131,2021,"aboveground",1.05,"N"
+"511","Arboretum","8","Water Addition","FEAR","PG3",NA,NA,NA,0.262386170705356,2021,"aboveground",17,"N"
+"512","Arboretum","8","Water Addition","LASE","A",NA,NA,NA,0.0077172403148634,2021,"aboveground",0.5,"I"
+"513","Arboretum","8","Water Addition","LUKI","A",NA,NA,NA,0.0173637907084427,2021,"aboveground",1.125,"N"
+"514","Arboretum","8","Water Addition","MESP","A",NA,NA,NA,0.00617379225189072,2021,"aboveground",0.4,"N"
+"515","Arboretum","8","Water Addition","MUMO","PG4",NA,NA,NA,0.0219941348973607,2021,"aboveground",1.425,"N"
+"516","Arboretum","8","Water Addition","MURI","PG4",NA,NA,NA,0.111128260534033,2021,"aboveground",7.2,"N"
+"517","Arboretum","8","Water Addition","PODO","A",NA,NA,NA,0.00192931007871585,2021,"aboveground",0.125,"N"
+"518","Arboretum","8","Water Addition","POHI","PF",NA,NA,NA,0.216082728816175,2021,"aboveground",14,"N"
+"519","Arboretum","8","Water Addition","PSMO","PF",NA,NA,NA,0.0077172403148634,2021,"aboveground",0.5,"N"
+"520","Arboretum","9","Water Addition","ACMI","PF",NA,NA,NA,0.0216432865731463,2021,"aboveground",1.35,"N"
+"521","Arboretum","9","Water Addition","ARCA","PF",NA,NA,NA,0.12064128256513,2021,"aboveground",7.525,"N"
+"522","Arboretum","9","Water Addition","ARFE","PF",NA,NA,NA,0.011623246492986,2021,"aboveground",0.725,"N"
+"523","Arboretum","9","Water Addition","ASHU","PF",NA,NA,NA,0.00400801603206413,2021,"aboveground",0.25,"N"
+"524","Arboretum","9","Water Addition","BOGR","PG4",NA,NA,NA,0.018436873747495,2021,"aboveground",1.15,"N"
+"525","Arboretum","9","Water Addition","ELEL","PG3",NA,NA,NA,0.07374749498998,2021,"aboveground",4.6,"N"
+"526","Arboretum","9","Water Addition","EPBR","A",NA,NA,NA,0.075751503006012,2021,"aboveground",4.725,"N"
+"527","Arboretum","9","Water Addition","ERFL","A",NA,NA,NA,0.00440881763527054,2021,"aboveground",0.275,"N"
+"528","Arboretum","9","Water Addition","FEAR","PG3",NA,NA,NA,0.125450901803607,2021,"aboveground",7.825,"N"
+"529","Arboretum","9","Water Addition","LASE","A",NA,NA,NA,0.0661322645290581,2021,"aboveground",4.125,"I"
+"530","Arboretum","9","Water Addition","LILE","PF",NA,NA,NA,0.000801603206412826,2021,"aboveground",0.05,"N"
+"531","Arboretum","9","Water Addition","LUKI","A",NA,NA,NA,0.128256513026052,2021,"aboveground",8,"N"
+"532","Arboretum","9","Water Addition","MUMO","PG4",NA,NA,NA,0.0865731462925852,2021,"aboveground",5.4,"N"
+"533","Arboretum","9","Water Addition","PEVI","PF",NA,NA,NA,0.0340681362725451,2021,"aboveground",2.125,"N"
+"534","Arboretum","9","Water Addition","PODO","A",NA,NA,NA,0.0120240480961924,2021,"aboveground",0.75,"N"
+"535","Arboretum","9","Water Addition","POHI","PF",NA,NA,NA,0.214428857715431,2021,"aboveground",13.375,"N"
+"536","Arboretum","9","Water Addition","UKFO","A",NA,NA,NA,0.00200400801603206,2021,"aboveground",0.125,NA
+"537","Arboretum","10","Water Exclusion","ANRO","PF",NA,NA,NA,0.00152858453072455,2021,"aboveground",0.05,"N"
+"538","Arboretum","10","Water Exclusion","ARCA","PF",NA,NA,NA,0.0152858453072455,2021,"aboveground",0.5,"N"
+"539","Arboretum","10","Water Exclusion","ARFE","PF",NA,NA,NA,0.0206358911647814,2021,"aboveground",0.675,"N"
+"540","Arboretum","10","Water Exclusion","ASHU","PF",NA,NA,NA,0.172730051971874,2021,"aboveground",5.65,"N"
+"541","Arboretum","10","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00535004585753592,2021,"aboveground",0.175,"N"
+"542","Arboretum","10","Water Exclusion","CHSES","A",NA,NA,NA,0.00535004585753592,2021,"aboveground",0.175,"N"
+"543","Arboretum","10","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0152858453072455,2021,"aboveground",0.5,"N"
+"544","Arboretum","10","Water Exclusion","ERFL","A",NA,NA,NA,0.0359217364720269,2021,"aboveground",1.175,"N"
+"545","Arboretum","10","Water Exclusion","ERRA","PF",NA,NA,NA,0.0535004585753592,2021,"aboveground",1.75,"N"
+"546","Arboretum","10","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0458575359217365,2021,"aboveground",1.5,"N"
+"547","Arboretum","10","Water Exclusion","LUKI","A",NA,NA,NA,0.107000917150718,2021,"aboveground",3.5,"N"
+"548","Arboretum","10","Water Exclusion","PODO","A",NA,NA,NA,0.00764292265362275,2021,"aboveground",0.25,"N"
+"549","Arboretum","10","Water Exclusion","POHI","PF",NA,NA,NA,0.343931519413024,2021,"aboveground",11.25,"N"
+"550","Arboretum","10","Water Exclusion","TRDU","A",NA,NA,NA,0.1681442983797,2021,"aboveground",5.5,"I"
+"551","Arboretum","10","Water Exclusion","UKFO","A",NA,NA,NA,0.00183430143686946,2021,"aboveground",0.06,NA
+"552","Arboretum","11","Control","ACMI","PF",NA,NA,NA,0.103251130642546,2021,"aboveground",6.05,"N"
+"553","Arboretum","11","Control","ALGE","PF",NA,NA,NA,0.00853315129277242,2021,"aboveground",0.5,"N"
+"554","Arboretum","11","Control","ARCA","PF",NA,NA,NA,0.183462752794607,2021,"aboveground",10.75,"N"
+"555","Arboretum","11","Control","ARFE","PF",NA,NA,NA,0.000853315129277242,2021,"aboveground",0.05,"N"
+"556","Arboretum","11","Control","BOGR","PG4",NA,NA,NA,0.00213328782319311,2021,"aboveground",0.125,"N"
+"557","Arboretum","11","Control","CHEN","A",NA,NA,NA,0.00255994538783173,2021,"aboveground",0.15,"I"
+"558","Arboretum","11","Control","ELEL","PG3",NA,NA,NA,0.0127997269391586,2021,"aboveground",0.75,"N"
+"559","Arboretum","11","Control","EPBR","A",NA,NA,NA,0.0981312398668828,2021,"aboveground",5.75,"N"
+"560","Arboretum","11","Control","ERFL","A",NA,NA,NA,0.00162129874562676,2021,"aboveground",0.095,"N"
+"561","Arboretum","11","Control","FEAR","PG3",NA,NA,NA,0.0571721136615752,2021,"aboveground",3.35,"N"
+"562","Arboretum","11","Control","LASE","A",NA,NA,NA,0.0115197542452428,2021,"aboveground",0.675,"I"
+"563","Arboretum","11","Control","LILE","PF",NA,NA,NA,0.00213328782319311,2021,"aboveground",0.125,"N"
+"564","Arboretum","11","Control","LUKI","A",NA,NA,NA,0.0452257018516938,2021,"aboveground",2.65,"N"
+"565","Arboretum","11","Control","MUMO","PG4",NA,NA,NA,0.0170663025855448,2021,"aboveground",1,"N"
+"566","Arboretum","11","Control","MURI","PG4",NA,NA,NA,0.127997269391586,2021,"aboveground",7.5,"N"
+"567","Arboretum","11","Control","PODO","A",NA,NA,NA,0.00127997269391586,2021,"aboveground",0.075,"N"
+"568","Arboretum","11","Control","POHI","PF",NA,NA,NA,0.290127143954262,2021,"aboveground",17,"N"
+"569","Arboretum","11","Control","PSMO","PF",NA,NA,NA,0.00426657564638621,2021,"aboveground",0.25,"N"
+"570","Arboretum","11","Control","TRDU","A",NA,NA,NA,0.0298660295247035,2021,"aboveground",1.75,"I"
+"571","Arboretum","12","Water Addition","ACMI","PF",NA,NA,NA,0.0160439247005134,2021,"aboveground",1.125,"N"
+"572","Arboretum","12","Water Addition","ANRO","PF",NA,NA,NA,0.0135482030804335,2021,"aboveground",0.95,"N"
+"573","Arboretum","12","Water Addition","ARCA","PF",NA,NA,NA,0.15687393040502,2021,"aboveground",11,"N"
+"574","Arboretum","12","Water Addition","ARFE","PF",NA,NA,NA,0.00926982316029663,2021,"aboveground",0.65,"N"
+"575","Arboretum","12","Water Addition","ASHU","PF",NA,NA,NA,0.0730889903023388,2021,"aboveground",5.125,"N"
+"576","Arboretum","12","Water Addition","BOGR","PG4",NA,NA,NA,0.0695236737022248,2021,"aboveground",4.875,"N"
+"577","Arboretum","12","Water Addition","CHEN","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025,"I"
+"578","Arboretum","12","Water Addition","ELEL","PG3",NA,NA,NA,0.0356531660011409,2021,"aboveground",2.5,"N"
+"579","Arboretum","12","Water Addition","ERFL","A",NA,NA,NA,0.000285225328009127,2021,"aboveground",0.02,"N"
+"580","Arboretum","12","Water Addition","ERRA","PF",NA,NA,NA,0.0106959498003423,2021,"aboveground",0.75,"N"
+"581","Arboretum","12","Water Addition","FEAR","PG3",NA,NA,NA,0.160439247005134,2021,"aboveground",11.25,"N"
+"582","Arboretum","12","Water Addition","LASE","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025,"I"
+"583","Arboretum","12","Water Addition","LILE","PF",NA,NA,NA,0.000713063320022818,2021,"aboveground",0.05,"N"
+"584","Arboretum","12","Water Addition","LUKI","A",NA,NA,NA,0.00926982316029663,2021,"aboveground",0.65,"N"
+"585","Arboretum","12","Water Addition","MUMO","PG4",NA,NA,NA,0.0477752424415288,2021,"aboveground",3.35,"N"
+"586","Arboretum","12","Water Addition","MURI","PG4",NA,NA,NA,0.0320878494010268,2021,"aboveground",2.25,"N"
+"587","Arboretum","12","Water Addition","PODO","A",NA,NA,NA,0.000356531660011409,2021,"aboveground",0.025,"N"
+"588","Arboretum","12","Water Addition","POHI","PF",NA,NA,NA,0.356531660011409,2021,"aboveground",25,"N"
+"589","Arboretum","12","Water Addition","UKFO","A",NA,NA,NA,0.00713063320022818,2021,"aboveground",0.5,NA
+"590","Black Point","1","Water Exclusion","ATCO","S",NA,NA,NA,0.796703296703297,2021,"aboveground",3.625,"N"
+"591","Black Point","1","Water Exclusion","BOER","PG4",NA,NA,NA,0.0274725274725275,2021,"aboveground",0.125,"N"
+"592","Black Point","1","Water Exclusion","CHSES","A",NA,NA,NA,0.0274725274725275,2021,"aboveground",0.125,"N"
+"593","Black Point","1","Water Exclusion","SATR","A",NA,NA,NA,0.148351648351648,2021,"aboveground",0.675,"I"
+"594","Black Point","2","Water Exclusion","ATCO","S",NA,NA,NA,0.505902192242833,2021,"aboveground",3,"N"
+"595","Black Point","2","Water Exclusion","BOER","PG4",NA,NA,NA,0.0168634064080944,2021,"aboveground",0.1,"N"
+"596","Black Point","2","Water Exclusion","CHSES","A",NA,NA,NA,0.130691399662732,2021,"aboveground",0.775,"N"
+"597","Black Point","2","Water Exclusion","SATR","A",NA,NA,NA,0.345699831365936,2021,"aboveground",2.05,"I"
+"598","Black Point","2","Water Exclusion","SPHA","PF",NA,NA,NA,0.000843170320404722,2021,"aboveground",0.005,"N"
+"599","Black Point","3","Control","ATCO","S",NA,NA,NA,0.180265654648956,2021,"aboveground",4.75,"N"
+"600","Black Point","3","Control","BOER","PG4",NA,NA,NA,0.313092979127135,2021,"aboveground",8.25,"N"
+"601","Black Point","3","Control","CHSES","A",NA,NA,NA,0.240986717267552,2021,"aboveground",6.35,"N"
+"602","Black Point","3","Control","SATR","A",NA,NA,NA,0.265654648956357,2021,"aboveground",7,"I"
+"603","Black Point","4","Water Exclusion","ATCO","S",NA,NA,NA,0.750750750750751,2021,"aboveground",5,"N"
+"604","Black Point","4","Water Exclusion","BOER","PG4",NA,NA,NA,0.232732732732733,2021,"aboveground",1.55,"N"
+"605","Black Point","4","Water Exclusion","CHSES","A",NA,NA,NA,0.0127627627627628,2021,"aboveground",0.085,"N"
+"606","Black Point","4","Water Exclusion","SATR","A",NA,NA,NA,0.00375375375375375,2021,"aboveground",0.025,"I"
+"607","Black Point","5","Control","ATCO","S",NA,NA,NA,0.243111831442464,2021,"aboveground",7.5,"N"
+"608","Black Point","5","Control","BOER","PG4",NA,NA,NA,0.157212317666126,2021,"aboveground",4.85,"N"
+"609","Black Point","5","Control","CHSES","A",NA,NA,NA,0.177471636952998,2021,"aboveground",5.475,"N"
+"610","Black Point","5","Control","SATR","A",NA,NA,NA,0.421393841166937,2021,"aboveground",13,"I"
+"611","Black Point","5","Control","SPHA","PF",NA,NA,NA,0.000810372771474879,2021,"aboveground",0.025,"N"
+"612","Black Point","6","Control","ATCO","S",NA,NA,NA,0.0483675937122128,2021,"aboveground",1,"N"
+"613","Black Point","6","Control","BOER","PG4",NA,NA,NA,0.217654171704958,2021,"aboveground",4.5,"N"
+"614","Black Point","6","Control","CHSES","A",NA,NA,NA,0.367593712212817,2021,"aboveground",7.6,"N"
+"615","Black Point","6","Control","SATR","A",NA,NA,NA,0.362756952841596,2021,"aboveground",7.5,"I"
+"616","Black Point","6","Control","SPHA","PF",NA,NA,NA,0.00362756952841596,2021,"aboveground",0.075,"N"
+"617","Black Point","7","Water Exclusion","ATCO","S",NA,NA,NA,0.536585365853659,2021,"aboveground",5.5,"N"
+"618","Black Point","7","Water Exclusion","BOER","PG4",NA,NA,NA,0.0121951219512195,2021,"aboveground",0.125,"N"
+"619","Black Point","7","Water Exclusion","CHSES","A",NA,NA,NA,0.0048780487804878,2021,"aboveground",0.05,"N"
+"620","Black Point","7","Water Exclusion","EPVI","S",NA,NA,NA,0.195121951219512,2021,"aboveground",2,"N"
+"621","Black Point","7","Water Exclusion","SATR","A",NA,NA,NA,0.251219512195122,2021,"aboveground",2.575,"I"
+"622","Black Point","8","Control","ATCO","S",NA,NA,NA,0.0405875531503672,2021,"aboveground",1.05,"N"
+"623","Black Point","8","Control","BOER","PG4",NA,NA,NA,0.0262852725164283,2021,"aboveground",0.68,"N"
+"624","Black Point","8","Control","CHSES","A",NA,NA,NA,0.350792423656745,2021,"aboveground",9.075,"N"
+"625","Black Point","8","Control","DAPU","PG4",NA,NA,NA,0.00154619250096637,2021,"aboveground",0.04,"N"
+"626","Black Point","8","Control","SATR","A",NA,NA,NA,0.579822187862389,2021,"aboveground",15,"I"
+"627","Black Point","8","Control","SPHA","PF",NA,NA,NA,0.000966370313103981,2021,"aboveground",0.025,"N"
+"628","Black Point","9","Water Addition","ATCO","S",NA,NA,NA,0.393013100436681,2021,"aboveground",9,"N"
+"629","Black Point","9","Water Addition","BOER","PG4",NA,NA,NA,0.356986899563319,2021,"aboveground",8.175,"N"
+"630","Black Point","9","Water Addition","CHSES","A",NA,NA,NA,0.126637554585153,2021,"aboveground",2.9,"N"
+"631","Black Point","9","Water Addition","DAPU","PG4",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025,"N"
+"632","Black Point","9","Water Addition","SATR","A",NA,NA,NA,0.109170305676856,2021,"aboveground",2.5,"I"
+"633","Black Point","9","Water Addition","SPAI","PG4",NA,NA,NA,0.0109170305676856,2021,"aboveground",0.25,"N"
+"634","Black Point","9","Water Addition","SPHA","PF",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025,"N"
+"635","Black Point","9","Water Addition","UKFO","A",NA,NA,NA,0.00109170305676856,2021,"aboveground",0.025,NA
+"636","Black Point","10","Water Addition","ATCO","S",NA,NA,NA,0.21112600536193,2021,"aboveground",7.875,"N"
+"637","Black Point","10","Water Addition","BOER","PG4",NA,NA,NA,0.126675603217158,2021,"aboveground",4.725,"N"
+"638","Black Point","10","Water Addition","CHSES","A",NA,NA,NA,0.601876675603217,2021,"aboveground",22.45,"N"
+"639","Black Point","10","Water Addition","SATR","A",NA,NA,NA,0.0603217158176944,2021,"aboveground",2.25,"I"
+"640","Black Point","11","Water Addition","ATCO","S",NA,NA,NA,0.00777121541809139,2021,"aboveground",0.125,"N"
+"641","Black Point","11","Water Addition","BOER","PG4",NA,NA,NA,0.345041964563258,2021,"aboveground",5.55,"N"
+"642","Black Point","11","Water Addition","CHSES","A",NA,NA,NA,0.271059993783028,2021,"aboveground",4.36,"N"
+"643","Black Point","11","Water Addition","KRLA","S",NA,NA,NA,0.373018340068387,2021,"aboveground",6,"N"
+"644","Black Point","11","Water Addition","SPHA","PF",NA,NA,NA,0.00155424308361828,2021,"aboveground",0.025,"N"
+"645","Black Point","11","Water Addition","UKFO","A",NA,NA,NA,0.00155424308361828,2021,"aboveground",0.025,NA
+"646","Black Point","12","Water Addition","BOER","PG4",NA,NA,NA,0.495164410058027,2021,"aboveground",12.8,"N"
+"647","Black Point","12","Water Addition","CHSES","A",NA,NA,NA,0.253384912959381,2021,"aboveground",6.55,"N"
+"648","Black Point","12","Water Addition","SATR","A",NA,NA,NA,0.251450676982592,2021,"aboveground",6.5,"I"
+"649","Blue Chute","1","Water Addition","BOGR","PG4",NA,NA,NA,0.466824244470707,2021,"aboveground",13.825,"N"
+"650","Blue Chute","1","Water Addition","CHEN","A",NA,NA,NA,0.130001688333615,2021,"aboveground",3.85,"I"
+"651","Blue Chute","1","Water Addition","CHRE","A",NA,NA,NA,0.142326523721087,2021,"aboveground",4.215,"N"
+"652","Blue Chute","1","Water Addition","ERNA","S",NA,NA,NA,0.18571669761945,2021,"aboveground",5.5,"N"
+"653","Blue Chute","1","Water Addition","GUSA","S",NA,NA,NA,0.025325004220834,2021,"aboveground",0.75,"N"
+"654","Blue Chute","1","Water Addition","HECO","PG3",NA,NA,NA,0.0337666722944454,2021,"aboveground",1,"N"
+"655","Blue Chute","1","Water Addition","JUMO","S",NA,NA,NA,0.00844166807361135,2021,"aboveground",0.25,"N"
+"656","Blue Chute","1","Water Addition","POOL","A",NA,NA,NA,0.00168833361472227,2021,"aboveground",0.05,"I"
+"657","Blue Chute","1","Water Addition","SATR","A",NA,NA,NA,0.00168833361472227,2021,"aboveground",0.05,"I"
+"658","Blue Chute","1","Water Addition","SPHA","PF",NA,NA,NA,0.00422083403680567,2021,"aboveground",0.125,"N"
+"659","Blue Chute","2","Control","BOGR","PG4",NA,NA,NA,0.536949685534591,2021,"aboveground",17.075,"N"
+"660","Blue Chute","2","Control","CHEN","A",NA,NA,NA,0.0786163522012578,2021,"aboveground",2.5,"I"
+"661","Blue Chute","2","Control","CHER","PF",NA,NA,NA,0.00786163522012578,2021,"aboveground",0.25,"N"
+"662","Blue Chute","2","Control","CHRE","A",NA,NA,NA,0.074685534591195,2021,"aboveground",2.375,"N"
+"663","Blue Chute","2","Control","ERNA","S",NA,NA,NA,0.0511006289308176,2021,"aboveground",1.625,"N"
+"664","Blue Chute","2","Control","HECO","PG3",NA,NA,NA,0.0314465408805031,2021,"aboveground",1,"N"
+"665","Blue Chute","2","Control","HELO","A",NA,NA,NA,0.102201257861635,2021,"aboveground",3.25,"N"
+"666","Blue Chute","2","Control","KOAM","PF",NA,NA,NA,0.020440251572327,2021,"aboveground",0.65,"I"
+"667","Blue Chute","2","Control","SATR","A",NA,NA,NA,0.00707547169811321,2021,"aboveground",0.225,"I"
+"668","Blue Chute","2","Control","SPHA","PF",NA,NA,NA,0.00157232704402516,2021,"aboveground",0.05,"N"
+"669","Blue Chute","2","Control","UKFO","A",NA,NA,NA,0.00157232704402516,2021,"aboveground",0.05,NA
+"670","Blue Chute","2","Control","ZIGR","PF",NA,NA,NA,0.0864779874213836,2021,"aboveground",2.75,"N"
+"671","Blue Chute","3","Control","ARPU","PG4",NA,NA,NA,0.0123304562268804,2021,"aboveground",0.5,"N"
+"672","Blue Chute","3","Control","BOGR","PG4",NA,NA,NA,0.149815043156597,2021,"aboveground",6.075,"N"
+"673","Blue Chute","3","Control","BOGR ","PG4",NA,NA,NA,0.0493218249075216,2021,"aboveground",2,"N"
+"674","Blue Chute","3","Control","CHER","PF",NA,NA,NA,0.0172626387176326,2021,"aboveground",0.7,"N"
+"675","Blue Chute","3","Control","CHRE","A",NA,NA,NA,0.376078914919852,2021,"aboveground",15.25,"N"
+"676","Blue Chute","3","Control","ERNA","S",NA,NA,NA,0.0863131935881628,2021,"aboveground",3.5,"N"
+"677","Blue Chute","3","Control","GUSA","S",NA,NA,NA,0.0986436498150432,2021,"aboveground",4,"N"
+"678","Blue Chute","3","Control","HECO","PG3",NA,NA,NA,0.0678175092478422,2021,"aboveground",2.75,"N"
+"679","Blue Chute","3","Control","HELO","A",NA,NA,NA,0.0493218249075216,2021,"aboveground",2,"N"
+"680","Blue Chute","3","Control","KOAM","PF",NA,NA,NA,0.0369913686806412,2021,"aboveground",1.5,"I"
+"681","Blue Chute","3","Control","KRLA","S",NA,NA,NA,0.0339087546239211,2021,"aboveground",1.375,"N"
+"682","Blue Chute","3","Control","SATR","A",NA,NA,NA,0.0061652281134402,2021,"aboveground",0.25,"I"
+"683","Blue Chute","3","Control","SPHA","PF",NA,NA,NA,0.00061652281134402,2021,"aboveground",0.025,"N"
+"684","Blue Chute","3","Control","UKFO","A",NA,NA,NA,0.0154130702836005,2021,"aboveground",0.625,NA
+"685","Blue Chute","4","Water Exclusion","CHEN","A",NA,NA,NA,0.0580474934036939,2021,"aboveground",0.55,"I"
+"686","Blue Chute","4","Water Exclusion","CHER","PF",NA,NA,NA,0.00263852242744063,2021,"aboveground",0.025,"N"
+"687","Blue Chute","4","Water Exclusion","CHSES","A",NA,NA,NA,0.0422163588390501,2021,"aboveground",0.4,"N"
+"688","Blue Chute","4","Water Exclusion","ERNA","S",NA,NA,NA,0.316622691292876,2021,"aboveground",3,"N"
+"689","Blue Chute","4","Water Exclusion","GUSA","S",NA,NA,NA,0.263852242744063,2021,"aboveground",2.5,"N"
+"690","Blue Chute","4","Water Exclusion","HECO","PG3",NA,NA,NA,0.316622691292876,2021,"aboveground",3,"N"
+"691","Blue Chute","5","Control","BOGR","PG4",NA,NA,NA,0.250727919767066,2021,"aboveground",7.75,"N"
+"692","Blue Chute","5","Control","CHEN","A",NA,NA,NA,0.113231963765772,2021,"aboveground",3.5,"I"
+"693","Blue Chute","5","Control","CHER","PF",NA,NA,NA,0.000808799741184083,2021,"aboveground",0.025,"N"
+"694","Blue Chute","5","Control","CHRE","A",NA,NA,NA,0.214331931413782,2021,"aboveground",6.625,"N"
+"695","Blue Chute","5","Control","ERNA","S",NA,NA,NA,0.0161759948236817,2021,"aboveground",0.5,"N"
+"696","Blue Chute","5","Control","GUSA","S",NA,NA,NA,0.0727919767065675,2021,"aboveground",2.25,"N"
+"697","Blue Chute","5","Control","HECO","PG3",NA,NA,NA,0.274991912002588,2021,"aboveground",8.5,"N"
+"698","Blue Chute","5","Control","HELO","A",NA,NA,NA,0.0363959883532837,2021,"aboveground",1.125,"N"
+"699","Blue Chute","5","Control","KOAM","PF",NA,NA,NA,0.00161759948236817,2021,"aboveground",0.05,"I"
+"700","Blue Chute","5","Control","POOL","A",NA,NA,NA,0.0181171142025235,2021,"aboveground",0.56,"I"
+"701","Blue Chute","5","Control","SPHA","PF",NA,NA,NA,0.000808799741184083,2021,"aboveground",0.025,"N"
+"702","Blue Chute","6","Water Addition","BOGR","PG4",NA,NA,NA,0.529619181946403,2021,"aboveground",18.775,"N"
+"703","Blue Chute","6","Water Addition","CHEN","A",NA,NA,NA,0.0916784203102962,2021,"aboveground",3.25,"I"
+"704","Blue Chute","6","Water Addition","CHER","PF",NA,NA,NA,0.00423131170662906,2021,"aboveground",0.15,"N"
+"705","Blue Chute","6","Water Addition","CHRE","A",NA,NA,NA,0.0916784203102962,2021,"aboveground",3.25,"N"
+"706","Blue Chute","6","Water Addition","CHSES","A",NA,NA,NA,0.00141043723554302,2021,"aboveground",0.05,"N"
+"707","Blue Chute","6","Water Addition","HECO","PG3",NA,NA,NA,0.260930888575458,2021,"aboveground",9.25,"N"
+"708","Blue Chute","6","Water Addition","KOAM","PF",NA,NA,NA,0.00282087447108604,2021,"aboveground",0.1,"I"
+"709","Blue Chute","6","Water Addition","POOL","A",NA,NA,NA,0.0176304654442877,2021,"aboveground",0.625,"I"
+"710","Blue Chute","7","Control","BOGR","PG4",NA,NA,NA,0.283345892991711,2021,"aboveground",9.4,"N"
+"711","Blue Chute","7","Control","CHEN","A",NA,NA,NA,0.00376789751318764,2021,"aboveground",0.125,"I"
+"712","Blue Chute","7","Control","CHER","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025,"N"
+"713","Blue Chute","7","Control","CHRE","A",NA,NA,NA,0.270535041446873,2021,"aboveground",8.975,"N"
+"714","Blue Chute","7","Control","CHSES","A",NA,NA,NA,0.0195930670685757,2021,"aboveground",0.65,"N"
+"715","Blue Chute","7","Control","HECO","PG3",NA,NA,NA,0.275056518462698,2021,"aboveground",9.125,"N"
+"716","Blue Chute","7","Control","HELO","A",NA,NA,NA,0.0150715900527506,2021,"aboveground",0.5,"N"
+"717","Blue Chute","7","Control","KOAM","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025,"I"
+"718","Blue Chute","7","Control","KRLA","S",NA,NA,NA,0.105501130369254,2021,"aboveground",3.5,"N"
+"719","Blue Chute","7","Control","POOL","A",NA,NA,NA,0.00150715900527506,2021,"aboveground",0.05,"I"
+"720","Blue Chute","7","Control","SOEL","PF",NA,NA,NA,0.00376789751318764,2021,"aboveground",0.125,"N"
+"721","Blue Chute","7","Control","SPHA","PF",NA,NA,NA,0.000753579502637528,2021,"aboveground",0.025,"N"
+"722","Blue Chute","7","Control","UKFO","A",NA,NA,NA,0.0195930670685757,2021,"aboveground",0.65,NA
+"723","Blue Chute","8","Water Exclusion","BOGR","PG4",NA,NA,NA,0.111368909512761,2021,"aboveground",1.2,"N"
+"724","Blue Chute","8","Water Exclusion","CHEN","A",NA,NA,NA,0.215777262180974,2021,"aboveground",2.325,"I"
+"725","Blue Chute","8","Water Exclusion","CHSES","A",NA,NA,NA,0.0139211136890951,2021,"aboveground",0.15,"N"
+"726","Blue Chute","8","Water Exclusion","ERNA","S",NA,NA,NA,0.556844547563805,2021,"aboveground",6,"N"
+"727","Blue Chute","8","Water Exclusion","HELO","A",NA,NA,NA,0.0232018561484919,2021,"aboveground",0.25,"N"
+"728","Blue Chute","8","Water Exclusion","KOAM","PF",NA,NA,NA,0.00232018561484919,2021,"aboveground",0.025,"I"
+"729","Blue Chute","8","Water Exclusion","POOL","A",NA,NA,NA,0.00696055684454756,2021,"aboveground",0.075,"I"
+"730","Blue Chute","8","Water Exclusion","SATR","A",NA,NA,NA,0.0696055684454756,2021,"aboveground",0.75,"I"
+"731","Blue Chute","9","Water Addition","BOGR","PG4",NA,NA,NA,0.635937715309356,2021,"aboveground",23.075,"N"
+"732","Blue Chute","9","Water Addition","CHEN","A",NA,NA,NA,0.0275595976298746,2021,"aboveground",1,"I"
+"733","Blue Chute","9","Water Addition","CHER","PF",NA,NA,NA,0.0020669698222406,2021,"aboveground",0.075,"N"
+"734","Blue Chute","9","Water Addition","CHRE","A",NA,NA,NA,0.00413393964448119,2021,"aboveground",0.15,"N"
+"735","Blue Chute","9","Water Addition","CHSES","A",NA,NA,NA,0.00620090946672178,2021,"aboveground",0.225,"N"
+"736","Blue Chute","9","Water Addition","ERNA","S",NA,NA,NA,0.137797988149373,2021,"aboveground",5,"N"
+"737","Blue Chute","9","Water Addition","GLGO","PF",NA,NA,NA,0.00826787928896238,2021,"aboveground",0.3,"N"
+"738","Blue Chute","9","Water Addition","GUSA","S",NA,NA,NA,0.0413393964448119,2021,"aboveground",1.5,"N"
+"739","Blue Chute","9","Water Addition","HECO","PG3",NA,NA,NA,0.0895686922970925,2021,"aboveground",3.25,"N"
+"740","Blue Chute","9","Water Addition","HELO","A",NA,NA,NA,0.020669698222406,2021,"aboveground",0.75,"N"
+"741","Blue Chute","9","Water Addition","KOAM","PF",NA,NA,NA,0.00482292958522806,2021,"aboveground",0.175,"I"
+"742","Blue Chute","9","Water Addition","POOL","A",NA,NA,NA,0.0179137384594185,2021,"aboveground",0.65,"I"
+"743","Blue Chute","9","Water Addition","SATR","A",NA,NA,NA,0.00137797988149373,2021,"aboveground",0.05,"I"
+"744","Blue Chute","9","Water Addition","UKFO","A",NA,NA,NA,0.00234256579853934,2021,"aboveground",0.085,NA
+"745","Blue Chute","10","Water Exclusion","CHEN","A",NA,NA,NA,0.0544464609800363,2021,"aboveground",0.75,"I"
+"746","Blue Chute","10","Water Exclusion","CHER","PF",NA,NA,NA,0.00725952813067151,2021,"aboveground",0.1,"N"
+"747","Blue Chute","10","Water Exclusion","ERNA","S",NA,NA,NA,0.780399274047187,2021,"aboveground",10.75,"N"
+"748","Blue Chute","10","Water Exclusion","HELO","A",NA,NA,NA,0.0308529945553539,2021,"aboveground",0.425,"N"
+"749","Blue Chute","10","Water Exclusion","SATR","A",NA,NA,NA,0.127041742286751,2021,"aboveground",1.75,"I"
+"750","Blue Chute","11","Water Addition","BOGR","PG4",NA,NA,NA,0.233669443226655,2021,"aboveground",13.325,"N"
+"751","Blue Chute","11","Water Addition","CHDE","S",NA,NA,NA,0.0701446733888645,2021,"aboveground",4,"N"
+"752","Blue Chute","11","Water Addition","CHEN","A",NA,NA,NA,0.0482244629548444,2021,"aboveground",2.75,"I"
+"753","Blue Chute","11","Water Addition","CHRE","A",NA,NA,NA,0.0631302060499781,2021,"aboveground",3.6,"N"
+"754","Blue Chute","11","Water Addition","CHSES","A",NA,NA,NA,0.133713283647523,2021,"aboveground",7.625,"N"
+"755","Blue Chute","11","Water Addition","ERNA","S",NA,NA,NA,0.0876808417360807,2021,"aboveground",5,"N"
+"756","Blue Chute","11","Water Addition","GUSA","S",NA,NA,NA,0.0701446733888645,2021,"aboveground",4,"N"
+"757","Blue Chute","11","Water Addition","HECO","PG3",NA,NA,NA,0.241122314774222,2021,"aboveground",13.75,"N"
+"758","Blue Chute","11","Water Addition","KOAM","PF",NA,NA,NA,0.0109601052170101,2021,"aboveground",0.625,"I"
+"759","Blue Chute","11","Water Addition","KRLA","S",NA,NA,NA,0.00438404208680403,2021,"aboveground",0.25,"N"
+"760","Blue Chute","11","Water Addition","POOL","A",NA,NA,NA,0.000876808417360807,2021,"aboveground",0.05,"I"
+"761","Blue Chute","11","Water Addition","SATR","A",NA,NA,NA,0.00876808417360807,2021,"aboveground",0.5,"I"
+"762","Blue Chute","11","Water Addition","STTE","PF",NA,NA,NA,0.0263042525208242,2021,"aboveground",1.5,"N"
+"763","Blue Chute","11","Water Addition","UKFO","A",NA,NA,NA,0.000876808417360807,2021,"aboveground",0.05,NA
+"764","Blue Chute","12","Water Exclusion","ATCA","S",NA,NA,NA,0.0547645125958379,2021,"aboveground",0.5,"N"
+"765","Blue Chute","12","Water Exclusion","BOGR","PG4",NA,NA,NA,0.00547645125958379,2021,"aboveground",0.05,"N"
+"766","Blue Chute","12","Water Exclusion","CHRE","A",NA,NA,NA,0.0498357064622125,2021,"aboveground",0.455,"N"
+"767","Blue Chute","12","Water Exclusion","ERNA","S",NA,NA,NA,0.219058050383352,2021,"aboveground",2,"N"
+"768","Blue Chute","12","Water Exclusion","GUSA","S",NA,NA,NA,0.602409638554217,2021,"aboveground",5.5,"N"
+"769","Blue Chute","12","Water Exclusion","KOAM","PF",NA,NA,NA,0.0273822562979189,2021,"aboveground",0.25,"I"
+"770","Blue Chute","12","Water Exclusion","POOL","A",NA,NA,NA,0.0136911281489595,2021,"aboveground",0.125,"I"
+"771","Blue Chute","12","Water Exclusion","SATR","A",NA,NA,NA,0.0273822562979189,2021,"aboveground",0.25,"I"
+"772","Camp Colton","1","Control","BRPO","PG3",NA,NA,NA,0.10629816635663,2021,"aboveground",8,"N"
+"773","Camp Colton","1","Control","CAGE","PG3",NA,NA,NA,0.077066170608557,2021,"aboveground",5.8,"N"
+"774","Camp Colton","1","Control","CAPA","PF",NA,NA,NA,0.0866994419346266,2021,"aboveground",6.525,"N"
+"775","Camp Colton","1","Control","ELEL","PG3",NA,NA,NA,0.0298963592878023,2021,"aboveground",2.25,"N"
+"776","Camp Colton","1","Control","ERFL","A",NA,NA,NA,0.00604570821153335,2021,"aboveground",0.455,"N"
+"777","Camp Colton","1","Control","ERFO","PF",NA,NA,NA,0.0158118522455488,2021,"aboveground",1.19,"N"
+"778","Camp Colton","1","Control","ERRA","PF",NA,NA,NA,0.0132872707945788,2021,"aboveground",1,"N"
+"779","Camp Colton","1","Control","FEAR","PG3",NA,NA,NA,0.066436353972894,2021,"aboveground",5,"N"
+"780","Camp Colton","1","Control","GETR","PF",NA,NA,NA,0.0930108955620516,2021,"aboveground",7,"N"
+"781","Camp Colton","1","Control","IRMI","PF",NA,NA,NA,0.066436353972894,2021,"aboveground",5,"N"
+"782","Camp Colton","1","Control","MUMO","PG4",NA,NA,NA,0.184693064044645,2021,"aboveground",13.9,"N"
+"783","Camp Colton","1","Control","POHI","PF",NA,NA,NA,0.0498272654796705,2021,"aboveground",3.75,"N"
+"784","Camp Colton","1","Control","POPR","PG3",NA,NA,NA,0.142173797501993,2021,"aboveground",10.7,"I"
+"785","Camp Colton","1","Control","ROWO","S",NA,NA,NA,0.0315572681371246,2021,"aboveground",2.375,"N"
+"786","Camp Colton","1","Control","VETH","A",NA,NA,NA,0.00817167153866596,2021,"aboveground",0.615,"I"
+"787","Camp Colton","1","Control","VIAM","PF",NA,NA,NA,0.022588360350784,2021,"aboveground",1.7,"N"
+"788","Camp Colton","2","Water Exclusion","ACMI","PF",NA,NA,NA,0.00412087912087912,2021,"aboveground",0.225,"N"
+"789","Camp Colton","2","Water Exclusion","ASSP","PF",NA,NA,NA,0.0114468864468864,2021,"aboveground",0.625,"N"
+"790","Camp Colton","2","Water Exclusion","CAGE","PG3",NA,NA,NA,0.173534798534799,2021,"aboveground",9.475,"N"
+"791","Camp Colton","2","Water Exclusion","CAPA","PF",NA,NA,NA,0.0283882783882784,2021,"aboveground",1.55,"N"
+"792","Camp Colton","2","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0251831501831502,2021,"aboveground",1.375,"N"
+"793","Camp Colton","2","Water Exclusion","ERFL","A",NA,NA,NA,0.00274725274725275,2021,"aboveground",0.15,"N"
+"794","Camp Colton","2","Water Exclusion","ERFO","PF",NA,NA,NA,0.032967032967033,2021,"aboveground",1.8,"N"
+"795","Camp Colton","2","Water Exclusion","ERRA","PF",NA,NA,NA,0.032051282051282,2021,"aboveground",1.75,"N"
+"796","Camp Colton","2","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0915750915750916,2021,"aboveground",5,"N"
+"797","Camp Colton","2","Water Exclusion","GETR","PF",NA,NA,NA,0.407509157509158,2021,"aboveground",22.25,"N"
+"798","Camp Colton","2","Water Exclusion","IRMI","PF",NA,NA,NA,0.0778388278388278,2021,"aboveground",4.25,"N"
+"799","Camp Colton","2","Water Exclusion","LUAR","PF",NA,NA,NA,0.0274725274725275,2021,"aboveground",1.5,"N"
+"800","Camp Colton","2","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00457875457875458,2021,"aboveground",0.25,"N"
+"801","Camp Colton","2","Water Exclusion","POHI","PF",NA,NA,NA,0.0274725274725275,2021,"aboveground",1.5,"N"
+"802","Camp Colton","2","Water Exclusion","POPR","PG3",NA,NA,NA,0.0448717948717949,2021,"aboveground",2.45,"I"
+"803","Camp Colton","2","Water Exclusion","TRDU","A",NA,NA,NA,0.00457875457875458,2021,"aboveground",0.25,"I"
+"804","Camp Colton","2","Water Exclusion","VIAM","PF",NA,NA,NA,0.00366300366300366,2021,"aboveground",0.2,"N"
+"805","Camp Colton","3","Control","ACMI","PF",NA,NA,NA,0.0250471316994344,2021,"aboveground",2.325,"N"
+"806","Camp Colton","3","Control","ASSP","PF",NA,NA,NA,0.00269323996768112,2021,"aboveground",0.25,"N"
+"807","Camp Colton","3","Control","BRPO","PG3",NA,NA,NA,0.0107729598707245,2021,"aboveground",1,"N"
+"808","Camp Colton","3","Control","CAGE","PG3",NA,NA,NA,0.0390519795313762,2021,"aboveground",3.625,"N"
+"809","Camp Colton","3","Control","CAPA","PF",NA,NA,NA,0.00484783194182602,2021,"aboveground",0.45,"N"
+"810","Camp Colton","3","Control","CIWH","PF",NA,NA,NA,0.0377053595475357,2021,"aboveground",3.5,"N"
+"811","Camp Colton","3","Control","ELEL","PG3",NA,NA,NA,0.00807971990304336,2021,"aboveground",0.75,"N"
+"812","Camp Colton","3","Control","ERFL","A",NA,NA,NA,0.00107729598707245,2021,"aboveground",0.1,"N"
+"813","Camp Colton","3","Control","ERFO","PF",NA,NA,NA,0.00538647993536224,2021,"aboveground",0.5,"N"
+"814","Camp Colton","3","Control","FEAR","PG3",NA,NA,NA,0.290869916509561,2021,"aboveground",27,"N"
+"815","Camp Colton","3","Control","GETR","PF",NA,NA,NA,0.36089415566927,2021,"aboveground",33.5,"N"
+"816","Camp Colton","3","Control","HYHO","PF",NA,NA,NA,0.140048478319418,2021,"aboveground",13,"N"
+"817","Camp Colton","3","Control","IRMI","PF",NA,NA,NA,0.0175060597899273,2021,"aboveground",1.625,"N"
+"818","Camp Colton","3","Control","MUMO","PG4",NA,NA,NA,0.0403985995152168,2021,"aboveground",3.75,"N"
+"819","Camp Colton","3","Control","POHI","PF",NA,NA,NA,0.000538647993536224,2021,"aboveground",0.05,"N"
+"820","Camp Colton","3","Control","POPR","PG3",NA,NA,NA,0.0123889038513332,2021,"aboveground",1.15,"I"
+"821","Camp Colton","3","Control","TAOF","PF",NA,NA,NA,0.00134661998384056,2021,"aboveground",0.125,"I"
+"822","Camp Colton","3","Control","VETH","A",NA,NA,NA,0.000269323996768112,2021,"aboveground",0.025,"I"
+"823","Camp Colton","3","Control","VIAM","PF",NA,NA,NA,0.00107729598707245,2021,"aboveground",0.1,"N"
+"824","Camp Colton","4","Water Addition","BRPO","PG3",NA,NA,NA,0.00866035182679296,2021,"aboveground",0.8,"N"
+"825","Camp Colton","4","Water Addition","CAGE","PG3",NA,NA,NA,0.00568335588633288,2021,"aboveground",0.525,"N"
+"826","Camp Colton","4","Water Addition","CAPA","PF",NA,NA,NA,0.0132611637347767,2021,"aboveground",1.225,"N"
+"827","Camp Colton","4","Water Addition","ELEL","PG3",NA,NA,NA,0.0054127198917456,2021,"aboveground",0.5,"N"
+"828","Camp Colton","4","Water Addition","ERFL","A",NA,NA,NA,0.00324763193504736,2021,"aboveground",0.3,"N"
+"829","Camp Colton","4","Water Addition","ERFO","PF",NA,NA,NA,0.00595399188092016,2021,"aboveground",0.55,"N"
+"830","Camp Colton","4","Water Addition","ERRA","PF",NA,NA,NA,0.0311231393775372,2021,"aboveground",2.875,"N"
+"831","Camp Colton","4","Water Addition","FEAR","PG3",NA,NA,NA,0.276048714479026,2021,"aboveground",25.5,"N"
+"832","Camp Colton","4","Water Addition","GETR","PF",NA,NA,NA,0.146143437077131,2021,"aboveground",13.5,"N"
+"833","Camp Colton","4","Water Addition","HYHO","PF",NA,NA,NA,0.0649526387009472,2021,"aboveground",6,"N"
+"834","Camp Colton","4","Water Addition","IRMI","PF",NA,NA,NA,0.0460081190798376,2021,"aboveground",4.25,"N"
+"835","Camp Colton","4","Water Addition","MUMO","PG4",NA,NA,NA,0.148849797023004,2021,"aboveground",13.75,"N"
+"836","Camp Colton","4","Water Addition","POHI","PF",NA,NA,NA,0.054127198917456,2021,"aboveground",5,"N"
+"837","Camp Colton","4","Water Addition","POPR","PG3",NA,NA,NA,0.0384303112313938,2021,"aboveground",3.55,"I"
+"838","Camp Colton","4","Water Addition","PTAQ","PF",NA,NA,NA,0.0433017591339648,2021,"aboveground",4,"N"
+"839","Camp Colton","4","Water Addition","TAOF","PF",NA,NA,NA,0.0216508795669824,2021,"aboveground",2,"I"
+"840","Camp Colton","4","Water Addition","VETH","A",NA,NA,NA,0.0817320703653586,2021,"aboveground",7.55,"I"
+"841","Camp Colton","4","Water Addition","VIAM","PF",NA,NA,NA,0.0054127198917456,2021,"aboveground",0.5,"N"
+"842","Camp Colton","5","Water Exclusion","ACMI","PF",NA,NA,NA,0.00455109640049648,2021,"aboveground",0.275,"N"
+"843","Camp Colton","5","Water Exclusion","ASSP","PF",NA,NA,NA,0.0496483243690525,2021,"aboveground",3,"N"
+"844","Camp Colton","5","Water Exclusion","CAGE","PG3",NA,NA,NA,0.16177079023583,2021,"aboveground",9.775,"N"
+"845","Camp Colton","5","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0475796441870087,2021,"aboveground",2.875,"N"
+"846","Camp Colton","5","Water Exclusion","FEAR","PG3",NA,NA,NA,0.0223417459660736,2021,"aboveground",1.35,"N"
+"847","Camp Colton","5","Water Exclusion","GETR","PF",NA,NA,NA,0.422010757136947,2021,"aboveground",25.5,"N"
+"848","Camp Colton","5","Water Exclusion","HYHO","PF",NA,NA,NA,0.0330988829127017,2021,"aboveground",2,"N"
+"849","Camp Colton","5","Water Exclusion","IRMI","PF",NA,NA,NA,0.130326851468763,2021,"aboveground",7.875,"N"
+"850","Camp Colton","5","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00165494414563508,2021,"aboveground",0.1,"N"
+"851","Camp Colton","5","Water Exclusion","POHI","PF",NA,NA,NA,0.0992966487381051,2021,"aboveground",6,"N"
+"852","Camp Colton","5","Water Exclusion","POPR","PG3",NA,NA,NA,0.0153082333471245,2021,"aboveground",0.925,"I"
+"853","Camp Colton","5","Water Exclusion","VIAM","PF",NA,NA,NA,0.0124120810922631,2021,"aboveground",0.75,"N"
+"854","Camp Colton","6","Water Addition","ACMI","PF",NA,NA,NA,0.00896366269047783,2021,"aboveground",0.65,"N"
+"855","Camp Colton","6","Water Addition","ASSP","PF",NA,NA,NA,0.0420602633937806,2021,"aboveground",3.05,"N"
+"856","Camp Colton","6","Water Addition","BRPO","PG3",NA,NA,NA,0.0358546507619113,2021,"aboveground",2.6,"N"
+"857","Camp Colton","6","Water Addition","CAPA","PF",NA,NA,NA,0.00310280631593463,2021,"aboveground",0.225,"N"
+"858","Camp Colton","6","Water Addition","ELEL","PG3",NA,NA,NA,0.0137902502930428,2021,"aboveground",1,"N"
+"859","Camp Colton","6","Water Addition","ERFL","A",NA,NA,NA,0.000206853754395642,2021,"aboveground",0.015,"N"
+"860","Camp Colton","6","Water Addition","ERFO","PF",NA,NA,NA,0.014824519065021,2021,"aboveground",1.075,"N"
+"861","Camp Colton","6","Water Addition","FEAR","PG3",NA,NA,NA,0.38957457077846,2021,"aboveground",28.25,"N"
+"862","Camp Colton","6","Water Addition","GETR","PF",NA,NA,NA,0.337861132179549,2021,"aboveground",24.5,"N"
+"863","Camp Colton","6","Water Addition","HYHO","PF",NA,NA,NA,0.0206853754395642,2021,"aboveground",1.5,"N"
+"864","Camp Colton","6","Water Addition","IRMI","PF",NA,NA,NA,0.00689512514652141,2021,"aboveground",0.5,"N"
+"865","Camp Colton","6","Water Addition","MUMO","PG4",NA,NA,NA,0.0624008825760188,2021,"aboveground",4.525,"N"
+"866","Camp Colton","6","Water Addition","POHI","PF",NA,NA,NA,0.00689512514652141,2021,"aboveground",0.5,"N"
+"867","Camp Colton","6","Water Addition","POPR","PG3",NA,NA,NA,0.0513686823415845,2021,"aboveground",3.725,"I"
+"868","Camp Colton","6","Water Addition","VIAM","PF",NA,NA,NA,0.00551610011721713,2021,"aboveground",0.4,"N"
+"869","Camp Colton","7","Control","BRPO","PG3",NA,NA,NA,0.0194069243906226,2021,"aboveground",1.25,"N"
+"870","Camp Colton","7","Control","CAPA","PF",NA,NA,NA,0.000776276975624903,2021,"aboveground",0.05,"N"
+"871","Camp Colton","7","Control","ELEL","PG3",NA,NA,NA,0.275578326346841,2021,"aboveground",17.75,"N"
+"872","Camp Colton","7","Control","ERRA","PF",NA,NA,NA,0.0271696941468716,2021,"aboveground",1.75,"N"
+"873","Camp Colton","7","Control","FEAR","PG3",NA,NA,NA,0.145551932929669,2021,"aboveground",9.375,"N"
+"874","Camp Colton","7","Control","GETR","PF",NA,NA,NA,0.221238938053097,2021,"aboveground",14.25,"N"
+"875","Camp Colton","7","Control","IRMI","PF",NA,NA,NA,0.0310510790249961,2021,"aboveground",2,"N"
+"876","Camp Colton","7","Control","MUMO","PG4",NA,NA,NA,0.147492625368732,2021,"aboveground",9.5,"N"
+"877","Camp Colton","7","Control","POHI","PF",NA,NA,NA,0.0232883092687471,2021,"aboveground",1.5,"N"
+"878","Camp Colton","7","Control","POPR","PG3",NA,NA,NA,0.064430988976867,2021,"aboveground",4.15,"I"
+"879","Camp Colton","7","Control","VETH","A",NA,NA,NA,0.00908244061481137,2021,"aboveground",0.585,"I"
+"880","Camp Colton","7","Control","VIAM","PF",NA,NA,NA,0.0349324639031206,2021,"aboveground",2.25,"N"
+"881","Camp Colton","8","Water Exclusion","CAGE","PG3",NA,NA,NA,0.18606627017842,2021,"aboveground",10.95,"N"
+"882","Camp Colton","8","Water Exclusion","ELEL","PG3",NA,NA,NA,0.133814783347494,2021,"aboveground",7.875,"N"
+"883","Camp Colton","8","Water Exclusion","ERFL","A",NA,NA,NA,0.133814783347494,2021,"aboveground",7.875,"N"
+"884","Camp Colton","8","Water Exclusion","ERFO","PF",NA,NA,NA,0.0212404418011895,2021,"aboveground",1.25,"N"
+"885","Camp Colton","8","Water Exclusion","FEAR","PG3",NA,NA,NA,0.123194562446899,2021,"aboveground",7.25,"N"
+"886","Camp Colton","8","Water Exclusion","GETR","PF",NA,NA,NA,0.00849617672047579,2021,"aboveground",0.5,"N"
+"887","Camp Colton","8","Water Exclusion","MUMO","PG4",NA,NA,NA,0.0127442650807137,2021,"aboveground",0.75,"N"
+"888","Camp Colton","8","Water Exclusion","POHI","PF",NA,NA,NA,0.174171622769754,2021,"aboveground",10.25,"N"
+"889","Camp Colton","8","Water Exclusion","POPR","PG3",NA,NA,NA,0.046304163126593,2021,"aboveground",2.725,"I"
+"890","Camp Colton","8","Water Exclusion","TAOF","PF",NA,NA,NA,0.00424808836023789,2021,"aboveground",0.25,"I"
+"891","Camp Colton","8","Water Exclusion","TRDU","A",NA,NA,NA,0.0998300764655905,2021,"aboveground",5.875,"I"
+"892","Camp Colton","8","Water Exclusion","VETH","A",NA,NA,NA,0.00297366185216653,2021,"aboveground",0.175,"I"
+"893","Camp Colton","8","Water Exclusion","VIAM","PF",NA,NA,NA,0.0531011045029737,2021,"aboveground",3.125,"N"
+"894","Camp Colton","9","Water Addition","BRPO","PG3",NA,NA,NA,0.029585798816568,2021,"aboveground",2.875,"N"
+"895","Camp Colton","9","Water Addition","CAGE","PG3",NA,NA,NA,0.0113197838950347,2021,"aboveground",1.1,"N"
+"896","Camp Colton","9","Water Addition","ELEL","PG3",NA,NA,NA,0.0352456907640854,2021,"aboveground",3.425,"N"
+"897","Camp Colton","9","Water Addition","ERFL","A",NA,NA,NA,0.00205814252636995,2021,"aboveground",0.2,"N"
+"898","Camp Colton","9","Water Addition","FEAR","PG3",NA,NA,NA,0.241831746848469,2021,"aboveground",23.5,"N"
+"899","Camp Colton","9","Water Addition","GETR","PF",NA,NA,NA,0.0771803447388732,2021,"aboveground",7.5,"N"
+"900","Camp Colton","9","Water Addition","HYHO","PF",NA,NA,NA,0.277849241059943,2021,"aboveground",27,"N"
+"901","Camp Colton","9","Water Addition","IRMI","PF",NA,NA,NA,0.100334448160535,2021,"aboveground",9.75,"N"
+"902","Camp Colton","9","Water Addition","MUMO","PG4",NA,NA,NA,0.0656032930280422,2021,"aboveground",6.375,"N"
+"903","Camp Colton","9","Water Addition","POHI","PF",NA,NA,NA,0.108052482634422,2021,"aboveground",10.5,"N"
+"904","Camp Colton","9","Water Addition","POPR","PG3",NA,NA,NA,0.0149215333161821,2021,"aboveground",1.45,"I"
+"905","Camp Colton","9","Water Addition","VETH","A",NA,NA,NA,0.0154360689477746,2021,"aboveground",1.5,"I"
+"906","Camp Colton","9","Water Addition","VIAM","PF",NA,NA,NA,0.0205814252636995,2021,"aboveground",2,"N"
+"907","Camp Colton","10","Water Exclusion","ACMI","PF",NA,NA,NA,0.0499486828600753,2021,"aboveground",3.65,"N"
+"908","Camp Colton","10","Water Exclusion","ASSP","PF",NA,NA,NA,0.0273691412931919,2021,"aboveground",2,"N"
+"909","Camp Colton","10","Water Exclusion","CAGE","PG3",NA,NA,NA,0.0157372562435854,2021,"aboveground",1.15,"N"
+"910","Camp Colton","10","Water Exclusion","ELEL","PG3",NA,NA,NA,0.0567909681833733,2021,"aboveground",4.15,"N"
+"911","Camp Colton","10","Water Exclusion","FEAR","PG3",NA,NA,NA,0.153951419774205,2021,"aboveground",11.25,"N"
+"912","Camp Colton","10","Water Exclusion","GETR","PF",NA,NA,NA,0.431063975367773,2021,"aboveground",31.5,"N"
+"913","Camp Colton","10","Water Exclusion","HYHO","PF",NA,NA,NA,0.0821074238795758,2021,"aboveground",6,"N"
+"914","Camp Colton","10","Water Exclusion","IRMI","PF",NA,NA,NA,0.0410537119397879,2021,"aboveground",3,"N"
+"915","Camp Colton","10","Water Exclusion","MUMO","PG4",NA,NA,NA,0.00923708518645227,2021,"aboveground",0.675,"N"
+"916","Camp Colton","10","Water Exclusion","POHI","PF",NA,NA,NA,0.109476565172768,2021,"aboveground",8,"N"
+"917","Camp Colton","10","Water Exclusion","POPR","PG3",NA,NA,NA,0.0010263427984947,2021,"aboveground",0.075,"I"
+"918","Camp Colton","10","Water Exclusion","TRDU","A",NA,NA,NA,0.0205268559698939,2021,"aboveground",1.5,"I"
+"919","Camp Colton","10","Water Exclusion","VIAM","PF",NA,NA,NA,0.0017105713308245,2021,"aboveground",0.125,"N"
+"920","Camp Colton","11","Water Addition","ACMI","PF",NA,NA,NA,0.00300364728599013,2021,"aboveground",0.35,"N"
+"921","Camp Colton","11","Water Addition","ANRO","PF",NA,NA,NA,0.0010727311735679,2021,"aboveground",0.125,"N"
+"922","Camp Colton","11","Water Addition","BRPO","PG3",NA,NA,NA,0.0759493670886076,2021,"aboveground",8.85,"N"
+"923","Camp Colton","11","Water Addition","CAGE","PG3",NA,NA,NA,0.00922548809268397,2021,"aboveground",1.075,"N"
+"924","Camp Colton","11","Water Addition","ELEL","PG3",NA,NA,NA,0.0278910105127655,2021,"aboveground",3.25,"N"
+"925","Camp Colton","11","Water Addition","FEAR","PG3",NA,NA,NA,0.364728599013087,2021,"aboveground",42.5,"N"
+"926","Camp Colton","11","Water Addition","GETR","PF",NA,NA,NA,0.261746406350569,2021,"aboveground",30.5,"N"
+"927","Camp Colton","11","Water Addition","HYHO","PF",NA,NA,NA,0.0858184938854323,2021,"aboveground",10,"N"
+"928","Camp Colton","11","Water Addition","IRMI","PF",NA,NA,NA,0.0579274833726668,2021,"aboveground",6.75,"N"
+"929","Camp Colton","11","Water Addition","MUMO","PG4",NA,NA,NA,0.0313237502681828,2021,"aboveground",3.65,"N"
+"930","Camp Colton","11","Water Addition","POHI","PF",NA,NA,NA,0.0514910963312594,2021,"aboveground",6,"N"
+"931","Camp Colton","11","Water Addition","POPR","PG3",NA,NA,NA,0.0148036901952371,2021,"aboveground",1.725,"I"
+"932","Camp Colton","11","Water Addition","TRDU","A",NA,NA,NA,0.00214546234713581,2021,"aboveground",0.25,"I"
+"933","Camp Colton","11","Water Addition","VIAM","PF",NA,NA,NA,0.0128727740828148,2021,"aboveground",1.5,"N"
+"934","Camp Colton","12","Control","CAGE","PG3",NA,NA,NA,0.0202069985214391,2021,"aboveground",2.05,"N"
+"935","Camp Colton","12","Control","ELEL","PG3",NA,NA,NA,0.0295712173484475,2021,"aboveground",3,"N"
+"936","Camp Colton","12","Control","ERFO","PF",NA,NA,NA,0.0125677673730902,2021,"aboveground",1.275,"N"
+"937","Camp Colton","12","Control","FEAR","PG3",NA,NA,NA,0.146623952686052,2021,"aboveground",14.875,"N"
+"938","Camp Colton","12","Control","GETR","PF",NA,NA,NA,0.310497782158699,2021,"aboveground",31.5,"N"
+"939","Camp Colton","12","Control","HYHO","PF",NA,NA,NA,0.206998521439133,2021,"aboveground",21,"N"
+"940","Camp Colton","12","Control","IRMI","PF",NA,NA,NA,0.0110892065056678,2021,"aboveground",1.125,"N"
+"941","Camp Colton","12","Control","MUMO","PG4",NA,NA,NA,0.0372104484967965,2021,"aboveground",3.775,"N"
+"942","Camp Colton","12","Control","POHI","PF",NA,NA,NA,0.172498767865944,2021,"aboveground",17.5,"N"
+"943","Camp Colton","12","Control","POPR","PG3",NA,NA,NA,0.0133070478068014,2021,"aboveground",1.35,"I"
+"944","Camp Colton","12","Control","VIAM","PF",NA,NA,NA,0.03942828979793,2021,"aboveground",4,"N"

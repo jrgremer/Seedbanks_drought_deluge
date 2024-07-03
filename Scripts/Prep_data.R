@@ -185,7 +185,7 @@ str(ab_sprelabun_wide)
 
 #write.csv(ab_sprelabun_wide, file = "Formatted_data/aboveground_NPP_relabun_wide.csv")
 
-#### merge aboveground and seedbank data into long format dataframe ####
+#### merge aboveground and seedbank data ####
 
 #use just collection year for emergent
 plantdat_long = plantdat_long %>%
@@ -198,7 +198,7 @@ length(unique(plantdat_long21$Species)) #72 unique species in above ground data
 
 length(intersect(unique(seedtots_long$Species), unique(plantdat_long21$Species))) #27 species in common in both emergent and seedbank data
 
-# then merge dataframes #
+# Merge dataframes: long format #
 names(seedtots_long)
 names(plantdat_long)
 
@@ -215,4 +215,54 @@ summary(alldat_long)
 
 #write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
 
-#Remember to create a species list
+## Wide format dataframes ##
+all_sprelabun_wide = alldat_long %>%
+  select(-rawabun, -PFT) %>%
+  pivot_wider(
+    id_cols = c(Site, Plot, Treatment, Year, type), 
+    names_from = Species, 
+    values_from = relabun)
+summary(all_sprelabun_wide)
+str(all_sprelabun_wide)
+
+#write.csv(all_sprelabun_wide, file = "Formatted_data/Relabun_sbandab_merged_wide.csv")
+
+all_sprawabun_wide = alldat_long %>%
+  select(-relabun, -PFT) %>%
+  pivot_wider(
+    id_cols = c(Site, Plot, Treatment, Year, type), 
+    names_from = Species, 
+    values_from = rawabun)
+summary(all_sprawabun_wide)
+str(all_sprawabun_wide)
+
+#write.csv(all_sprawabun_wide, file = "Formatted_data/Rawabun_sbandab_merged_wide.csv")
+
+#### Adding native vs non-native (introduced) ####
+summary(alldat_long)
+nativeint = read.csv("Raw_data/species list_allNPPandSB_NI.csv") %>%
+  select(Species, Native.Introduced) 
+
+summary(nativeint)
+
+dim(alldat_long)
+
+#join dataframes to get native vs introduced  
+alldat_long =  left_join(alldat_long, nativeint) %>%
+    mutate(Species = as.factor(Species), Native.Introduced = as.factor(Native.Introduced)) 
+dim(alldat_long)
+summary(alldat_long)
+
+alldat_long[is.na(alldat_long$Native.Introduced)==T,] #only species that were not identified in above ground data 
+
+#write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
+
+
+#### Create and save species list #### 
+splist = alldat_long %>%
+  select(Species, PFT, Native.Introduced) %>%
+  distinct()
+dim(splist)
+head(splist)
+
+#write.csv(splist, file = "Formatted_data/species list_allNPPandSB.csv")
