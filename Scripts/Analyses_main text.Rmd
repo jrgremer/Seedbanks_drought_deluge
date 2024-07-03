@@ -13,5 +13,73 @@ knitr::opts_chunk$set(echo = TRUE)
 ```{r}
 
 ```
+#load libraries
+```{r}
+library(tidyverse)
+library(vegan)
+library(emmeans) #for posthoc comparisons of means
+library(spaa) #for dist2list function 
+library(cowplot)
+```
 
-#
+
+#load data
+```{r}
+alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv") %>%
+              mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species),
+                     type = as.factor(type)) %>%
+              mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+              mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank"))) %>%
+              filter(Site != "Blank") %>% #filter blanks for now, but will need to figure that out
+              #add elevations for sites 
+              mutate(elevation = case_when(
+                Site == "Black Point" ~ 1566,
+                Site == "Antelope" ~ 1636,
+                Site == "Blue Chute" ~ 1930,
+                Site == "Arboretum" ~ 2179,
+                Site == "Camp Colton" ~ 2591
+              )) %>%
+              mutate(elevation = as.numeric(elevation)) %>%
+              mutate(elevfact = as.factor(elevation)) %>%
+              mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                seedbank = "Seedbank"))
+
+summary(alldat_long)
+```
+
+```{r}
+
+```
+
+#Total abundance
+```{r}
+
+```
+
+#Relative abundance of plant functional types
+```{r}
+
+```
+
+#Species richness
+
+```{r}
+
+```
+
+#Species diversity
+```{r}
+
+```
+
+#Species composition - NMDS
+```{r}
+
+```
+
+
+#Species composition - Dissimilarity
+
+```{r}
+
+```

@@ -36,7 +36,8 @@ dim(plotstreats)
 #join to get treatment and make treatment a factor
 dim(seeddat)
 seeddat = left_join(seeddat, plotstreats, by = c("Site", "Plot"))%>%
-          mutate(Treatment = as.factor(Treatment))
+          mutate(Treatment = ifelse(Site == "Blank", "Blank", Treatment)) %>% #add "blank" to treatments
+          mutate(Treatment = as.factor(Treatment), Site = as.factor(Site))
 
 dim(seeddat)   
 head(seeddat)
@@ -83,7 +84,7 @@ blanktots = seeddat %>%
 #sum by tray
 seedtots_long = seeddat %>% 
   group_by(Site, Plot, Treatment, Species, PFT) %>%
-  summarise(tottally = sum(Tally, na.rm=T)) %>% #for seedbank data, raw abundances = counts (will be cover for emergent community)
+  summarise(tottally = sum(Tally, na.rm=T)) %>% #for seedbank data, abundances = counts (will be cover for emergent community)
   ungroup() 
 
 #join with blanktotals and correct for contamination
@@ -91,6 +92,7 @@ dim(seedtots_long)
 seedtots_long = left_join(seedtots_long, blanktots)
 dim(seedtots_long)
 head(seedtots_long)
+summary(seedtots_long)
 
 #correct for contamination
 seedtots_long = seedtots_long %>%
@@ -102,7 +104,6 @@ summary(seedtots_long)
 
 #Calculate relative abundances
 seedtots_long = seedtots_long %>%
-  mutate(Treatment = ifelse(Site == "Blank", "Blank", Treatment)) %>% #add "blank" to treatments
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species)) %>%
   #calculate relative abundance at the plot level
   group_by(Site, Plot, Treatment) %>%
@@ -114,7 +115,7 @@ summary(seedtots_long)
 head(seedtots_long)
 dim(seedtots_long)
 
-#write.csv(seedtots_long, file = "Formatted_data/seedbank_rawandrelabun_long.csv")
+write.csv(seedtots_long, file = "Formatted_data/seedbank_rawandrelabun_long.csv")
 
 #create Wide dataframes
 sb_sprelabun_wide = seedtots_long %>%
@@ -126,7 +127,7 @@ sb_sprelabun_wide = seedtots_long %>%
 summary(sb_sprelabun_wide)
 str(sb_sprelabun_wide)
 
-#write.csv(sb_sprelabun_wide, file = "Formatted_data/seedbank_relabun_wide.csv")
+write.csv(sb_sprelabun_wide, file = "Formatted_data/seedbank_relabun_wide.csv")
 
 sb_sptotabun_wide = seedtots_long %>%
   select(-relabun, -PFT) %>% 
@@ -136,7 +137,7 @@ sb_sptotabun_wide = seedtots_long %>%
     values_from = totabun)
 summary(sb_sptotabun_wide)
 str(sb_sptotabun_wide)
-#write.csv(sb_sptotabun_wide, file = "Formatted_data/seedbank_totabun_wide.csv")
+write.csv(sb_sptotabun_wide, file = "Formatted_data/seedbank_totabun_wide.csv")
 
 #### format NPP/above ground data ####
 
@@ -170,9 +171,8 @@ plantdat_long = plantdat_plot %>%
 
 summary(plantdat_long)            
 
-#write.csv(plantdat_long, file = "Formatted_data/aboveground_NPP_rawandrelabun_long.csv")
+write.csv(plantdat_long, file = "Formatted_data/aboveground_NPP_rawandrelabun_long.csv")
 
-#next make wide dataframe
 #create Wide dataframes
 ab_sprelabun_wide = plantdat_long %>%
   select(-canopycov_plot, -PFT) %>%
@@ -183,13 +183,13 @@ ab_sprelabun_wide = plantdat_long %>%
 summary(ab_sprelabun_wide)
 str(ab_sprelabun_wide)
 
-#write.csv(ab_sprelabun_wide, file = "Formatted_data/aboveground_NPP_relabun_wide.csv")
+write.csv(ab_sprelabun_wide, file = "Formatted_data/aboveground_NPP_relabun_wide.csv")
 
 #### merge aboveground and seedbank data ####
 
 #use just collection year for emergent
 plantdat_long = plantdat_long %>%
-    rename(rawabun = canopycov_plot) #rename raw abundance to match seedbank data
+    rename(totabun = canopycov_plot) #rename raw abundance to match seedbank data
 
 summary(plantdat_long)
 
@@ -213,11 +213,11 @@ dim(seedtots_long) + dim(plantdat_long) #dimensions look good
 
 summary(alldat_long)
 
-#write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
+write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
 
 ## Wide format dataframes ##
 all_sprelabun_wide = alldat_long %>%
-  select(-rawabun, -PFT) %>%
+  select(-totabun, -PFT) %>%
   pivot_wider(
     id_cols = c(Site, Plot, Treatment, Year, type), 
     names_from = Species, 
@@ -225,18 +225,18 @@ all_sprelabun_wide = alldat_long %>%
 summary(all_sprelabun_wide)
 str(all_sprelabun_wide)
 
-#write.csv(all_sprelabun_wide, file = "Formatted_data/Relabun_sbandab_merged_wide.csv")
+write.csv(all_sprelabun_wide, file = "Formatted_data/Relabun_sbandab_merged_wide.csv")
 
-all_sprawabun_wide = alldat_long %>%
+all_sptotabun_wide = alldat_long %>%
   select(-relabun, -PFT) %>%
   pivot_wider(
     id_cols = c(Site, Plot, Treatment, Year, type), 
     names_from = Species, 
-    values_from = rawabun)
+    values_from = totabun)
 summary(all_sprawabun_wide)
 str(all_sprawabun_wide)
 
-#write.csv(all_sprawabun_wide, file = "Formatted_data/Rawabun_sbandab_merged_wide.csv")
+write.csv(all_sprawabun_wide, file = "Formatted_data/Rawabun_sbandab_merged_wide.csv")
 
 #### Adding native vs non-native (introduced) ####
 summary(alldat_long)
@@ -255,7 +255,7 @@ summary(alldat_long)
 
 alldat_long[is.na(alldat_long$Native.Introduced)==T,] #only species that were not identified in above ground data 
 
-#write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
+write.csv(alldat_long, file = "Formatted_data/Seedbank_aboveground_merged_long.csv")
 
 
 #### Create and save species list #### 
@@ -265,4 +265,4 @@ splist = alldat_long %>%
 dim(splist)
 head(splist)
 
-#write.csv(splist, file = "Formatted_data/species list_allNPPandSB.csv")
+write.csv(splist, file = "Formatted_data/species list_allNPPandSB.csv")
