@@ -95,6 +95,8 @@ alldat_raw_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") 
 summary(alldat_raw_wide)
 
 
+#load temperature data
+
 ```
 
 ##Species richness and diversity calculation
@@ -158,6 +160,13 @@ simp_plot_elevation
 
 ```
 
+#Overwinter storage temps
+
+```{r}
+
+```
+
+#Seedbank growout temps
 
 ```{r}
 
