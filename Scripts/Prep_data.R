@@ -233,10 +233,10 @@ all_sptotabun_wide = alldat_long %>%
     id_cols = c(Site, Plot, Treatment, Year, type), 
     names_from = Species, 
     values_from = totabun)
-summary(all_sprawabun_wide)
-str(all_sprawabun_wide)
+summary(all_sptotabun_wide)
+str(all_sptotabun_wide)
 
-write.csv(all_sprawabun_wide, file = "Formatted_data/Totabun_sbandab_merged_wide.csv")
+write.csv(all_sptotabun_wide, file = "Formatted_data/Totabun_sbandab_merged_wide.csv")
 
 #### Adding native vs non-native (introduced) ####
 summary(alldat_long)

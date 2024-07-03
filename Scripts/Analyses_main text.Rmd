@@ -45,15 +45,75 @@ alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv")
                 seedbank = "Seedbank"))
 
 summary(alldat_long)
+
+alldat_rel_wide = read.csv("../Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
+  mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type)) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
+  filter(Site != "Blank") %>%
+  mutate(siteplot = paste0(Site, Plot)) %>%
+  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
+  select(-X, -siteplot) %>%
+  #add elevations for sites 
+  mutate(elevation = case_when(
+    Site == "Black Point" ~ 1566,
+    Site == "Antelope" ~ 1636,
+    Site == "Blue Chute" ~ 1930,
+    Site == "Arboretum" ~ 2179,
+    Site == "Camp Colton" ~ 2591
+  )) %>%
+  mutate(elevation = as.numeric(elevation))%>%
+  mutate(elevfact = as.factor(elevation)) %>%
+  mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                              seedbank = "Seedbank"))
+
+summary(alldat_rel_wide)
+
+alldat_raw_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") %>%
+  mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type))%>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
+  filter(Site != "Blank") %>%
+  mutate(siteplot = paste0(Site, Plot)) %>%
+  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
+  select(-X, -siteplot) %>%
+  #add elevations for sites 
+  mutate(elevation = case_when(
+    Site == "Black Point" ~ 1566,
+    Site == "Antelope" ~ 1636,
+    Site == "Blue Chute" ~ 1930,
+    Site == "Arboretum" ~ 2179,
+    Site == "Camp Colton" ~ 2591
+  )) %>%
+  mutate(elevation = as.numeric(elevation))%>%
+  mutate(elevfact = as.factor(elevation)) %>%
+  mutate(type = recode_factor(type, aboveground = "Aboveground", 
+                              seedbank = "Seedbank"))
+
+
+summary(alldat_raw_wide)
+
+
 ```
 
-```{r}
-
-```
 
 #Total abundance
 ```{r}
+#calculate total abundance for each plot
+abun_tots = alldat_long %>%
+                 group_by(Site, Treatment, type, Plot, site_byelev, trt_order, elevation, elevfact) %>%
+                 summarize(totabun = sum(totabun)) 
 
+#linear models for above ground and seedbank separately
+lm_abun_ab = lm(totabun ~ elevfact*Treatment, data = subset(abun_tots, type == "Aboveground"))
+summary(lm_abun_ab)                   
+anova(lm_abun_ab)
+
+
+#Jenny start here, need to run both models and post hoc contrasts, then plot it
+                 
 ```
 
 #Relative abundance of plant functional types
