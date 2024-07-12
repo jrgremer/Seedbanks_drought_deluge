@@ -5,14 +5,6 @@ date: "2024-07-03"
 output: html_document
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-#empty chunk to copy
-```{r}
-
-```
 #load libraries
 ```{r}
 library(tidyverse)
@@ -22,7 +14,7 @@ library(spaa) #for dist2list function
 library(cowplot)
 ```
 
-#load data
+#load community data
 ```{r}
 alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv") %>%
               mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species),
@@ -43,7 +35,6 @@ alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv")
               mutate(type = recode_factor(type, aboveground = "Aboveground", 
                 seedbank = "Seedbank"))
 
-summary(alldat_long)
 
 alldat_rel_wide = read.csv("../Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type)) %>%
@@ -66,8 +57,6 @@ alldat_rel_wide = read.csv("../Formatted_data/Relabun_sbandab_merged_wide.csv") 
   mutate(elevfact = as.factor(elevation)) %>%
   mutate(type = recode_factor(type, aboveground = "Aboveground", 
                               seedbank = "Seedbank"))
-
-summary(alldat_rel_wide)
 
 alldat_raw_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type))%>%
@@ -92,10 +81,110 @@ alldat_raw_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") 
                               seedbank = "Seedbank"))
 
 
-summary(alldat_raw_wide)
 
 
-#load temperature data
+```
+#load and format temperature data
+```{r, echo = FALSE, message = FALSE}
+
+#data from overwinter storage
+winterfiles = list.files("../Raw_data/raw ibutton data_overwinter", pattern= ".csv$")
+              
+
+winterdat = read_csv(paste0("../Raw_data/raw ibutton data_overwinter/",winterfiles), #read all files in
+                     id = "iid") %>%
+            bind_rows() %>% #and bind by rows
+            mutate(iid = c(substr(iid, nchar(iid)-7,nchar(iid)-6))) %>%#change file to unit number
+            mutate(Date_Time = as.POSIXct(Date_Time, format ="%m/%d/%Y %H:%M")) %>%
+            mutate(Date = as.Date(Date_Time)) %>%
+            mutate(hour = round(hour(Date_Time),0)) %>%
+            mutate(iid = as.factor(iid)) %>%
+            select(-Unit)
+
+
+#temperature data from growout in greenhouse
+growoutfiles = list.files('../Raw_data/raw hobo data_growout', pattern= ".csv$")
+growoutfiles = growoutfiles[substr(growoutfiles, 1, 3) != "Air"]
+
+growdat = read_csv(paste0("../Raw_data/raw hobo data_growout/",growoutfiles), #read all files in
+                   id = "iid", skip=2, col_names = c("num", "Date_Time", "Temp")) %>% #why isn't it skipping first row?
+  bind_rows() %>% #and bind by rows
+  mutate(iid = c(substr(iid, nchar(iid)-5,nchar(iid)-4))) %>%#change file to unit number
+  mutate(Date_Time = as.POSIXct(Date_Time, format ="%m/%d/%Y %H:%M")) %>%
+  mutate(Date = as.Date(Date_Time)) %>%
+  mutate(hour = round(hour(Date_Time),0)) %>%
+  mutate(iid = as.factor(iid)) 
+```
+#format and plot overwinter temperatures
+```{r}
+meanhourly = winterdat %>%
+            group_by(Date, hour,iid) %>%
+            summarize(meanhourlyT = mean(Value), sdhourlyT = sd(Value), n = length(Value))
+
+meandaily_iid = meanhourly %>%
+  group_by(Date, iid) %>%
+  summarize(meandailyTid = mean(meanhourlyT ), nid = length(meanhourlyT ),
+            maxdailyTid = max(meanhourlyT ),mindailyTid = min(meanhourlyT )) %>% #get mean, min and max for each button
+  ungroup()
+#summary(meandaily_iid)  
+
+meandaily = meandaily_iid %>%
+  group_by(Date) %>% #average across ibuttons
+  summarize(meandailyT = mean(meandailyTid ), n = length(meandailyTid ),
+          maxdailyT = max(maxdailyTid ),mindailyT = min(mindailyTid),
+          sdmeandailyT = sd(meandailyTid, na.rm=T), sdmindailyT = sd(mindailyTid, na.rm=T),
+          sdmaxdailyT = sd(maxdailyTid, na.rm=T)) %>%
+  mutate(semean = meandailyT/sqrt(n), semin = mindailyT/sqrt(n),
+         semax = maxdailyT/sqrt(n))
+  
+meanTplot = ggplot(meandaily, aes(x = Date, y= meandailyT)) + 
+  geom_line(color = "black", linewidth = 0.5) + #geom_point() +
+  #geom_errorbar(aes(ymin= meandailyT - semean, ymax= meandailyT + semean), width=0.1)+
+  theme_classic(base_size = 20) +# theme(legend.text = element_text(size = 14))+
+  labs(y="Temperature (°C)") #, title = "Overwinter storage temperatures")  
+  
+
+FigS1_overwintertemps = meanTplot +
+       geom_line(data = meandaily, aes(x = Date, y= mindailyT), color = "blue")+
+        geom_line(data = meandaily, aes(x = Date, y= maxdailyT), color = "red")
+FigS1_overwintertemps #need to work on formatting
+#ggsave("Plots/FigS1_overwintertemps.jpg", height = 8, width = 12)
+```
+
+#format and plot growout conditions
+```{r}
+gmeanhourly = growdat %>%
+  group_by(Date, hour,iid) %>%
+  summarize(meanhourlyT = mean(Temp), sdhourlyT = sd(Temp), n = length(Temp))
+
+gmeandaily_iid = gmeanhourly %>%
+  group_by(Date, iid) %>%
+  summarize(meandailyTid = mean(meanhourlyT ), nid = length(meanhourlyT ),
+            maxdailyTid = max(meanhourlyT ),mindailyTid = min(meanhourlyT )) %>% #get mean, min and max for each button
+  ungroup()
+
+gmeandaily = gmeandaily_iid %>%
+  group_by(Date) %>% #average across ibuttons
+  summarize(meandailyT = mean(meandailyTid ), n = length(meandailyTid ),
+            maxdailyT = max(maxdailyTid ),mindailyT = min(mindailyTid),
+            sdmeandailyT = sd(meandailyTid, na.rm=T), sdmindailyT = sd(mindailyTid, na.rm=T),
+            sdmaxdailyT = sd(maxdailyTid, na.rm=T)) %>%
+  mutate(semean = meandailyT/sqrt(n), semin = mindailyT/sqrt(n),
+         semax = maxdailyT/sqrt(n)) %>%
+         drop_na()
+summary(gmeandaily)
+gmeanTplot = ggplot(gmeandaily, aes(x = Date, y= meandailyT)) + 
+  geom_line(color = "black", size = 0.5) + #geom_point() +
+  #geom_errorbar(aes(ymin= meandailyT - semean, ymax= meandailyT + semean), width=0.1)+
+  theme_classic(base_size = 20) +# theme(legend.text = element_text(size = 14))+
+  labs(y="Temperature (°C)") #, title = "Grow out temperatures")  
+
+
+FigS2_growouttemps = gmeanTplot +
+  geom_line(data = gmeandaily, aes(x = Date, y= mindailyT), color = "blue")+
+  geom_line(data = gmeandaily, aes(x = Date, y= maxdailyT), color = "red")
+FigS2_growouttemps #need to work on formatting
+#ggsave("Plots/FigS2_growouttemps.jpg", height = 8, width = 12)
 
 ```
 
@@ -127,8 +216,8 @@ anova(lm_simp_all_full)
 #posthoc comparison
 test(emmeans(lm_simp_all_full, pairwise ~ Treatment|elevfact, by=c("type")) )
 #aboveground:
-#exclusion different from control at 1636m, no differences with addition
-#seedbank: no significant differences
+#exclusion different from control at 1930m, no differences with addition
+#seedbank: no significant differences, marginally sig diff between exclusion and control at 2179
 
 ```
 #plot simpsons
@@ -140,7 +229,8 @@ simp_means = alldat_rel_wide %>%
   #add labels from contrasts for graphing
   mutate(siglabel = "Nonsignificant") %>%
   mutate(siglabel = case_when(
-    type == "Aboveground" & elevation == 1636 & Treatment == "Water Exclusion" ~ "*"))
+    type == "Aboveground" & elevation == 1930 & Treatment == "Water Exclusion" ~ "*",
+    type == "Aboveground" & elevation == 2179 & Treatment == "Water Exclusion" ~ "+"))
 
 simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color = Treatment, 
                                                    shape = type)) + 
@@ -156,18 +246,11 @@ simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color =
    #     legend.key = element_rect(colour = NA, fill = NA),
     text = element_text(size = 20))
 
+#### Fig. S3, simpsons diversity  ####
 simp_plot_elevation
+#ggsave("Plots/FigS3_Simpson diversity.jpg", height = 8, width = 12)
+
+
 
 ```
 
-#Overwinter storage temps
-
-```{r}
-
-```
-
-#Seedbank growout temps
-
-```{r}
-
-```
