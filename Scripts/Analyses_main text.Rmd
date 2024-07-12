@@ -35,7 +35,7 @@ alldat_long = read.csv("../Formatted_data/Seedbank_aboveground_merged_long.csv")
               mutate(elevation = as.numeric(elevation)) %>%
               mutate(elevfact = as.factor(elevation)) %>%
               mutate(type = recode_factor(type, aboveground = "Aboveground", 
-                seedbank = "Seedbank"))
+                seedbank = "Seedbank")) 
 
 
 alldat_rel_wide = read.csv("../Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
@@ -81,8 +81,7 @@ alldat_wide = read.csv("../Formatted_data/totabun_sbandab_merged_wide.csv") %>%
   mutate(elevation = as.numeric(elevation))%>%
   mutate(elevfact = as.factor(elevation)) %>%
   mutate(type = recode_factor(type, aboveground = "Aboveground", 
-                              seedbank = "Seedbank"))
-
+                              seedbank = "Seedbank")) 
 
 ```
 
@@ -274,24 +273,11 @@ meanpftrel = pftdat %>%
     PFT == "PF" & type == "Seedbank" & elevation == 1930  & Treatment == "Water Exclusion" ~ "*",
     PFT == "PG4" &type == "Aboveground" & elevation == 1636  & Treatment == "Water Exclusion" ~ "+",
     PFT == "PG4" &type == "Aboveground" & elevation == 1930  & Treatment == "Water Exclusion" ~ "+",
-    PFT == "PG4" &type == "Seedbank" & elevation == 1930 & Treatment == "Water Exclusion" ~ "*"))
+    PFT == "PG4" &type == "Seedbank" & elevation == 1930 & Treatment == "Water Exclusion" ~ "*"))  %>%
+  mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 20, elevation))
 
 ## panel by relative abundance ##
-pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation, y= meanPFTrel, color = Treatment,
-                                             shape = type)) + 
-  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
-  geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
-                position=position_dodge(40)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
-  scale_shape_manual(values = c(1,18)) +
-  labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
-        shape = "Community type") + ggtitle("Annual forbs")+
-  geom_text(aes(label = siglabel), 
-            position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
-  theme(text = element_text(size = 14))+
-  ylim(0,1) + xlim(1500,2700)
-
-pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = elevation, y= meanPFTrel, color = Treatment,
+pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                    shape = type)) + 
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
@@ -299,16 +285,30 @@ pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = eleva
   scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
+       shape = "Community type") + ggtitle("Annual forbs")+
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
+  theme(text = element_text(size = 14))+
+  ylim(0,1) + xlim(1500,2700)
+
+pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
+                                                                       shape = type)) + 
+  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
+                position=position_dodge(40)) + theme_bw() + 
+  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_shape_manual(values = c(1,18)) +
+  labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial forbs")+
-   geom_text(aes(label = siglabel), 
+  geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
   theme(legend.justification = c(0.95, .99),legend.position = c(0.95,.99), 
-       legend.key = element_rect(colour = NA, fill = NA),
-      text = element_text(size = 14))   + 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 14))   + 
   ylim(0,1)+ xlim(1500,2700)
 
 
-pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation, y= meanPFTrel, color = Treatment,
+pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                  shape = type)) + 
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
@@ -317,13 +317,13 @@ pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation, 
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial C3 grasses")+
-   geom_text(aes(label = siglabel), 
+  geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
   theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none")+
   ylim(0,1)+ xlim(1500,2700)
 
-pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation, y= meanPFTrel, color = Treatment,
-                                                                       shape = type)) + 
+pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
+                                                                 shape = type)) + 
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
@@ -331,10 +331,20 @@ pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation, 
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial C4 grasses")+
-   geom_text(aes(label = siglabel), 
+  geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
-    theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none") + 
+  theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none") + 
   ylim(0,1)+ xlim(1500,2700)
+
+
+#### Figure 2: Relative abundance of plant functional types ####
+
+plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
+          pft_elevation_Perennials+ theme(legend.position = "none") ,
+          pft_elevation_C3s, 
+          pft_elevation_C4s, 
+          nrow=2, labels = c("A.", "B.", "C.", "D."), label_size=20)
+#ggsave("../Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
 
 
 #### Figure 2: Relative abundance of plant functional types ####
@@ -406,9 +416,10 @@ rich_means = alldat_rel_wide %>%
   mutate(siglabel = case_when(
     type == "Aboveground" & elevation  == 1930 & Treatment == "Water Exclusion" ~ "*",
     type == "Aboveground" & elevation  == 2179 & Treatment == "Water Exclusion" ~ "+" #marginally significant, P=0.061
-    ))
+  ))%>%
+  mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 30, elevation))
 
-rich_plot_elevation = ggplot(rich_means, aes(x = elevation, y= meanrich, color = Treatment, 
+rich_plot_elevation = ggplot(rich_means, aes(x = elevation_plotting, y= meanrich, color = Treatment, 
                                              shape = type)) + 
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanrich - serich, ymax =  meanrich + serich), width = 0.2,
@@ -416,7 +427,7 @@ rich_plot_elevation = ggplot(rich_means, aes(x = elevation, y= meanrich, color =
   scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Species richness", color = "Treatment", linetype = "Community type", shape = "Community type") +
-  geom_text(aes(label = siglabel), hjust = -.75, size =10, show.legend = F) + #,   position = position_dodge() 
+  geom_text(aes(label = siglabel), hjust = 1, size =10, show.legend = F) + #,   position = position_dodge() 
   theme(legend.justification = c(0.05, .99),legend.position = c(0.05,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20))
@@ -430,25 +441,25 @@ shannon_means = alldat_rel_wide %>%
   mutate(siglabel = "Nonsignificant") %>%
   mutate(siglabel = case_when(
     type == "Aboveground" &  elevation  == 1636  & Treatment == "Water Exclusion" ~ "*",
-    type == "Aboveground" & elevation  == 1930 & Treatment == "Water Exclusion" ~ "*"))
+    type == "Aboveground" & elevation  == 1930 & Treatment == "Water Exclusion" ~ "*"))  %>%
+  mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 30, elevation))
 
-shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation, y= meanshannon, color = Treatment, 
-                                             shape = type)) + 
+shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= meanshannon, color = Treatment, 
+                                                   shape = type)) + 
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanshannon - seshannon, ymax =  meanshannon + seshannon), width = 0.2,
                 position=position_dodge(10)) + theme_bw() + 
   scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Shannon Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
-  geom_text(aes(label = siglabel), hjust = -.75, size =12, show.legend = F) + #,   position = position_dodge()
+  geom_text(aes(label = siglabel), hjust = 1, size =12, show.legend = F) + #,   position = position_dodge()
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20))
 
 #### Figure 3: Richness and diversity ####
 plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=20)
-#ggsave("../Plots/Fig3_richness_diversity.jpg", height = 8, width = 15)
-
+#ggsave("./Plots/Fig3_richness_diversity.jpg", height = 8, width = 15)
 
 ```
 
