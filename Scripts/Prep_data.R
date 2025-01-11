@@ -11,7 +11,7 @@ str(seeddat)
 head(seeddat)
 
 
-#NPP data from Seth, updated through 2021 (no 2022 yet)
+#NPP data from Seth, updated through 2021 
 plantdat = read.csv("Raw_data/Abovegrounddata_2021.csv") #this file has corrected species names and PFTs, and only 2021 data (to match seedbank data)
 summary(plantdat)
 str(plantdat)
@@ -57,7 +57,7 @@ unique(as.factor(seeddat$PFT)) #have some NA's for PFTs, which may mean they are
 
 filter(seeddat, is.na(PFT) == T) 
 
-#Adding PFTs for those I can
+#Adding PFTs 
 seeddat = seeddat %>%
   mutate(PFT = factor(if_else(Species == "AMDI", "PF", as.character(PFT)))) %>% 
   mutate(PFT = factor(if_else(Species == "BASC", "A", as.character(PFT)))) %>%
@@ -87,7 +87,7 @@ seedtots_long = seeddat %>%
   summarise(tottally = sum(Tally, na.rm=T)) %>% #for seedbank data, abundances = counts (will be cover for emergent community)
   ungroup() 
 
-#join with blanktotals and correct for contamination
+#join with blanktotals 
 dim(seedtots_long)
 seedtots_long = left_join(seedtots_long, blanktots)
 dim(seedtots_long)
