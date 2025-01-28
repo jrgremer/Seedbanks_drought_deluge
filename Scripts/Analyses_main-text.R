@@ -42,7 +42,6 @@ alldat_rel_wide = read.csv("Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
   mutate(elevation = case_when(
     Site == "Black Point" ~ 1566,
     Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
     Site == "Arboretum" ~ 2179,
     Site == "Camp Colton" ~ 2591
   )) %>%
@@ -187,7 +186,7 @@ pft_wide = pftdat %>%
 dep_vars = with(pft_wide, cbind(A, PG4, PF, PG3))
 
 relabun_manova_mod = manova(dep_vars ~ Treatment*elevfact*type, data = pft_wide)
-summary(relabun_manova_mod) 
+summary(relabun_manova_mod, test = c("Wilks")) 
 
 #Since we have a significant manova, we can do oneway ANOVAs to test for pairwise differences
 #Annuals 
