@@ -43,7 +43,6 @@ dim(seeddat)
 head(seeddat)
 summary(seeddat)
 
-filter(seeddat, is.na(Treatment) == T) #only NAs are the blank trays
 
 #join with species and PFT list and make PFT a factor
 seeddat = left_join(seeddat, plantspPFTlist) %>%
@@ -109,7 +108,7 @@ seedtots_long = seedtots_long %>%
   group_by(Site, Plot, Treatment) %>%
   mutate(relabun = totabun/sum(totabun)) %>%
   ungroup() %>%
-  mutate(Year = 2021, type = as.factor("seedbank"))
+  mutate(Year = 2021, type = as.factor("seedbank")) #add year and community type
 
 summary(seedtots_long)
 head(seedtots_long)
@@ -145,8 +144,6 @@ write.csv(sb_sptotabun_wide, file = "Formatted_data/seedbank_totabun_wide.csv")
 plant_quad = plantdat %>%
   rename(treat = Treatment, site = Site) %>%
   mutate(Treatment = recode(treat, "C" = "Control", "W" = "Water Addition", "D" = "Water Exclusion")) %>%
-  mutate(Site = recode(site, "ANT" = "Antelope", "ARB" = "Arboretum", "BC" = "Blue Chute", 
-                       "BP" = "Black Point", "CC" = "Camp Colton")) %>%
   mutate(type = "Aboveground") %>%
   #rename(raw_canopy_cov = Canopy_cover, raw_NPP = NPP_g_m2) %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species)) %>%
@@ -194,9 +191,9 @@ plantdat_long = plantdat_long %>%
 summary(plantdat_long)
 
 length(unique(seedtots_long$Species)) #36 unique species in seedbank data
-length(unique(plantdat_long21$Species)) #72 unique species in above ground data
+length(unique(plantdat_long$Species)) #72 unique species in above ground data
 
-length(intersect(unique(seedtots_long$Species), unique(plantdat_long21$Species))) #27 species in common in both emergent and seedbank data
+length(intersect(unique(seedtots_long$Species), unique(plantdat_long$Species))) #27 species in common in both emergent and seedbank data
 
 # Merge dataframes: long format #
 names(seedtots_long)

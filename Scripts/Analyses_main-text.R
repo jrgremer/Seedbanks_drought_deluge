@@ -3,8 +3,9 @@ library(tidyverse)
 library(vegan)
 library(emmeans) #for posthoc comparisons of means
 library(spaa) #for dist2list function 
-library(cowplot)
-library(ggplot2)
+library(ggplot2) #for plotting
+library(cowplot) #for plotting
+
 
 
 
@@ -12,67 +13,68 @@ library(ggplot2)
 alldat_long = read.csv("Formatted_data/Seedbank_aboveground_merged_long.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species),
          type = as.factor(type)) %>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank"))) %>%
   filter(Site != "Blank") %>% #filter blanks for now, but will need to figure that out
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation)) %>%
   mutate(elevfact = as.factor(elevation)) %>%
   mutate(type = recode_factor(type, aboveground = "Aboveground", 
                               seedbank = "Seedbank")) 
-
+summary(alldat_long)
 
 alldat_rel_wide = read.csv("Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type)) %>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
   filter(Site != "Blank") %>%
   mutate(siteplot = paste0(Site, Plot)) %>%
-  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  filter(siteplot != "Desert scrub1" ) %>% #no seedlings in Desert scrub 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
   mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
   select(-X, -siteplot) %>%
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation))%>%
   mutate(elevfact = as.factor(elevation)) %>%
   mutate(type = recode_factor(type, aboveground = "Aboveground", 
                               seedbank = "Seedbank"))
-
+summary(alldat_rel_wide)
 
 alldat_wide = read.csv("Formatted_data/totabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type))%>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
   filter(Site != "Blank") %>%
   mutate(siteplot = paste0(Site, Plot)) %>%
-  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  filter(siteplot != "Desert scrub1" ) %>% #no seedlings in Desert scrub 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
   mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
   select(-X, -siteplot) %>%
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation))%>%
   mutate(elevfact = as.factor(elevation)) %>%
   mutate(type = recode_factor(type, aboveground = "Aboveground", 
                               seedbank = "Seedbank")) 
-
+summary(alldat_wide)
 
 #Total abundance
 #calculate total abundance for each plot
@@ -155,7 +157,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
 
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
-#ggsave("../Plots/Fig1_Mean abundance.jpg", height = 8, width = 12)
+#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 8, width = 12)
 
 
 
@@ -331,18 +333,7 @@ plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
 #ggsave("../Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
 
 
-#### Figure 2: Relative abundance of plant functional types ####
-
-plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
-          pft_elevation_Perennials+ theme(legend.position = "none") ,
-          pft_elevation_C3s, 
-          pft_elevation_C4s, 
-          nrow=2, labels = c("A.", "B.", "C.", "D."), label_size=20)
-#ggsave("../Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
-
 #Species richness and diversity calculation
-
-
 #create dataframe that is just columns with relative abundances of each species
 allsp_rel = alldat_rel_wide %>%
   #make rownames siteplot names
@@ -403,7 +394,7 @@ test(emmeans(lm_shannon_all_ab, pairwise ~ Treatment, by=c("elevfact")) )
 #exclusion sig different from control at 1636m and 1930, no differences with addition
 
 #seedbank
-lm_shannon_all_sb = lm(shannon ~ Treatment+elevfact, data = alldat_rel_wide_sb)
+lm_shannon_all_sb = lm(shannon ~ Treatment*elevfact, data = alldat_rel_wide_sb)
 summary(lm_shannon_all_sb)                   
 anova(lm_shannon_all_sb)
 
@@ -492,13 +483,13 @@ nmds_dist_plot_trt = ggplot(data = nmds_dist_scores, aes(x = NMDS1, y= NMDS2, sh
   labs(color = "Treatment", shape= "Community", fill = "Elevation", linetype= "Elevation") 
 
 #add convex hulls
-site_bp <- nmds_dist_scores[nmds_dist_scores$site == "Black Point",][chull(nmds_dist_scores[nmds_dist_scores$site ==  "Black Point", c("NMDS1", "NMDS2")]), ]  
-site_ant <- nmds_dist_scores[nmds_dist_scores$site == "Antelope", ][chull(nmds_dist_scores[nmds_dist_scores$site  == "Antelope", c("NMDS1", "NMDS2")]), ]  
-site_bc <- nmds_dist_scores[nmds_dist_scores$site == "Blue Chute", ][chull(nmds_dist_scores[nmds_dist_scores$site == "Blue Chute", c("NMDS1", "NMDS2")]), ]  
-site_arb <- nmds_dist_scores[nmds_dist_scores$site == "Arboretum", ][chull(nmds_dist_scores[nmds_dist_scores$site == "Arboretum", c("NMDS1", "NMDS2")]), ]  # hull values for site A
-site_cc <- nmds_dist_scores[nmds_dist_scores$site == "Camp Colton",][chull(nmds_dist_scores[nmds_dist_scores$site == "Camp Colton", c("NMDS1", "NMDS2")]), ]  
+site_ds <- nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",][chull(nmds_dist_scores[nmds_dist_scores$site ==  "Desert scrub", c("NMDS1", "NMDS2")]), ]  
+site_dg <- nmds_dist_scores[nmds_dist_scores$site == "Desert grassland", ][chull(nmds_dist_scores[nmds_dist_scores$site  == "Desert grassland", c("NMDS1", "NMDS2")]), ]  
+site_js <- nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna", ][chull(nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna", c("NMDS1", "NMDS2")]), ]  
+site_ppm <- nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow", ][chull(nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow", c("NMDS1", "NMDS2")]), ]  # hull values for site A
+site_mcm <- nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow",][chull(nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow", c("NMDS1", "NMDS2")]), ]  
 
-hull.data <- rbind(site_bp, site_ant, site_bc, site_arb, site_cc)  %>%
+hull.data <- rbind(site_ds, site_dg, site_js, site_ppm, site_mcm)  %>%
   mutate(elevfact = as.factor(elevation))
 
 elevs = sort(unique(all_groups$elevfact))
@@ -508,17 +499,17 @@ nmds_all = nmds_dist_plot_trt +
 
 #### Figure 4: NMDS of species composition ####        
 nmds_all +
-  annotate("text", x=-1.25, y=1.9, label=paste0("Desert scrubland, ",elevs[1],"m"),
+  annotate("text", x=-1, y=-2, label=paste0("Desert scrubland, ",elevs[1],"m"),
            color="black", size = 5)+
-  annotate("text", x=-0.5, y=0.25, label=paste0("Desert grassland, ",elevs[2],"m"),
+  annotate("text", x=-0.5, y=-0.25, label=paste0("Desert grassland, ",elevs[2],"m"),
            color="black", size = 5)+
-  annotate("text", x=1, y=-1.5, label=paste0("Juniper savanna, ",elevs[3],"m"),
+  annotate("text", x=1, y=1.5, label=paste0("Juniper savanna, ",elevs[3],"m"),
            color="black", size = 5)+
-  annotate("text", x=0.25, y=1.4, label=paste0("Ponderosa pine meadow, ",elevs[4],"m"),
+  annotate("text", x=1.75, y=0.8, label=paste0("Ponderosa pine meadow, ",elevs[4],"m"),
            color="black", size = 5)+
-  annotate("text", x=1.9, y=1.1, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
+  annotate("text", x=1.9, y=-1.2, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
            color="black", size = 5)
-#ggsave("../Plots/Fig4.NMDS.jpg", height = 6, width = 12)
+#ggsave("./Plots/Fig4.NMDS.jpg", height = 6, width = 12)
 
 
 #Species composition - permANOVA
@@ -549,14 +540,14 @@ bray_long_type = all_bray_long %>%
   select(Site, Treatment, Plot, type1, type2, bray) 
 
 bray_long_type = bray_long_type %>% 
-  mutate(site_byelev = factor(Site, levels = c("Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition"))) %>%
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevfact = as.factor(elevation))
 

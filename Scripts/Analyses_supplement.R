@@ -10,16 +10,16 @@ library(cowplot)
 alldat_long = read.csv("Formatted_data/Seedbank_aboveground_merged_long.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species),
          type = as.factor(type)) %>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank"))) %>%
   filter(Site != "Blank") %>% #filter blanks for now, but will need to figure that out
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation)) %>%
   mutate(elevfact = as.factor(elevation)) %>%
@@ -29,20 +29,20 @@ alldat_long = read.csv("Formatted_data/Seedbank_aboveground_merged_long.csv") %>
 
 alldat_rel_wide = read.csv("Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type)) %>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
   filter(Site != "Blank") %>%
   mutate(siteplot = paste0(Site, Plot)) %>%
-  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  filter(siteplot != "Desert scrub1" ) %>% #no seedlings in Desert scrub 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
   mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
   select(-X, -siteplot) %>%
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation))%>%
   mutate(elevfact = as.factor(elevation)) %>%
@@ -51,20 +51,20 @@ alldat_rel_wide = read.csv("Formatted_data/Relabun_sbandab_merged_wide.csv") %>%
 
 alldat_raw_wide = read.csv("Formatted_data/totabun_sbandab_merged_wide.csv") %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), type = as.factor(type))%>%
-  mutate(site_byelev = factor(Site, levels = c("Blank", "Black Point", "Antelope", "Blue Chute", "Arboretum", "Camp Colton"))) %>%
+  mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank")))%>%
   filter(Site != "Blank") %>%
   mutate(siteplot = paste0(Site, Plot)) %>%
-  filter(siteplot != "Black Point1" ) %>% #no seedlings in Black Point 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
+  filter(siteplot != "Desert scrub1" ) %>% #no seedlings in Desert scrub 1 seedbank, so this will cause trouble with diversity and dissimilarity, remove here (but keep for abundance? which uses long format data)
   mutate(ID = paste(Site, Treatment, Plot, type, sep = "_")) %>% #create ID for use when making distance matrices and reshaping them
   select(-X, -siteplot) %>%
   #add elevations for sites 
   mutate(elevation = case_when(
-    Site == "Black Point" ~ 1566,
-    Site == "Antelope" ~ 1636,
-    Site == "Blue Chute" ~ 1930,
-    Site == "Arboretum" ~ 2179,
-    Site == "Camp Colton" ~ 2591
+    Site == "Desert scrub" ~ 1566,
+    Site == "Desert grassland" ~ 1636,
+    Site == "Juniper savanna" ~ 1930,
+    Site == "Ponderosa pine meadow" ~ 2179,
+    Site == "Mixed conifer meadow" ~ 2591
   )) %>%
   mutate(elevation = as.numeric(elevation))%>%
   mutate(elevfact = as.factor(elevation)) %>%
