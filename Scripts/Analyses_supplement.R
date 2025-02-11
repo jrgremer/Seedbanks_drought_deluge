@@ -89,7 +89,7 @@ winterdat = read_csv(paste0("Raw_data/raw ibutton data_overwinter/",winterfiles)
   mutate(hour = round(hour(Date_Time),0)) %>%
   mutate(iid = as.factor(iid)) %>%
   select(-Unit)
-
+write.csv(winterdat, file = "Formatted_data/winterandspringstoragetemps.csv")
 
 #temperature data from growout in greenhouse
 growoutfiles = list.files('Raw_data/raw hobo data_growout', pattern= ".csv$")
@@ -104,6 +104,8 @@ growdat = read_csv(paste0("Raw_data/raw hobo data_growout/",growoutfiles), #read
   mutate(hour = round(hour(Date_Time),0)) %>%
   mutate(iid = as.factor(iid)) 
  
+write.csv(growdat, file = "Formatted_data/growouttemps.csv")
+
 #format and plot overwinter temperatures
 
 meanhourly = winterdat %>%
