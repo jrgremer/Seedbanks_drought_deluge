@@ -1,73 +1,73 @@
 ﻿Plot,Site,Treatment,quad
-1,Antelope,Water Addition,AN_1_
-2,Antelope,Water Addition,AN_2_
-3,Antelope,Control,AN_3_
-4,Antelope,Water Exclusion,AN_4_
-5,Antelope,Water Addition,AN_5_
-6,Antelope,Water Exclusion,AN_6_
-7,Antelope,Control,AN_7_
-8,Antelope,Control,AN_8_
-9,Antelope,Water Exclusion,AN_9_
-10,Antelope,Control,AN_10_
-11,Antelope,Water Addition,AN_11_
-12,Antelope,Water Exclusion,AN_12_
-1,Blue Chute,Water Addition,BC_1_
-2,Blue Chute,Control,BC_2_
-3,Blue Chute,Control,BC_3_
-4,Blue Chute,Water Exclusion,BC_4_
-5,Blue Chute,Control,BC_5_
-6,Blue Chute,Water Addition,BC_6_
-7,Blue Chute,Control,BC_7_
-8,Blue Chute,Water Exclusion,BC_8_
-9,Blue Chute,Water Addition,BC_9_
-10,Blue Chute,Water Exclusion,BC_10_
-11,Blue Chute,Water Addition,BC_11_
-12,Blue Chute,Water Exclusion,BC_12_
-1,Arboretum,Water Exclusion,AR_1_
-2,Arboretum,Control,AR_2_
-3,Arboretum,Water Addition,AR_3_
-4,Arboretum,Water Exclusion,AR_4_
-5,Arboretum,Control,AR_5_
-6,Arboretum,Control,AR_6_
-7,Arboretum,Water Exclusion,AR_7_
-8,Arboretum,Water Addition,AR_8_
-9,Arboretum,Water Addition,AR_9_
-10,Arboretum,Water Exclusion,AR_10_
-11,Arboretum,Control,AR_11_
-12,Arboretum,Water Addition,AR_12_
-1,Camp Colton,Control,CC_1_
-2,Camp Colton,Water Exclusion,CC_2_
-3,Camp Colton,Control,CC_3_
-4,Camp Colton,Water Addition,CC_4_
-5,Camp Colton,Water Exclusion,CC_5_
-6,Camp Colton,Water Addition,CC_6_
-7,Camp Colton,Control,CC_7_
-8,Camp Colton,Water Exclusion,CC_8_
-9,Camp Colton,Water Addition,CC_9_
-10,Camp Colton,Water Exclusion,CC_10_
-11,Camp Colton,Water Addition,CC_11_
-12,Camp Colton,Control,CC_12_
-1,Black Point,Water Exclusion,BP_1NE_
-2,Black Point,Water Exclusion,BP_2NE_
-3,Black Point,Control,BP_3NE_
-4,Black Point,Water Exclusion,BP_4NW_
-5,Black Point,Control,BP_5NE_
-6,Black Point,Control,BP_6NE_
-7,Black Point,Water Exclusion,BP_7NE_
-8,Black Point,Control,BP_8NE_
-9,Black Point,Water Addition,BP_9NE_
-10,Black Point,Water Addition,BP_10NW_
-11,Black Point,Water Addition,BP_11NW_
-12,Black Point,Water Addition,BP_12NW_
-1,Black Point,Water Exclusion,BP_1SW_
-2,Black Point,Water Exclusion,BP_2SW_
-3,Black Point,Control,BP_3SW_
-4,Black Point,Water Exclusion,BP_4SE_
-5,Black Point,Control,BP_5SW_
-6,Black Point,Control,BP_6SW_
-7,Black Point,Water Exclusion,BP_7SW_
-8,Black Point,Control,BP_8SW_
-9,Black Point,Water Addition,BP_9SW_
-10,Black Point,Water Addition,BP_10SE_
-11,Black Point,Water Addition,BP_11SE_
-12,Black Point,Water Addition,BP_12NE_
+1,Desert grassland,Water Addition,AN_1_
+2,Desert grassland,Water Addition,AN_2_
+3,Desert grassland,Control,AN_3_
+4,Desert grassland,Water Exclusion,AN_4_
+5,Desert grassland,Water Addition,AN_5_
+6,Desert grassland,Water Exclusion,AN_6_
+7,Desert grassland,Control,AN_7_
+8,Desert grassland,Control,AN_8_
+9,Desert grassland,Water Exclusion,AN_9_
+10,Desert grassland,Control,AN_10_
+11,Desert grassland,Water Addition,AN_11_
+12,Desert grassland,Water Exclusion,AN_12_
+1,Juniper savanna,Water Addition,BC_1_
+2,Juniper savanna,Control,BC_2_
+3,Juniper savanna,Control,BC_3_
+4,Juniper savanna,Water Exclusion,BC_4_
+5,Juniper savanna,Control,BC_5_
+6,Juniper savanna,Water Addition,BC_6_
+7,Juniper savanna,Control,BC_7_
+8,Juniper savanna,Water Exclusion,BC_8_
+9,Juniper savanna,Water Addition,BC_9_
+10,Juniper savanna,Water Exclusion,BC_10_
+11,Juniper savanna,Water Addition,BC_11_
+12,Juniper savanna,Water Exclusion,BC_12_
+1,Ponderosa pine meadow,Water Exclusion,AR_1_
+2,Ponderosa pine meadow,Control,AR_2_
+3,Ponderosa pine meadow,Water Addition,AR_3_
+4,Ponderosa pine meadow,Water Exclusion,AR_4_
+5,Ponderosa pine meadow,Control,AR_5_
+6,Ponderosa pine meadow,Control,AR_6_
+7,Ponderosa pine meadow,Water Exclusion,AR_7_
+8,Ponderosa pine meadow,Water Addition,AR_8_
+9,Ponderosa pine meadow,Water Addition,AR_9_
+10,Ponderosa pine meadow,Water Exclusion,AR_10_
+11,Ponderosa pine meadow,Control,AR_11_
+12,Ponderosa pine meadow,Water Addition,AR_12_
+1,Mixed conifer meadow,Control,CC_1_
+2,Mixed conifer meadow,Water Exclusion,CC_2_
+3,Mixed conifer meadow,Control,CC_3_
+4,Mixed conifer meadow,Water Addition,CC_4_
+5,Mixed conifer meadow,Water Exclusion,CC_5_
+6,Mixed conifer meadow,Water Addition,CC_6_
+7,Mixed conifer meadow,Control,CC_7_
+8,Mixed conifer meadow,Water Exclusion,CC_8_
+9,Mixed conifer meadow,Water Addition,CC_9_
+10,Mixed conifer meadow,Water Exclusion,CC_10_
+11,Mixed conifer meadow,Water Addition,CC_11_
+12,Mixed conifer meadow,Control,CC_12_
+1,Desert scrub,Water Exclusion,BP_1NE_
+2,Desert scrub,Water Exclusion,BP_2NE_
+3,Desert scrub,Control,BP_3NE_
+4,Desert scrub,Water Exclusion,BP_4NW_
+5,Desert scrub,Control,BP_5NE_
+6,Desert scrub,Control,BP_6NE_
+7,Desert scrub,Water Exclusion,BP_7NE_
+8,Desert scrub,Control,BP_8NE_
+9,Desert scrub,Water Addition,BP_9NE_
+10,Desert scrub,Water Addition,BP_10NW_
+11,Desert scrub,Water Addition,BP_11NW_
+12,Desert scrub,Water Addition,BP_12NW_
+1,Desert scrub,Water Exclusion,BP_1SW_
+2,Desert scrub,Water Exclusion,BP_2SW_
+3,Desert scrub,Control,BP_3SW_
+4,Desert scrub,Water Exclusion,BP_4SE_
+5,Desert scrub,Control,BP_5SW_
+6,Desert scrub,Control,BP_6SW_
+7,Desert scrub,Water Exclusion,BP_7SW_
+8,Desert scrub,Control,BP_8SW_
+9,Desert scrub,Water Addition,BP_9SW_
+10,Desert scrub,Water Addition,BP_10SE_
+11,Desert scrub,Water Addition,BP_11SE_
+12,Desert scrub,Water Addition,BP_12NE_
