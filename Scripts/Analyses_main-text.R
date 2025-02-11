@@ -273,7 +273,7 @@ pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Annual forbs")+
   geom_text(aes(label = siglabel), 
-            position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
+            position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(text = element_text(size = 14))+
   ylim(0,1) + xlim(1500,2700)
 
@@ -287,7 +287,7 @@ pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = eleva
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial forbs")+
   geom_text(aes(label = siglabel), 
-            position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
+            position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(legend.justification = c(0.95, .99),legend.position = c(0.95,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 14))   + 
@@ -304,7 +304,7 @@ pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_p
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial C3 grasses")+
   geom_text(aes(label = siglabel), 
-            position = position_dodge(), hjust = -.5, size =8, show.legend = F) + 
+            position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none")+
   ylim(0,1)+ xlim(1500,2700)
 
@@ -330,7 +330,7 @@ plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
           pft_elevation_C3s, 
           pft_elevation_C4s, 
           nrow=2, labels = c("A.", "B.", "C.", "D."), label_size=20)
-#ggsave("../Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
 
 
 #Species richness and diversity calculation
