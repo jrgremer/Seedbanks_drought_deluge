@@ -157,7 +157,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
 
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
-#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 8, width = 12)
+#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 6, width = 12)
 
 
 
@@ -320,7 +320,7 @@ pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_p
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none") + 
-  ylim(0,1)+ xlim(1500,2700)
+  ylim(0,1)+ xlim(1500,2700) 
 
 
 #### Figure 2: Relative abundance of plant functional types ####
@@ -329,9 +329,9 @@ plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
           pft_elevation_Perennials+ theme(legend.position = "none") ,
           pft_elevation_C3s, 
           pft_elevation_C4s, 
-          nrow=2, labels = c("A.", "B.", "C.", "D."), label_size=20)
+          nrow=2, ncol = 2, 
+          labels = c("A.", "B.", "C.", "D."),label_size=18)
 #ggsave("./Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
-
 
 #Species richness and diversity calculation
 #create dataframe that is just columns with relative abundances of each species
@@ -455,8 +455,8 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
         text = element_text(size = 20))
 
 #### Figure 3: Richness and diversity ####
-plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=20)
-#ggsave("./Plots/Fig3_richness_diversity.jpg", height = 8, width = 15)
+plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=18)
+#ggsave("./Plots/Fig3_richness_diversity.jpg", height = 7.5, width = 15)
 
 
 #Species composition - NMDS
@@ -480,7 +480,8 @@ nmds_dist_plot_trt = ggplot(data = nmds_dist_scores, aes(x = NMDS1, y= NMDS2, sh
   geom_point(aes(colour = trt_order), size= 5, alpha = 0.75)   + theme_bw() +
   scale_color_manual(values = c("firebrick4" , "darkolivegreen4", "dodgerblue4")) +
   scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", fill = "Elevation", linetype= "Elevation") 
+  labs(color = "Treatment", shape= "Community", fill = "Elevation", linetype= "Elevation") +
+  theme(text = element_text(size = 20))
 
 #add convex hulls
 site_ds <- nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",][chull(nmds_dist_scores[nmds_dist_scores$site ==  "Desert scrub", c("NMDS1", "NMDS2")]), ]  
