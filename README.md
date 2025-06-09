@@ -1,0 +1,1 @@
+Scripts and data associated with "Divergent responses of seed banks and above ground vegetation to drought and deluge in grasslands across an elevational gradient" by J.R Gremer, M.M. Moore, D.C. Laughlin, and S.M. Munson.  
