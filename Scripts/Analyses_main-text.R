@@ -184,7 +184,7 @@ summary(pftdat)
 str(pftdat)
 
 #### MANOVA on functional types ####
-dep_vars = with(pft_wide, cbind(A, PG4, PF, PG3))
+dep_vars = with(pftdat, cbind(A, PG4, PF, PG3))
 
 relabun_manova_mod = manova(dep_vars ~ Treatment*elevfact*type, data = pftdat)
 summary(relabun_manova_mod, test = c("Wilks")) 
@@ -546,7 +546,7 @@ nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa p
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "Ponderosa pine meadow, 2179m") +
-  theme(text = element_text(size = 14)) 
+  theme(text = element_text(size = 11)) 
 
 
 nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -559,7 +559,7 @@ nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conife
 plot_grid(nmds_ds + theme(legend.position = "none") , 
           nmds_dg + theme(legend.position = "none") , 
           nmds_js + theme(legend.position = "none") , 
-          nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none") , 
+          nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 13))+ guides(shape="none") , 
           nmds_mcm+ theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"),  
           labels = c("A.", "B.", "C.", "D.", "E."), label_size=18)
 #ggsave("./Plots/Fig4.NMDS_newcolors_paneled.jpg", height = 6, width = 12)
