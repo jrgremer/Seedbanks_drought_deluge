@@ -106,7 +106,7 @@ seedtots_long = seedtots_long %>%
   mutate(Site = as.factor(Site), Plot = as.factor(Plot), Treatment = as.factor(Treatment), Species = as.factor(Species)) %>%
   #calculate relative abundance at the plot level
   group_by(Site, Plot, Treatment) %>%
-  mutate(relabun = totabun/sum(totabun)) %>%
+  mutate(relabun = ifelse(totabun >0, totabun/sum(totabun),0)) %>%
   ungroup() %>%
   mutate(Year = 2021, type = as.factor("seedbank")) #add year and community type
 
@@ -142,7 +142,7 @@ write.csv(sb_sptotabun_wide, file = "Formatted_data/seedbank_totabun_wide.csv")
 
 #remember here there are 2 quadrats/plot.   
 plant_quad = plantdat %>%
-  rename(treat = Treatment, site = Site) %>%
+  rename(treat = Treatment) %>%
   mutate(Treatment = recode(treat, "C" = "Control", "W" = "Water Addition", "D" = "Water Exclusion")) %>%
   mutate(type = "Aboveground") %>%
   #rename(raw_canopy_cov = Canopy_cover, raw_NPP = NPP_g_m2) %>%
@@ -154,7 +154,7 @@ plant_quad = plantdat %>%
 plantdat_plot = plant_quad %>%
   #calculate raw canopy cover and then relative abundance based on cover at the species level by plot 
   group_by(Year, Site, Plot, Treatment, Species) %>%
-  mutate(canopycov_plot = sum(quadcover, na.rm=T)/2) %>% #take mean of canopy cover across 2 NPP quadrats (per chat with Seth 10/19 or so)
+  mutate(canopycov_plot = sum(quadcover, na.rm=T)/2) %>% #take mean of canopy cover across 2 NPP quadrats 
   ungroup() %>%
   select(-Quadrat, -quadcover) %>%
   distinct() #removes duplicate values because of quadrat

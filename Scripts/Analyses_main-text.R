@@ -139,7 +139,7 @@ abund_elevation_ab = ggplot(abun_means_ab, aes(x = elevation, y= meanabun, group
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20)) +
-  xlim(c(1560,2610))
+  xlim(c(1555,2610))
 
 abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group = Treatment, color = Treatment)) + 
   geom_point(position=position_dodge(25), size = 6, shape = 18) + #geom_line(position=position_dodge(0.3)) +
@@ -153,7 +153,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20)) +
-  xlim(c(1560,2610))
+  xlim(c(1555,2610))
 
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
@@ -260,7 +260,7 @@ meanpftrel = pftdat %>%
     PFT == "PG4" &type == "Aboveground" & elevation == 1636  & Treatment == "Water Exclusion" ~ "+",
     PFT == "PG4" &type == "Aboveground" & elevation == 1930  & Treatment == "Water Exclusion" ~ "+",
     PFT == "PG4" &type == "Seedbank" & elevation == 1930 & Treatment == "Water Exclusion" ~ "*"))  %>%
-  mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 20, elevation))
+  mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 40, elevation))
 
 ## panel by relative abundance ##
 pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
