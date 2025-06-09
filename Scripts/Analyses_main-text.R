@@ -90,11 +90,11 @@ anova(lm_abun_ab)
 
 #Post hoc contrasts
 emmeans(lm_abun_ab, pairwise ~ Treatment|elevfact) 
-#at 1566, Water exclusion sig diff from control
+#at 1566, Water exclusion sig diff from control and addition
 #at 1636: no sig treatment diff
-#at 1930: water exclusion diff from control 
-#at 2179: water exclusion diff from control 
-#at 2591: water exclusion diff from control     
+#at 1930: water exclusion diff from control and addition
+#at 2179: water exclusion diff from control and addition
+#at 2591: water exclusion diff from control and addition    
 
 lm_abun_sb = lm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"))
 summary(lm_abun_sb)                   
@@ -157,7 +157,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
 
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
-#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 6, width = 12)
+#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 8, width = 15)
 
 
 
@@ -165,49 +165,43 @@ plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.
 #create PFT data frame.  Sum relative abundances by functional type
 pftdat = alldat_long %>%
   filter(Site != "Blank") %>%
-  group_by(Site, site_byelev,elevation ,elevfact, Plot, Treatment, trt_order, PFT, type) %>%
-  summarize(pft_sum = sum(totabun, na.rm=T), pft_sum_rel = sum(relabun, na.rm=T)) %>%   
+  group_by(Site, site_byelev,elevation ,elevfact, Plot, Treatment, trt_order,  type) %>% #PFT,
+  #new code.  Need to summarize A, PF, PG3, and PG4 by plot.  If group by PFT then we drop plots with zero for that type
+  summarize(
+    A_sum_relabun = sum(relabun[PFT == "A"]),
+    PF_sum_relabun = sum(relabun[PFT == "PF"]),
+    PG3_sum_relabun = sum(relabun[PFT == "PG3"]),
+    PG4_sum_relabun = sum(relabun[PFT == "PG4"]),
+    S_sum_relabun = sum(relabun[PFT == "S"]),
+  ) %>% 
+#NOW NEED TO MAKE IT ONE LONG COLUMN? OR ANALYZE AS IS?
+  #summarize(pft_sum = sum(totabun, na.rm=T), pft_sum_rel = sum(relabun, na.rm=T)) %>%   #old summary function
   ungroup() %>%
-  mutate(trt_type = as.factor(paste(trt_order, type, sep="_")))
+  mutate(trt_type = as.factor(paste(trt_order, type, sep="_")))%>%
+  select(everything(), A = A_sum_relabun, PF = PF_sum_relabun, PG3 = PG3_sum_relabun, PG4 = PG4_sum_relabun, S = S_sum_relabun)
 
 summary(pftdat)
 str(pftdat)
 
-#need to reshape relative abundances into wide form for MANOVA
-pft_wide = pftdat %>%
-  pivot_wider(
-    id_cols = c(Site, site_byelev, elevfact, elevation, Plot, Treatment, trt_order, type),
-    names_from = PFT, 
-    values_from = pft_sum_rel) %>%
-  mutate(A = replace_na(A, 0),
-         PF = replace_na(PF),
-         PG4 = replace_na(PG4, 0),
-         S = replace_na(S, 0),
-         PG3 = replace_na(PG3, 0))   
-
+#### MANOVA on functional types ####
 dep_vars = with(pft_wide, cbind(A, PG4, PF, PG3))
 
-relabun_manova_mod = manova(dep_vars ~ Treatment*elevfact*type, data = pft_wide)
+relabun_manova_mod = manova(dep_vars ~ Treatment*elevfact*type, data = pftdat)
 summary(relabun_manova_mod, test = c("Wilks")) 
 
 #Since we have a significant manova, we can do oneway ANOVAs to test for pairwise differences
 #Annuals 
-annualdat = subset(pftdat, PFT == "A" ) %>%
-  droplevels()
-
-annual_mod = lm(pft_sum_rel ~ Treatment*elevfact*type, data = annualdat)
+annual_mod = lm(A ~ Treatment*elevfact*type, data = pftdat)
 anova(annual_mod)
 #plot(annual_mod)
 
-test(emmeans(annual_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Seedbank")) ) #no significant differences
+test(emmeans(annual_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Seedbank")) ) 
+#no significant differences
 test(emmeans(annual_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Aboveground")) ) 
 #Water exclusion different from control at 1566, no other differences
 
 #perennial forbs
-perennialdat = subset(pftdat, PFT == "PF" ) %>%
-  droplevels()
-
-perennial_mod = lm(pft_sum_rel ~ Treatment*elevfact*type, data = perennialdat)
+perennial_mod = lm(PF ~ Treatment*elevfact*type, data = pftdat)
 anova(perennial_mod)
 #plot(perennial_mod)
 
@@ -218,35 +212,37 @@ test(emmeans(perennial_mod, pairwise ~ Treatment*type|elevfact, at = list(type =
 
 
 #perennial C3 Grasses
-c3dat = subset(pftdat, PFT == "PG3" ) %>%
-  droplevels()
-
-c3_mod = lm(pft_sum_rel ~ Treatment*elevfact*type, data = c3dat)
+c3_mod = lm(PG3 ~ Treatment*elevfact*type, data = pftdat)
 anova(c3_mod)
 #plot(c3_mod)
 
 test(emmeans(c3_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Seedbank")) ) 
-#no  differences
+#no  differences from control
 test(emmeans(c3_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Aboveground")) ) 
-#no  differences
+#no  differences from control
 
 
 #perennial C4 Grasses
-c4dat = subset(pftdat, PFT == "PG4" ) %>%
-  droplevels()
-
-c4_mod = lm(pft_sum_rel ~ Treatment*elevfact*type, data = c4dat)
+c4_mod = lm(PG4 ~ Treatment*elevfact*type, data = pftdat)
 anova(c4_mod)
 #plot(c4_mod)
 
 test(emmeans(c4_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Seedbank")) ) 
 #Exclusion different from control at 1930m
 test(emmeans(c4_mod, pairwise ~ Treatment*type|elevfact, at = list(type = "Aboveground")) ) 
-#Exclusion marginally different at 1636 and 1930
+#Exclusion significantly different at 1636 and 1930
 
 
 #plot relative abundance of functional types
-meanpftrel = pftdat %>%
+#make pftdat into longer dataframe to summarize
+pft_longer = pftdat %>%
+             pivot_longer(
+               cols = c(A, PF, PG3, PG4, S),
+               names_to = "PFT",
+               values_to = "pft_sum_rel"
+             )
+
+meanpftrel = pft_longer %>%
   group_by(Site, site_byelev, elevation, elevfact,Treatment, trt_order, PFT, 
            type, trt_type) %>%
   summarize(meanPFTrel = mean(pft_sum_rel, na.rm=T), sdPFTrel = sd(pft_sum_rel, na.rm=T), samplesize = n()) %>%
@@ -257,8 +253,8 @@ meanpftrel = pftdat %>%
     PFT == "A" & type == "Aboveground" & elevation == 1566 & Treatment == "Water Exclusion" ~ "*",
     PFT == "PF" & type == "Seedbank" & elevation == 1566  & Treatment == "Water Exclusion" ~ "*",
     PFT == "PF" & type == "Seedbank" & elevation == 1930  & Treatment == "Water Exclusion" ~ "*",
-    PFT == "PG4" &type == "Aboveground" & elevation == 1636  & Treatment == "Water Exclusion" ~ "+",
-    PFT == "PG4" &type == "Aboveground" & elevation == 1930  & Treatment == "Water Exclusion" ~ "+",
+    PFT == "PG4" &type == "Aboveground" & elevation == 1636  & Treatment == "Water Exclusion" ~ "*",
+    PFT == "PG4" &type == "Aboveground" & elevation == 1930  & Treatment == "Water Exclusion" ~ "*",
     PFT == "PG4" &type == "Seedbank" & elevation == 1930 & Treatment == "Water Exclusion" ~ "*"))  %>%
   mutate(elevation_plotting = ifelse(type == "Aboveground", elevation - 40, elevation))
 
