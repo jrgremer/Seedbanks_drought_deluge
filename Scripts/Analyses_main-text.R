@@ -131,7 +131,7 @@ abund_elevation_ab = ggplot(abun_means_ab, aes(x = elevation, y= meanabun, group
   geom_point(position=position_dodge(25), size = 6, shape = 1, stroke =1) + #geom_line(position=position_dodge(0.3)) +
   geom_errorbar(aes(ymin = meanabun - seabun, ymax = meanabun + seabun), width = 0.2,
                 position=position_dodge(25)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4", "dodgerblue4", "firebrick4" )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean cover)", color = "Treatment",
        title = "Above ground community") +
   geom_text(aes(label = siglabel), 
@@ -145,7 +145,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
   geom_point(position=position_dodge(25), size = 6, shape = 18) + #geom_line(position=position_dodge(0.3)) +
   geom_errorbar(aes(ymin = meanabun - seabun, ymax = meanabun + seabun), width = 0.2,
                 position=position_dodge(25)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4", "dodgerblue4", "firebrick4" )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   labs(x = "Elevation (m, asl)", y = "Mean total abundance\n (Mean count)", color = "Treatment",
        title = "Seed bank community") +
   geom_text(aes(label = siglabel), 
@@ -157,7 +157,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
 
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
-#ggsave("./Plots/Fig1_Mean abundance.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig1_Mean abundance_newcolors.jpg", height = 8, width = 15)
 
 
 
@@ -264,21 +264,21 @@ pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Annual forbs")+
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(text = element_text(size = 14))+
-  ylim(0,1) + xlim(1500,2700)
+  ylim(0,1) + xlim(1500,2700) 
 
 pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                        shape = type)) + 
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial forbs")+
@@ -295,7 +295,7 @@ pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_p
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial C3 grasses")+
@@ -309,7 +309,7 @@ pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_p
   geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Relative abundance", color = "Treatment", 
        shape = "Community type") + ggtitle("Perennial C4 grasses")+
@@ -327,7 +327,16 @@ plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
           pft_elevation_C4s, 
           nrow=2, ncol = 2, 
           labels = c("A.", "B.", "C.", "D."),label_size=18)
-#ggsave("./Plots/Fig2_PFTrelabun_byPFT.jpg", height = 8, width = 12)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT_newcolors.jpg", height = 8, width = 12)
+
+#### figure 2 alternative version ####
+plot_grid(pft_elevation_Annuals + theme(legend.position = "none") + facet_wrap(~type),
+          pft_elevation_Perennials+ theme(legend.position = "none") + facet_wrap(~type),
+          pft_elevation_C3s+ facet_wrap(~type), 
+          pft_elevation_C4s+ facet_wrap(~type), 
+          nrow=2, ncol = 2, 
+          labels = c("A.", "B.", "C.", "D."),label_size=18)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT_newcolors_bytype.jpg", height = 8, width = 12)
 
 #Species richness and diversity calculation
 #create dataframe that is just columns with relative abundances of each species
@@ -416,7 +425,7 @@ rich_plot_elevation = ggplot(rich_means, aes(x = elevation_plotting, y= meanrich
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanrich - serich, ymax =  meanrich + serich), width = 0.2,
                 position=position_dodge(10)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Species richness", color = "Treatment", linetype = "Community type", shape = "Community type") +
   geom_text(aes(label = siglabel), hjust = 1, size =10, show.legend = F) + #,   position = position_dodge() 
@@ -442,7 +451,7 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanshannon - seshannon, ymax =  meanshannon + seshannon), width = 0.2,
                 position=position_dodge(10)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Shannon Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
   geom_text(aes(label = siglabel), hjust = 1, size =12, show.legend = F) + #,   position = position_dodge()
@@ -452,7 +461,7 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
 
 #### Figure 3: Richness and diversity ####
 plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=18)
-#ggsave("./Plots/Fig3_richness_diversity.jpg", height = 7.5, width = 15)
+#ggsave("./Plots/Fig3_richness_diversity_newcolors.jpg", height = 7.5, width = 15)
 
 
 #Species composition - NMDS
@@ -474,7 +483,7 @@ nmds_dist_scores = as.data.frame(scores(all_NMS_dist, "sites")) %>%
 #plot it
 nmds_dist_plot_trt = ggplot(data = nmds_dist_scores, aes(x = NMDS1, y= NMDS2, shape = type)) +
   geom_point(aes(colour = trt_order), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("firebrick4" , "darkolivegreen4", "dodgerblue4")) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", fill = "Elevation", linetype= "Elevation") +
   theme(text = element_text(size = 20))
@@ -506,7 +515,7 @@ nmds_all +
            color="black", size = 5)+
   annotate("text", x=1.9, y=-1.2, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
            color="black", size = 5)
-#ggsave("./Plots/Fig4.NMDS.jpg", height = 6, width = 12)
+#ggsave("./Plots/Fig4.NMDS_newcolors.jpg", height = 6, width = 12)
 
 
 #Species composition - permANOVA
@@ -580,7 +589,7 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2,
                 position=position_dodge(10)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Bray Curtis Dissimilarity", color = "Treatment", linetype = "Community type", shape = "Community type") +
   geom_text(aes(label = siglabel), 
@@ -591,4 +600,4 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
 
 #### Fig. 5: Bray-Curtis distance #####
 bray_plot_elevation
-#ggsave("../Plots/fig5_braydissim.jpg", height = 8, width = 12)
+#ggsave("./Plots/fig5_braydissim_newcolors.jpg", height = 8, width = 12)
