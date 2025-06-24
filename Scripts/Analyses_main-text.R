@@ -15,7 +15,7 @@ alldat_long = read.csv("Formatted_data/Seedbank_aboveground_merged_long.csv") %>
          type = as.factor(type)) %>%
   mutate(site_byelev = factor(Site, levels = c("Blank", "Desert scrub", "Desert grassland", "Juniper savanna", "Ponderosa pine meadow", "Mixed conifer meadow"))) %>%
   mutate(trt_order = factor(Treatment, levels = c("Water Exclusion", "Control", "Water Addition", "Blank"))) %>%
-  filter(Site != "Blank") %>% #filter blanks for now, but will need to figure that out
+  filter(Site != "Blank") %>% #filter blanks 
   #add elevations for sites 
   mutate(elevation = case_when(
     Site == "Desert scrub" ~ 1566,
@@ -573,7 +573,7 @@ plot_grid(nmds_ds + theme(legend.position = "none") ,
           nmds_js + theme(legend.position = "none") , 
           nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 13))+ guides(shape="none") , 
           nmds_mcm+ theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"),  
-          labels = c("A.", "B.", "C.", "D.", "E."), label_size=18)
+          labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=18)
 #ggsave("./Plots/Fig4.NMDS_newcolors_paneled.jpg", height = 6, width = 12)
 
 
@@ -630,6 +630,11 @@ test(emmeans(lm_bray_full, pairwise ~ Treatment|elevfact) )
 # marg sig at 1636 (P=0.087), 1930m
 #water addition:
 #sig at 1566, 1930
+
+#pattern with elevation
+lm_bray_full_elev  = lm(bray ~ elevation*Treatment, data = bray_long_type)
+summary(lm_bray_full_elev)                   
+anova(lm_bray_full_elev)
 
 #Plot dissimilarity
 bray_means = bray_long_type %>%
