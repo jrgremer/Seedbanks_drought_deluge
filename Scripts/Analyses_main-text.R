@@ -96,9 +96,21 @@ emmeans(lm_abun_ab, pairwise ~ Treatment|elevfact)
 #at 2179: water exclusion diff from control and addition
 #at 2591: water exclusion diff from control and addition    
 
-lm_abun_sb = lm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"))
+lm_abun_sb = glm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "gaussian")
 summary(lm_abun_sb)                   
 anova(lm_abun_sb)
+#plot(lm_abun_sb)
+
+#testing for poission distribution
+lm_abun_sb_poisson = glm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "poisson")
+summary(lm_abun_sb_poisson)                   
+anova(lm_abun_sb_poisson) 
+#plot(lm_abun_sb_poisson)
+
+AIC(lm_abun_sb, lm_abun_sb_poisson) #normal distribution has lower AIC
+library(stats)
+logLik(lm_abun_sb)
+logLik(lm_abun_sb_poisson) #normal has higher LL
 
 #post hoc contrasts
 emmeans(lm_abun_sb, pairwise ~ Treatment|elevfact) 
@@ -567,7 +579,7 @@ plot_grid(nmds_ds + theme(legend.position = "none") ,
 
 #Species composition - permANOVA
 all_bray_rel = vegdist(allsp_rel, method = 'bray')
-permanova_bray = adonis2(all_bray_rel ~ Treatment*type*elevfact, perm= 999, data = all_groups)
+permanova_bray = adonis2(all_bray_rel ~ Treatment*type*elevfact, perm= 999, data = all_groups, by = "terms")
 summary(permanova_bray)
 permanova_bray
 
