@@ -246,7 +246,7 @@ simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color =
   geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meansimp - sesimp, ymax =  meansimp + sesimp), width = 0.2,
                 position=position_dodge(10)) + theme_bw() + 
-  scale_color_manual(values = c("darkolivegreen4",  "dodgerblue4", "firebrick4"  )) +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Simpson Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
   geom_text(aes(label = siglabel), 
@@ -257,7 +257,7 @@ simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color =
 
 #### Fig. S3, simpsons diversity  ####
 simp_plot_elevation
-#ggsave("Plots/FigS3_Simpson diversity.jpg", height = 8, width = 12)
+#ggsave("Plots/FigS3_Simpson diversity_new colors.jpg", height = 8, width = 12)
 
 
 
