@@ -80,7 +80,11 @@ summary(alldat_wide)
 #calculate total abundance for each plot
 abun_tots = alldat_long %>%
   group_by(Site, Treatment, type, Plot, site_byelev, trt_order, elevation, elevfact) %>%
-  summarize(totabun = sum(totabun)) 
+  summarize(totabun = sum(totabun))  %>%
+  #calculate seed density.  Each plot had 15 samples of 5 cm diameter x 5 cm depth = 15 x pi*(2.5^2)*(5) = 5*98.17477 = 1472.62.  This will be calculated here for all, but will only be used for seeds
+  mutate(totdensity_vol = totabun/1472.62) %>%
+  #by area in meters to compare to Abella, it would be 15 samples x 0.05m diameter, so 15 x pi*(0.025^2) = 0.0295  
+  mutate(totdensity_area = totabun/0.0295)
 
 #linear models for above ground and seedbank separately
 #aboveground
@@ -96,7 +100,7 @@ emmeans(lm_abun_ab, pairwise ~ Treatment|elevfact)
 #at 2179: water exclusion diff from control and addition
 #at 2591: water exclusion diff from control and addition    
 
-lm_abun_sb = glm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "gaussian")
+lm_abun_sb = glm(totdensity_vol ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "gaussian")
 summary(lm_abun_sb)                   
 anova(lm_abun_sb)
 #plot(lm_abun_sb)
@@ -119,8 +123,9 @@ emmeans(lm_abun_sb, pairwise ~ Treatment|elevfact)
 #plot abundances, Figure 1
 abun_means = abun_tots %>%
   group_by(Site, site_byelev, Treatment, trt_order, type, elevation, elevfact) %>%
-  summarize(meanabun = mean(totabun), sdabun = sd(totabun), samplesize = n()) %>%
-  mutate(seabun = sdabun/sqrt(samplesize))
+  summarize(meanabun = mean(totabun), sdabun = sd(totabun), samplesize = n(),
+            meandensity = mean(totdensity_area), sddensity = sd(totdensity_area)) %>%
+  mutate(seabun = sdabun/sqrt(samplesize),sedensity = sddensity/samplesize)
 
 abun_means_ab = abun_means %>%
   filter(type == "Aboveground") %>%
@@ -167,9 +172,26 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
         text = element_text(size = 20)) +
   xlim(c(1555,2610))
 
+abund_elevation_sb_density = ggplot(abun_means_sb, aes(x = elevation, y= meandensity, group = Treatment, color = Treatment)) + 
+  geom_point(position=position_dodge(25), size = 6, shape = 18) + #geom_line(position=position_dodge(0.3)) +
+  geom_errorbar(aes(ymin = meandensity - sedensity, ymax = meandensity + sedensity), width = 0.2,
+                position=position_dodge(25)) + theme_bw() + 
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  labs(x = "Elevation (m, asl)", title = "Seed bank community") +
+  ylab(expression(atop ("Mean total abundance", paste("(Mean density, seeds/ ", m^{2},")")))) +
+  geom_text(aes(label = siglabel), 
+            position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
+  theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
+        legend.key = element_rect(colour = NA, fill = NA),
+        text = element_text(size = 20)) +
+  xlim(c(1555,2610))
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
 #ggsave("./Plots/Fig1_Mean abundance_newcolors.jpg", height = 8, width = 15)
+
+#### Figure 1: abundances alternate version with density ####
+plot_grid(abund_elevation_ab, abund_elevation_sb_density  , align = "hv", labels = c("A.", "B."), label_size=20)
+#ggsave("./Plots/Fig1_Mean abundance_newcolors_sbdensitybyarea.jpg", height = 8, width = 15)
 
 
 
@@ -535,52 +557,6 @@ nmds_all +
            color="black", size = 5)
 #ggsave("./Plots/Fig4.NMDS_newcolors.jpg", height = 6, width = 12)
 
-#alternate paneled NMDS
-nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",], aes(x = NMDS1, y= NMDS2, shape = type)) +
-  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
-  scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", title = "Desert scrub, 1566m") +
-  theme(text = element_text(size = 14)) 
-
-nmds_dg =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert grassland",], aes(x = NMDS1, y= NMDS2, shape = type)) +
-  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
-  scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", title = "Desert grassland, 1636m") +
-  theme(text = element_text(size = 14)) 
-
-
-nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna",], aes(x = NMDS1, y= NMDS2, shape = type)) +
-  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
-  scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", title = "Juniper savanna, 1930m") +
-  theme(text = element_text(size = 14)) 
-
-
-nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
-  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
-  scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", title = "Ponderosa pine meadow, 2179m") +
-  theme(text = element_text(size = 11)) 
-
-
-nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
-  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
-  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
-  scale_shape_manual(values = c(1,18))+
-  labs(color = "Treatment", shape= "Community", title = "Mixed conifer meadow, 2591m") +
-  theme(text = element_text(size = 14)) 
-
-plot_grid(nmds_ds + theme(legend.position = "none") , 
-          nmds_dg + theme(legend.position = "none") , 
-          nmds_js + theme(legend.position = "none") , 
-          nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 13))+ guides(shape="none") , 
-          nmds_mcm+ theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"),  
-          labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=18)
-#ggsave("./Plots/Fig4.NMDS_newcolors_paneled.jpg", height = 6, width = 12)
 
 
 #Species composition - permANOVA
@@ -656,14 +632,12 @@ bray_means = bray_long_type %>%
     elevation == 1930  & Treatment == "Water Addition" ~ "*"))
 
 bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color = Treatment)) + 
-  geom_point(position=position_dodge(10), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
-  geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2,
-                position=position_dodge(10)) + theme_bw() + 
+  geom_point( size = 4, shape = 15) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Bray Curtis Dissimilarity", color = "Treatment", linetype = "Community type", shape = "Community type") +
-  geom_text(aes(label = siglabel), 
-            position = position_dodge(), hjust = -1, size =12, show.legend = F) + 
+  geom_text(aes(label = siglabel),  hjust = -.5, size =8, show.legend = F) + 
   theme(legend.justification = c(0.95, .05),legend.position = c(0.95,.05), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20))
@@ -671,3 +645,52 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
 #### Fig. 5: Bray-Curtis distance #####
 bray_plot_elevation
 #ggsave("./Plots/fig5_braydissim_newcolors.jpg", height = 8, width = 12)
+
+
+#### alternate figure 4: paneled NMDS with Bray Curtis ####
+nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",], aes(x = NMDS1, y= NMDS2, shape = type)) +
+  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  scale_shape_manual(values = c(1,18))+
+  labs(color = "Treatment", shape= "Community", title = "Desert scrub, 1566m") +
+  theme(text = element_text(size = 14)) 
+
+nmds_dg =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert grassland",], aes(x = NMDS1, y= NMDS2, shape = type)) +
+  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  scale_shape_manual(values = c(1,18))+
+  labs(color = "Treatment", shape= "Community", title = "Desert grassland, 1636m") +
+  theme(text = element_text(size = 14)) 
+
+
+nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna",], aes(x = NMDS1, y= NMDS2, shape = type)) +
+  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  scale_shape_manual(values = c(1,18))+
+  labs(color = "Treatment", shape= "Community", title = "Juniper savanna, 1930m") +
+  theme(text = element_text(size = 14)) 
+
+
+nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
+  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  scale_shape_manual(values = c(1,18))+
+  labs(color = "Treatment", shape= "Community", title = "Ponderosa pine meadow, 2179m") +
+  theme(text = element_text(size = 11)) 
+
+
+nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
+  geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
+  scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
+  scale_shape_manual(values = c(1,18))+
+  labs(color = "Treatment", shape= "Community", title = "Mixed conifer meadow, 2591m") +
+  theme(text = element_text(size = 14)) 
+
+plot_grid(nmds_ds + theme(legend.position = "none") , 
+          nmds_dg + theme(legend.position = "none") , 
+          nmds_js + theme(legend.position = "none") , 
+          nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 13))+ guides(shape="none") , 
+          nmds_mcm+ theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"),  
+          bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 13)),
+          labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=14)
+#ggsave("./Plots/Fig4.NMDS_newcolors_paneled_BC.jpg", height = 6, width = 12)
