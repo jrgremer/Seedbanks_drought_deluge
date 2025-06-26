@@ -475,6 +475,12 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
 plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=18)
 #ggsave("./Plots/Fig3_richness_diversity_newcolors.jpg", height = 7.5, width = 15)
 
+#### Figure 3: Richness and diversity alternative version ####
+plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none"), 
+          shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"), 
+          labels = c("A.", "B."), label_size=18)
+#ggsave("./Plots/Fig3_richness_diversity_newcolors_paneled by type.jpg", height = 7.5, width = 15)
+
 
 #Species composition - NMDS
 #create grouping data
