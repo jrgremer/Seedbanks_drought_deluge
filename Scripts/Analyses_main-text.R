@@ -543,7 +543,7 @@ elevs = sort(unique(all_groups$elevfact))
 nmds_all = nmds_dist_plot_trt + 
   geom_polygon(data=hull.data,aes(x=NMDS1,y=NMDS2,group=elevfact, linetype = elevfact),color = "black", fill = NA) 
 
-#### Figure 4: NMDS of species composition ####        
+#### Figure S4: NMDS of species composition ####        
 nmds_all +
   annotate("text", x=-1, y=-2, label=paste0("Desert scrubland, ",elevs[1],"m"),
            color="black", size = 5)+
@@ -555,7 +555,7 @@ nmds_all +
            color="black", size = 5)+
   annotate("text", x=1.9, y=-1.2, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
            color="black", size = 5)
-#ggsave("./Plots/Fig4.NMDS_newcolors.jpg", height = 6, width = 12)
+#ggsave("./Plots/FigS4.NMDS_newcolors.jpg", height = 6, width = 12)
 
 
 
@@ -686,11 +686,47 @@ nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conife
   labs(color = "Treatment", shape= "Community", title = "Mixed conifer meadow, 2591m") +
   theme(text = element_text(size = 14)) 
 
-plot_grid(nmds_ds + theme(legend.position = "none") , 
-          nmds_dg + theme(legend.position = "none") , 
-          nmds_js + theme(legend.position = "none") , 
-          nmds_ppm + theme(legend.position = "none") + theme(legend.position="bottom", text = element_text(size = 13))+ guides(shape="none") , 
-          nmds_mcm+ theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"),  
-          bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 13)),
+plot_grid(#a
+          bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 13),
+                                                                        plot.background = element_blank(),
+                                                                        panel.grid.major = element_blank(),
+                                                                        panel.grid.minor = element_blank(),
+                                                                        panel.border = element_blank(),
+                                                                  axis.line = element_line(color = 'black')),
+          #b
+          nmds_ds + theme(legend.position = "none") + theme(text = element_text(size = 13),
+                                                            plot.background = element_blank(),
+                                                            panel.grid.major = element_blank(),
+                                                            panel.grid.minor = element_blank(),
+                                                            panel.border = element_blank(),
+                                                            axis.line = element_line(color = 'black')), 
+          #c
+          nmds_dg +   theme(legend.position= c(0.85,0.8), text = element_text(size = 13),plot.background = element_blank(),
+                            panel.grid.major = element_blank(),
+                            panel.grid.minor = element_blank(),
+                            panel.border = element_blank(),
+                            axis.line = element_line(color = 'black')) +
+            guides(shape = guide_legend(order = 2), colour = guide_legend(order = 1)), 
+          #d
+          nmds_js + theme(legend.position = "none") + theme(text = element_text(size = 13),
+                                                            plot.background = element_blank(),
+                                                            panel.grid.major = element_blank(),
+                                                            panel.grid.minor = element_blank(),
+                                                            panel.border = element_blank(),
+                                                            axis.line = element_line(color = 'black')), 
+          #e
+          nmds_ppm + theme(legend.position = "none")  + theme(text = element_text(size = 13),
+                                                              plot.background = element_blank(),
+                                                              panel.grid.major = element_blank(),
+                                                              panel.grid.minor = element_blank(),
+                                                              panel.border = element_blank(),
+                                                              axis.line = element_line(color = 'black')), 
+          #f
+          nmds_mcm+ theme(legend.position = "none") + theme(text = element_text(size = 13),
+                                                            plot.background = element_blank(),
+                                                            panel.grid.major = element_blank(),
+                                                            panel.grid.minor = element_blank(),
+                                                            panel.border = element_blank(),
+                                                            axis.line = element_line(color = 'black')), 
           labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=14)
-#ggsave("./Plots/Fig4.NMDS_newcolors_paneled_BC.jpg", height = 6, width = 12)
+#ggsave("./Plots/Fig4.NMDS_newcolors_paneled_BC.jpg", height = 8, width = 15)
