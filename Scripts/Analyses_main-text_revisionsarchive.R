@@ -81,6 +81,8 @@ summary(alldat_wide)
 abun_tots = alldat_long %>%
   group_by(Site, Treatment, type, Plot, site_byelev, trt_order, elevation, elevfact) %>%
   summarize(totabun = sum(totabun))  %>%
+  #calculate seed density.  Each plot had 15 samples of 5 cm diameter x 5 cm depth = 15 x pi*(2.5^2)*(5) = 5*98.17477 = 1472.62.  This will be calculated here for all, but will only be used for seeds
+  mutate(totdensity_vol = totabun/1472.62) %>%
   #by area in meters to compare to other studies, it would be 15 samples x 0.05m diameter, so 15 x pi*(0.025^2) = 0.0295  
   mutate(totdensity_area = totabun/0.0295)
 
@@ -98,10 +100,21 @@ emmeans(lm_abun_ab, pairwise ~ Treatment|elevfact)
 #at 2179: water exclusion diff from control and addition
 #at 2591: water exclusion diff from control and addition    
 
-lm_abun_sb = glm(totdensity_area ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "gaussian")
+lm_abun_sb = glm(totdensity_vol ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "gaussian")
 summary(lm_abun_sb)                   
 anova(lm_abun_sb)
 #plot(lm_abun_sb)
+
+#testing for poission distribution
+lm_abun_sb_poisson = glm(totabun ~ elevfact * Treatment, data = subset(abun_tots, type == "Seedbank"), family = "poisson")
+summary(lm_abun_sb_poisson)                   
+anova(lm_abun_sb_poisson) 
+#plot(lm_abun_sb_poisson)
+
+AIC(lm_abun_sb, lm_abun_sb_poisson) #normal distribution has lower AIC
+library(stats)
+logLik(lm_abun_sb)
+logLik(lm_abun_sb_poisson) #normal has higher LL
 
 #post hoc contrasts
 emmeans(lm_abun_sb, pairwise ~ Treatment|elevfact) 
@@ -173,8 +186,12 @@ abund_elevation_sb_density = ggplot(abun_means_sb, aes(x = elevation, y= meanden
         text = element_text(size = 20)) +
   xlim(c(1555,2610))
 #### Figure 1: abundances ####
+plot_grid(abund_elevation_ab, abund_elevation_sb  , align = "hv", labels = c("A.", "B."), label_size=20)
+#ggsave("./Plots/Fig1_Mean abundance_newcolors.jpg", height = 8, width = 15)
+
+#### Figure 1: abundances alternate version with density ####
 plot_grid(abund_elevation_ab, abund_elevation_sb_density  , align = "hv", labels = c("A.", "B."), label_size=20)
-#ggsave("./Plots/Fig1_Mean abundance_revision1.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig1_Mean abundance_newcolors_sbdensitybyarea.jpg", height = 8, width = 15)
 
 
 
@@ -288,7 +305,7 @@ pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(text = element_text(size = 14))+
-  ylim(0,1) + xlim(1500, 2600)
+  ylim(0,1) + xlim(1500,2700) 
 
 pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                        shape = type)) + 
@@ -304,7 +321,7 @@ pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = eleva
   theme(legend.justification = c(0.95, .99),legend.position = c(0.95,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 14))   + 
-  ylim(0,1)+ xlim(1500,2600)
+  ylim(0,1)+ xlim(1500,2700)
 
 
 pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
@@ -319,7 +336,7 @@ pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_p
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none")+
-  ylim(0,1)+ xlim(1500,2600)
+  ylim(0,1)+ xlim(1500,2700)
 
 pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                  shape = type)) + 
@@ -333,17 +350,27 @@ pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_p
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = .8, size =8, show.legend = F) + 
   theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none") + 
-  ylim(0,1)+ xlim(1500, 2600)
+  ylim(0,1)+ xlim(1500,2700) 
 
 
 #### Figure 2: Relative abundance of plant functional types ####
+
+plot_grid(pft_elevation_Annuals + theme(legend.position = "none"),
+          pft_elevation_Perennials+ theme(legend.position = "none") ,
+          pft_elevation_C3s, 
+          pft_elevation_C4s, 
+          nrow=2, ncol = 2, 
+          labels = c("A.", "B.", "C.", "D."),label_size=18)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT_newcolors.jpg", height = 8, width = 12)
+
+#### figure 2 alternative version ####
 plot_grid(pft_elevation_Annuals + theme(legend.position = "none") + facet_wrap(~type),
           pft_elevation_Perennials+ theme(legend.position = "none") + facet_wrap(~type),
           pft_elevation_C3s+ facet_wrap(~type), 
           pft_elevation_C4s+ facet_wrap(~type), 
-          nrow=2, ncol = 2, align = "v",
+          nrow=2, ncol = 2, 
           labels = c("A.", "B.", "C.", "D."),label_size=18)
-#ggsave("./Plots/Fig2_PFTrelabun_byPFT_revision1.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT_newcolors_bytype.jpg", height = 8, width = 12)
 
 #Species richness and diversity calculation
 #create dataframe that is just columns with relative abundances of each species
@@ -438,8 +465,7 @@ rich_plot_elevation = ggplot(rich_means, aes(x = elevation_plotting, y= meanrich
   geom_text(aes(label = siglabel), hjust = 1, size =10, show.legend = F) + #,   position = position_dodge() 
   theme(legend.justification = c(0.05, .99),legend.position = c(0.05,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20)) + 
-  xlim(1500, 2610)
+        text = element_text(size = 20))
 
 #shannon diversity
 shannon_means = alldat_rel_wide %>%
@@ -465,14 +491,17 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
   geom_text(aes(label = siglabel), hjust = 1, size =12, show.legend = F) + #,   position = position_dodge()
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20))+ 
-  xlim(1500, 2610)
+        text = element_text(size = 20))
 
 #### Figure 3: Richness and diversity ####
+plot_grid(rich_plot_elevation, shannon_plot_elevation+ theme(legend.position = "none")   , labels = c("A.", "B."), label_size=18)
+#ggsave("./Plots/Fig3_richness_diversity_newcolors.jpg", height = 7.5, width = 15)
+
+#### Figure 3: Richness and diversity alternative version ####
 plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none"), 
           shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"), 
           labels = c("A.", "B."), label_size=18)
-#ggsave("./Plots/Fig3_richness_diversity_revision1.jpg", height = 7.5, width = 15)
+#ggsave("./Plots/Fig3_richness_diversity_newcolors_paneled by type.jpg", height = 7.5, width = 15)
 
 
 #Species composition - NMDS
@@ -526,7 +555,7 @@ nmds_all +
            color="black", size = 5)+
   annotate("text", x=1.9, y=-1.2, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
            color="black", size = 5)
-#ggsave("./Plots/FigS4.NMDS_revision1.jpg", height = 6, width = 12)
+#ggsave("./Plots/FigS4.NMDS_newcolors.jpg", height = 6, width = 12)
 
 
 
@@ -613,10 +642,12 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20))
 
+#### Fig. 5: Bray-Curtis distance #####
 bray_plot_elevation
+#ggsave("./Plots/fig5_braydissim_newcolors.jpg", height = 8, width = 12)
 
 
-#### Figure 4: paneled NMDS with Bray Curtis ####
+#### alternate figure 4: paneled NMDS with Bray Curtis ####
 nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",], aes(x = NMDS1, y= NMDS2, shape = type)) +
   geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -698,4 +729,4 @@ plot_grid(#a
                                                             panel.border = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
           labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=14)
-#ggsave("./Plots/Fig4.NMDS_revision1.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig4.NMDS_newcolors_paneled_BC.jpg", height = 8, width = 15)
