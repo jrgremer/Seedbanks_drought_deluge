@@ -603,8 +603,8 @@ bray_means = bray_long_type %>%
     elevation == 1930  & Treatment == "Water Addition" ~ "*"))
 
 bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color = Treatment)) + 
-  geom_point( size = 4, shape = 15) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
-  geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2) + theme_bw() + 
+  geom_point( position=position_dodge(50), size = 4, shape = 15) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_errorbar(aes(ymin = meanbray - sebray, ymax =  meanbray + sebray), width = 0.2,  position=position_dodge(50)) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Bray Curtis Dissimilarity", color = "Treatment", linetype = "Community type", shape = "Community type") +
