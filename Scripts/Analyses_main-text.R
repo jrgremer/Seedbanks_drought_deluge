@@ -472,7 +472,7 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
 plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none"), 
           shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"), 
           labels = c("A.", "B."), label_size=18)
-#ggsave("./Plots/Fig3_richness_diversity_revision1.jpg", height = 7.5, width = 15)
+#ggsave("./Plots/Fig3_richness_diversity_revision1.jpg", height = 5, width = 12)
 
 
 #Species composition - NMDS
@@ -616,7 +616,7 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
 bray_plot_elevation
 
 
-#### Figure 4: paneled NMDS with Bray Curtis ####
+#### Figure 4: Composition: dissimilarity and NMDS ####
 nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub",], aes(x = NMDS1, y= NMDS2, shape = type)) +
   geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -698,4 +698,4 @@ plot_grid(#a
                                                             panel.border = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
           labels = c("A.", "B.", "C.", "D.", "E.", "F."), label_size=14)
-#ggsave("./Plots/Fig4.NMDS_revision1.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig4.BC and NMDS_revision1.jpg", height = 8, width = 15)
