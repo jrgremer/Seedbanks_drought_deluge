@@ -641,14 +641,14 @@ nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub"
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "Desert scrub, 1566m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.5)
+  theme(text = element_text(size = 14)) + xlim(-2,2.7)
 
 nmds_dg =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert grassland",], aes(x = NMDS1, y= NMDS2, shape = type)) +
   geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "     Desert grassland, 1636m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.5)
+  theme(text = element_text(size = 14)) + xlim(-2,2.7)
 
 
 nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -656,7 +656,7 @@ nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savan
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "Juniper savanna, 1930m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.5)
+  theme(text = element_text(size = 14)) + xlim(-2,2.7)
 
 
 nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -664,7 +664,7 @@ nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa p
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "     Ponderosa pine meadow, 2179m") +
-  theme(text = element_text(size = 11)) + xlim(-2,2.5)
+  theme(text = element_text(size = 11)) + xlim(-2,2.7)
 
 
 nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conifer meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -672,7 +672,7 @@ nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conife
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "     Mixed conifer meadow, 2591m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.5)
+  theme(text = element_text(size = 14)) + xlim(-2,2.7)
 
 plot_grid(#a
           bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 13),
@@ -691,7 +691,7 @@ plot_grid(#a
                                                            axis.text.x = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
           #c
-          nmds_dg +   theme(legend.position= c(0.8,0.7), text = element_text(size = 13),plot.background = element_blank(),
+          nmds_dg +   theme(legend.position= c(0.8,0.65), text = element_text(size = 13),plot.background = element_blank(),
                             panel.grid.major = element_blank(),
                             panel.grid.minor = element_blank(),
                            # panel.border = element_blank(),
