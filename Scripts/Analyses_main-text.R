@@ -452,7 +452,7 @@ rich_plot_elevation = ggplot(rich_means, aes(x = elevation_plotting, y= meanrich
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Species richness", color = "Treatment", linetype = "Community type", shape = "Community type") +
-  geom_text(aes(label = siglabel), hjust = 1, size =10, show.legend = F) + #,   position = position_dodge() 
+  geom_text(aes(label = siglabel), hjust = -0.7, size =10, show.legend = F) + #,   position = position_dodge() 
   theme(legend.justification = c(0.05, .99),legend.position = c(0.05,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20),panel.grid.major = element_blank(),
@@ -480,7 +480,7 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18)) +
   labs(x = "Elevation (m, asl)", y = "Shannon Diversity", color = "Treatment", linetype = "Community type", shape = "Community type") +
-  geom_text(aes(label = siglabel), hjust = 1, size =12, show.legend = F) + #,   position = position_dodge()
+  geom_text(aes(label = siglabel), hjust = -0.7, size =12, show.legend = F) + #,   position = position_dodge()
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
         text = element_text(size = 20),panel.grid.major = element_blank(),
