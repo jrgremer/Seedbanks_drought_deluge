@@ -177,7 +177,7 @@ abund_elevation_sb_density = ggplot(abun_means_sb, aes(x = elevation, y= meanden
   xlim(c(1555,2610))
 #### Figure 1: abundances ####
 plot_grid(abund_elevation_ab, abund_elevation_sb_density  , align = "hv", labels = c("a)", "b)"), label_size=20)
-#ggsave("./Plots/Fig1_Mean abundance_final.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig1_Mean abundance_final.jpg", height = 8, width = 15, dpi = 600)
 
 
 
@@ -360,7 +360,7 @@ plot_grid(
                                    axis.title.y = element_blank()) + facet_wrap(~type), 
           nrow=2, ncol = 2, align = "v",
           labels = c("a)", "b)", "c)", "d)"),label_size=18)
-#ggsave("./Plots/Fig2_PFTrelabun_byPFT_final.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig2_PFTrelabun_byPFT_final.jpg", height = 8, width = 15, dpi=600)
 
 #Species richness and diversity calculation
 #create dataframe that is just columns with relative abundances of each species
@@ -491,7 +491,7 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
 plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none"), 
           shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"), 
           labels = c("a)", "b)"), label_size=18)
-#ggsave("./Plots/Fig3_richness_diversity_final.jpg", height = 5, width = 12)
+#ggsave("./Plots/Fig3_richness_diversity_final.jpg", height = 5, width = 12, dpi = 600)
 
 
 #Species composition - NMDS
@@ -545,7 +545,7 @@ nmds_all +
            color="black", size = 5)+
   annotate("text", x=1.9, y=-1.2, label=paste0("Mixed conifer meadow, ",elevs[5],"m"),
            color="black", size = 5)
-#ggsave("./Plots/FigS4.NMDS_revision1.jpg", height = 6, width = 12)
+#ggsave("./Plots/FigS4.NMDS_revision1.jpg", height = 6, width = 12, dpi = 600)
 
 
 
@@ -728,4 +728,4 @@ plot_grid(#a
                                                            axis.text.y = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
           labels = c("a)", "b)", "c)", "d)", "e)", "f)"), label_size=14)
-#ggsave("./Plots/Fig4.BC and NMDS_final.jpg", height = 8, width = 15)
+#ggsave("./Plots/Fig4.BC and NMDS_final.jpg", height = 8, width = 15, dpi = 600)
