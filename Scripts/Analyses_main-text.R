@@ -142,7 +142,7 @@ abund_elevation_ab = ggplot(abun_means_ab, aes(x = elevation, y= meanabun, group
             position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20),panel.grid.major = element_blank(),
+        text = element_text(size = 28),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   xlim(c(1555,2610))
 
@@ -157,7 +157,7 @@ abund_elevation_sb = ggplot(abun_means_sb, aes(x = elevation, y= meanabun, group
             position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20),panel.grid.major = element_blank(),
+        text = element_text(size = 28),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   xlim(c(1555,2610))
 
@@ -172,11 +172,11 @@ abund_elevation_sb_density = ggplot(abun_means_sb, aes(x = elevation, y= meanden
             position = position_dodge(25), hjust = -0.5, size =12, show.legend = F) + 
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20),panel.grid.major = element_blank(),
+        text = element_text(size = 28),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) +
   xlim(c(1555,2610))
 #### Figure 1: abundances ####
-plot_grid(abund_elevation_ab, abund_elevation_sb_density  , align = "hv", labels = c("a)", "b)"), label_size=20)
+plot_grid(abund_elevation_ab, abund_elevation_sb_density  , align = "hv", labels = c("a)", "b)"), label_size=28)
 #ggsave("./Plots/Fig1_Mean abundance_final.jpg", height = 8, width = 15, dpi = 600)
 
 
@@ -281,7 +281,7 @@ meanpftrel = pft_longer %>%
 ## panel by relative abundance ##
 pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                    shape = type)) + 
-  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_point(position=position_dodge(40), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -290,13 +290,13 @@ pft_elevation_Annuals = ggplot(subset(meanpftrel, PFT == "A"), aes(x = elevation
        shape = "Community type") + ggtitle("Annual forbs")+
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = -.8, size =8, show.legend = F) + 
-  theme(text = element_text(size = 14),panel.grid.major = element_blank(),
+  theme(text = element_text(size = 24),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())+
   ylim(0,1) + xlim(1500, 2600)
 
 pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                        shape = type)) + 
-  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_point(position=position_dodge(40), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -307,14 +307,14 @@ pft_elevation_Perennials = ggplot(subset(meanpftrel, PFT == "PF"), aes(x = eleva
             position = position_dodge(), hjust = -.8, size =8, show.legend = F) + 
   theme(legend.justification = c(0.95, .99),legend.position = c(0.95,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 14),panel.grid.major = element_blank(),
+        text = element_text(size = 24),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())   + 
   ylim(0,1)+ xlim(1500,2600)
 
 
 pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                  shape = type)) + 
-  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_point(position=position_dodge(40), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -323,13 +323,13 @@ pft_elevation_C3s = ggplot(subset(meanpftrel, PFT == "PG3"), aes(x = elevation_p
        shape = "Community type") + ggtitle("Perennial C3 grasses")+
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = -.8, size =8, show.legend = F) + 
-  theme(legend.position="bottom", text = element_text(size = 14),panel.grid.major = element_blank(),
+  theme(legend.position="bottom", text = element_text(size = 24),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())+ guides(shape="none")+
   ylim(0,1)+ xlim(1500,2600)
 
 pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_plotting, y= meanPFTrel, color = Treatment,
                                                                  shape = type)) + 
-  geom_point(position=position_dodge(40), size = 4) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
+  geom_point(position=position_dodge(40), size = 6) + #geom_line(position=position_dodge(0.3), aes(linetype = type)) +
   geom_errorbar(aes(ymin = meanPFTrel - sePFTrel, ymax =  meanPFTrel + sePFTrel), width = 0.2,
                 position=position_dodge(40)) + theme_bw() + 
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
@@ -338,7 +338,7 @@ pft_elevation_C4s = ggplot(subset(meanpftrel, PFT == "PG4"), aes(x = elevation_p
        shape = "Community type") + ggtitle("Perennial C4 grasses")+
   geom_text(aes(label = siglabel), 
             position = position_dodge(), hjust = -.8, size =8, show.legend = F) + 
-  theme(legend.position="bottom", text = element_text(size = 14),panel.grid.major = element_blank(),
+  theme(legend.position="bottom", text = element_text(size = 24),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())+ guides(color = "none") + 
   ylim(0,1)+ xlim(1500, 2600)
 
@@ -359,7 +359,7 @@ plot_grid(
                                    #axis.ticks.y = element_blank(),
                                    axis.title.y = element_blank()) + facet_wrap(~type), 
           nrow=2, ncol = 2, align = "v",
-          labels = c("a)", "b)", "c)", "d)"),label_size=18)
+          labels = c("a)", "b)", "c)", "d)"),label_size=24)
 #ggsave("./Plots/Fig2_PFTrelabun_byPFT_final.jpg", height = 8, width = 15, dpi=600)
 
 #Species richness and diversity calculation
@@ -455,7 +455,7 @@ rich_plot_elevation = ggplot(rich_means, aes(x = elevation_plotting, y= meanrich
   geom_text(aes(label = siglabel), hjust = -0.7, size =10, show.legend = F) + #,   position = position_dodge() 
   theme(legend.justification = c(0.05, .99),legend.position = c(0.05,.99), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20),panel.grid.major = element_blank(),
+        text = element_text(size = 28),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank()) + 
   xlim(1500, 2610)
 
@@ -483,14 +483,14 @@ shannon_plot_elevation = ggplot(shannon_means, aes(x = elevation_plotting, y= me
   geom_text(aes(label = siglabel), hjust = -0.7, size =12, show.legend = F) + #,   position = position_dodge()
   theme(legend.justification = c(0.05, .95),legend.position = c(0.05,.95), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20),panel.grid.major = element_blank(),
+        text = element_text(size = 28),panel.grid.major = element_blank(),
         panel.grid.minor = element_blank())+ 
   xlim(1500, 2610)
 
 #### Figure 3: Richness and diversity ####
-plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(shape="none"), 
-          shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 14))+ guides(color = "none"), 
-          labels = c("a)", "b)"), label_size=18)
+plot_grid(rich_plot_elevation+ facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 20))+ guides(shape="none"), 
+          shannon_plot_elevation+ theme(legend.position = "none") + facet_wrap(~type) + theme(legend.position="bottom", text = element_text(size = 20))+ guides(color = "none"), 
+          labels = c("a)", "b)"), label_size=24)
 #ggsave("./Plots/Fig3_richness_diversity_final.jpg", height = 5, width = 12, dpi = 600)
 
 
@@ -630,7 +630,7 @@ bray_plot_elevation = ggplot(bray_means, aes(x = elevation, y= meanbray, color =
   geom_text(aes(label = siglabel),  hjust = -.5, size =8, show.legend = F) + 
   theme(legend.justification = c(0.95, .05),legend.position = c(0.95,.05), 
         legend.key = element_rect(colour = NA, fill = NA),
-        text = element_text(size = 20))
+        text = element_text(size = 24))
 
 bray_plot_elevation
 
@@ -641,14 +641,14 @@ nmds_ds = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert scrub"
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "Desert scrub, 1566m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.7)
+  theme(text = element_text(size = 24)) + xlim(-2,2.7)
 
 nmds_dg =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Desert grassland",], aes(x = NMDS1, y= NMDS2, shape = type)) +
   geom_point(aes(colour = treatment), size= 5, alpha = 0.75)   + theme_bw() +
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "     Desert grassland, 1636m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.7)
+  theme(text = element_text(size = 24)) + xlim(-2,2.7)
 
 
 nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savanna",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -656,7 +656,7 @@ nmds_js = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Juniper savan
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "Juniper savanna, 1930m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.7)
+  theme(text = element_text(size = 24)) + xlim(-2,2.7)
 
 
 nmds_ppm =  ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Ponderosa pine meadow",], aes(x = NMDS1, y= NMDS2, shape = type)) +
@@ -672,17 +672,17 @@ nmds_mcm = ggplot(data = nmds_dist_scores[nmds_dist_scores$site == "Mixed conife
   scale_color_manual(values = c("#999999",  "#0072B2", "#D55E00"  )) +
   scale_shape_manual(values = c(1,18))+
   labs(color = "Treatment", shape= "Community", title = "     Mixed conifer meadow, 2591m") +
-  theme(text = element_text(size = 14)) + xlim(-2,2.7)
+  theme(text = element_text(size = 24)) + xlim(-2,2.7)
 
 plot_grid(#a
-          bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 13),
+          bray_plot_elevation + theme(legend.position = "none") + theme(text = element_text(size = 18),
                                                                         plot.background = element_blank(),
                                                                         panel.grid.major = element_blank(),
                                                                         panel.grid.minor = element_blank(),
                                                                        # panel.border = element_blank(),
                                                                        axis.line = element_line(color = 'black')),
           #b
-          nmds_ds + theme(legend.position = "none") + theme(text = element_text(size = 13),
+          nmds_ds + theme(legend.position = "none") + theme(text = element_text(size = 18),
                                                             plot.background = element_blank(),
                                                             panel.grid.major = element_blank(),
                                                             panel.grid.minor = element_blank(),
@@ -691,7 +691,7 @@ plot_grid(#a
                                                            axis.text.x = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
           #c
-          nmds_dg +   theme(legend.position= c(0.8,0.65), text = element_text(size = 13),plot.background = element_blank(),
+          nmds_dg +   theme(legend.position= c(0.8,0.65), text = element_text(size = 18),plot.background = element_blank(),
                             panel.grid.major = element_blank(),
                             panel.grid.minor = element_blank(),
                            # panel.border = element_blank(),
@@ -702,7 +702,7 @@ plot_grid(#a
                             axis.line = element_line(color = 'black')) +
             guides(shape = guide_legend(order = 2), colour = guide_legend(order = 1)), 
           #d
-          nmds_js + theme(legend.position = "none") + theme(text = element_text(size = 13),
+          nmds_js + theme(legend.position = "none") + theme(text = element_text(size = 18),
                                                             plot.background = element_blank(),
                                                             panel.grid.major = element_blank(),
                                                             panel.grid.minor = element_blank(),
@@ -710,7 +710,7 @@ plot_grid(#a
                                                            
                                                             axis.line = element_line(color = 'black')), 
           #e
-          nmds_ppm + theme(legend.position = "none")  + theme(text = element_text(size = 13),
+          nmds_ppm + theme(legend.position = "none")  + theme(text = element_text(size = 18),
                                                               plot.background = element_blank(),
                                                               panel.grid.major = element_blank(),
                                                               panel.grid.minor = element_blank(),
@@ -719,7 +719,7 @@ plot_grid(#a
                                                              axis.text.y = element_blank(),
                                                               axis.line = element_line(color = 'black')), 
           #f
-          nmds_mcm+ theme(legend.position = "none") + theme(text = element_text(size = 13),
+          nmds_mcm+ theme(legend.position = "none") + theme(text = element_text(size = 18),
                                                             plot.background = element_blank(),
                                                             panel.grid.major = element_blank(),
                                                             panel.grid.minor = element_blank(),
@@ -727,5 +727,5 @@ plot_grid(#a
                                                            axis.title.y = element_blank(),
                                                            axis.text.y = element_blank(),
                                                             axis.line = element_line(color = 'black')), 
-          labels = c("a)", "b)", "c)", "d)", "e)", "f)"), label_size=14)
+          labels = c("a)", "b)", "c)", "d)", "e)", "f)"), label_size=18)
 #ggsave("./Plots/Fig4.BC and NMDS_final.jpg", height = 8, width = 15, dpi = 600)
