@@ -257,7 +257,7 @@ simp_plot_elevation = ggplot(simp_means, aes(x = elevation, y= meansimp, color =
 
 #### Fig. S3, simpsons diversity  ####
 simp_plot_elevation
-#ggsave("Plots/FigS3_Simpson diversity_new colors.jpg", height = 8, width = 12)
+#ggsave("Plots/FigS3_Simpson diversity_final.jpg", height = 8, width = 12)
 
 
 
